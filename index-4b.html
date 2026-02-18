@@ -578,6 +578,47 @@
             color: var(--coral);
         }
 
+        /* AUDIO BTNS */
+        .audio-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            justify-content: center;
+        }
+
+        .audio-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-width: 100px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 800;
+            cursor: pointer;
+            background: white;
+            color: var(--blue);
+            border: 2px solid var(--blue);
+            transition: all 0.15s;
+        }
+
+        .audio-btn:hover {
+            background: #eff6ff;
+            transform: translateY(-2px);
+        }
+
+        .audio-btn.primary {
+            background: var(--blue);
+            color: white;
+            box-shadow: 0 4px 6px rgba(58, 134, 255, 0.2);
+        }
+
+        .audio-btn.primary:hover {
+            background: #2563eb;
+        }
+
         /* Answer buttons */
         .answer-btns {
             display: flex;
@@ -1180,7 +1221,10 @@
       <div class="card-chinese" style="font-size:1.4rem;margin-bottom:12px">${vocab.chinese}</div>
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="card-example-zh">${vocab.ex_zh}</div>
-      <div style="margin-top:16px;font-size:2rem;cursor:pointer" onclick="speak('${vocab.word.replace(/'/g, "\\'")}')">🔊</div>
+      <div class="audio-row">
+        <div class="audio-btn" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); speak('${vocab.ex_en.replace(/'/g, "\\'")}')">�️ Sentence</div>
+      </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'pointer';
 
@@ -1199,7 +1243,10 @@
                 back.innerHTML = `
       <div class="card-word" style="font-size:2.2rem">${vocab.word}</div>
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
-      <div style="margin-top:16px;font-size:2rem;cursor:pointer" onclick="speak('${vocab.word.replace(/'/g, "\\'")}')">🔊</div>
+      <div class="audio-row">
+        <div class="audio-btn" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); speak('${vocab.ex_en.replace(/'/g, "\\'")}')">�️ Sentence</div>
+      </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'default';
                 setTimeout(() => { const inp = document.getElementById('spell-input'); if (inp) inp.focus(); }, 100);
@@ -1214,7 +1261,10 @@
                 back.innerHTML = `
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="card-word" style="font-size:1.5rem;margin-top:10px;color:var(--purple)">${vocab.word}</div>
-      <div style="margin-top:16px;font-size:2rem;cursor:pointer" onclick="speak('${vocab.ex_en.replace(/'/g, "\\'")}')">🔊</div>
+      <div class="audio-row">
+        <div class="audio-btn" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); speak('${vocab.ex_en.replace(/'/g, "\\'")}')">�️ Sentence</div>
+      </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'pointer';
             }
