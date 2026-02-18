@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mason's English 4A Adventure! 🌟</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #FFD93D; --coral: #FF6B6B; --teal: #4ECDC4;
+  --purple: #A855F7; --green: #6BCB77; --blue: #4D96FF;
+  --dark: #2D2D2D; --white: #FFFDF7; --card-bg: #FFFDF7;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh; color: var(--dark);
+  overflow-x: hidden;
+}
+h1,h2,h3 { font-family: 'Fredoka One', cursive; }
+
+/* ===== SCREENS ===== */
+.screen { display: none; min-height: 100vh; padding: 20px; }
+.screen.active { display: flex; flex-direction: column; align-items: center; }
+
+/* ===== HOME SCREEN ===== */
+#home-screen { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.home-header { text-align: center; margin-bottom: 24px; }
+.home-header h1 { font-size: 2.8rem; color: var(--yellow); text-shadow: 3px 3px 0 #a855f7; }
+.home-header p { font-size: 1.1rem; color: #e0d7ff; font-weight: 700; }
+.badges-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; min-height: 40px; }
+.badge-icon { font-size: 2rem; animation: pop 0.3s ease; }
+@keyframes pop { 0%{transform:scale(0)} 70%{transform:scale(1.3)} 100%{transform:scale(1)} }
+.packs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; width: 100%; max-width: 700px; }
+.pack-card {
+  background: var(--white); border-radius: 20px; padding: 16px 12px;
+  text-align: center; cursor: pointer; border: 3px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+  position: relative; overflow: hidden;
+}
+.pack-card:hover { transform: translateY(-4px); box-shadow: 0 8px 0 rgba(0,0,0,0.2); }
+.pack-card.completed { border-color: var(--yellow); background: #fffbea; }
+.pack-letter { font-family: 'Fredoka One', cursive; font-size: 2.2rem; }
+.pack-count { font-size: 0.8rem; color: #888; font-weight: 700; margin-top: 2px; }
+.pack-progress-ring { margin: 8px auto 0; }
+.pack-badge { position: absolute; top: 6px; right: 8px; font-size: 1.2rem; }
+svg.ring { transform: rotate(-90deg); }
+.ring-bg { fill: none; stroke: #eee; stroke-width: 4; }
+.ring-fill { fill: none; stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 0.5s; }
+
+/* ===== MODE SELECTOR ===== */
+#mode-screen { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); justify-content: center; }
+.mode-box { background: white; border-radius: 30px; padding: 30px; max-width: 420px; width: 100%; box-shadow: 0 8px 0 rgba(0,0,0,0.15); }
+.mode-box h2 { font-size: 1.8rem; text-align: center; margin-bottom: 6px; color: var(--purple); }
+.mode-box .pack-name { text-align: center; color: #888; font-weight: 700; margin-bottom: 20px; }
+.mode-btn {
+  display: flex; align-items: center; gap: 14px;
+  width: 100%; padding: 16px 20px; margin-bottom: 14px;
+  border: 3px solid; border-radius: 18px; cursor: pointer;
+  font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+}
+.mode-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(0,0,0,0.15); }
+.mode-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.15); }
+.mode-btn.easy { background: #e8fdf5; border-color: var(--green); color: #2d7a4f; }
+.mode-btn.medium { background: #fff8e1; border-color: var(--yellow); color: #7a5c00; }
+.mode-btn.hard { background: #fce4ec; border-color: var(--coral); color: #7a1a2a; }
+.mode-emoji { font-size: 2rem; }
+.mode-info { text-align: left; }
+.mode-info strong { display: block; font-size: 1.1rem; }
+.mode-info span { font-size: 0.85rem; opacity: 0.8; }
+.back-btn {
+  background: none; border: 3px solid #ddd; border-radius: 14px;
+  padding: 10px 20px; font-family: 'Nunito', sans-serif; font-size: 1rem;
+  font-weight: 700; cursor: pointer; color: #888; margin-top: 4px;
+  transition: all 0.15s; width: 100%;
+}
+.back-btn:hover { background: #f5f5f5; }
+
+/* ===== STUDY SCREEN ===== */
+#study-screen { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.study-header { width: 100%; max-width: 560px; display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.study-header h2 { font-size: 1.3rem; color: white; flex: 1; }
+.progress-bar-wrap { width: 100%; max-width: 560px; margin-bottom: 18px; }
+.progress-label { font-size: 0.85rem; font-weight: 800; color: white; margin-bottom: 4px; }
+.progress-bar { background: rgba(255,255,255,0.3); border-radius: 20px; height: 14px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--yellow); border-radius: 20px; transition: width 0.5s; box-shadow: 0 0 8px rgba(255,217,61,0.7); }
+
+/* Card */
+.card-scene { width: 100%; max-width: 560px; height: 340px; perspective: 1000px; cursor: pointer; margin-bottom: 20px; }
+.card-wrap { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+.card-wrap.flipped { transform: rotateY(180deg); }
+.card-face {
+  position: absolute; width: 100%; height: 100%;
+  backface-visibility: hidden; border-radius: 28px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 28px; text-align: center;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.15);
+}
+.card-front { background: var(--white); border: 4px solid var(--teal); }
+.card-back { background: #e8fdf5; border: 4px solid var(--green); transform: rotateY(180deg); }
+.card-word { font-family: 'Fredoka One', cursive; font-size: 2.8rem; color: var(--purple); margin-bottom: 4px; }
+.card-phonetic { font-size: 1rem; color: #888; margin-bottom: 8px; }
+.card-pos { font-size: 0.85rem; background: var(--teal); color: white; border-radius: 20px; padding: 2px 12px; margin-bottom: 10px; display: inline-block; font-weight: 700; }
+.card-chinese { font-size: 1.6rem; font-weight: 800; color: var(--coral); }
+.card-hint { font-size: 0.9rem; color: #aaa; margin-top: 10px; font-weight: 700; }
+.card-example { font-size: 1.15rem; font-weight: 700; color: var(--dark); line-height: 1.5; }
+.card-example .highlight { color: var(--purple); font-family: 'Fredoka One', cursive; font-size: 1.3rem; }
+.card-example-zh { font-size: 1rem; color: #666; margin-top: 8px; }
+.tap-hint { font-size: 0.85rem; color: #aaa; margin-top: 12px; }
+
+/* Spell input */
+.spell-blank { font-size: 1.4rem; font-weight: 800; color: var(--blue); letter-spacing: 4px; }
+.spell-input-wrap { margin-top: 14px; display: flex; gap: 8px; width: 100%; justify-content: center; }
+.spell-input {
+  font-family: 'Nunito', sans-serif; font-size: 1.3rem; font-weight: 700;
+  border: 3px solid var(--teal); border-radius: 14px; padding: 8px 16px;
+  outline: none; text-align: center; width: 200px; color: var(--dark);
+}
+.spell-input:focus { border-color: var(--purple); }
+.spell-submit {
+  background: var(--teal); color: white; border: none; border-radius: 14px;
+  padding: 8px 18px; font-family: 'Nunito', sans-serif; font-size: 1.1rem;
+  font-weight: 800; cursor: pointer; transition: transform 0.15s;
+}
+.spell-submit:hover { transform: scale(1.05); }
+.spell-result { font-size: 1.1rem; font-weight: 800; margin-top: 8px; }
+.spell-result.correct { color: var(--green); }
+.spell-result.wrong { color: var(--coral); }
+
+/* Answer buttons */
+.answer-btns { display: flex; gap: 16px; width: 100%; max-width: 560px; }
+.ans-btn {
+  flex: 1; padding: 16px; border: none; border-radius: 20px;
+  font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 800;
+  cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+}
+.ans-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 0 rgba(0,0,0,0.2); }
+.ans-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(0,0,0,0.2); }
+.ans-know { background: var(--green); color: white; }
+.ans-learn { background: var(--coral); color: white; }
+.answer-btns.hidden { visibility: hidden; }
+
+/* Queue info */
+.queue-info { font-size: 0.85rem; color: rgba(255,255,255,0.8); font-weight: 700; margin-top: 10px; }
+
+/* ===== COMPLETE SCREEN ===== */
+#complete-screen { background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%); justify-content: center; }
+.complete-box { background: white; border-radius: 30px; padding: 36px 28px; max-width: 420px; width: 100%; text-align: center; box-shadow: 0 8px 0 rgba(0,0,0,0.15); }
+.complete-box h2 { font-size: 2.2rem; color: var(--purple); margin-bottom: 8px; }
+.complete-badge { font-size: 5rem; margin: 16px 0; animation: spin 0.6s ease; }
+@keyframes spin { 0%{transform:rotate(-20deg) scale(0)} 60%{transform:rotate(10deg) scale(1.2)} 100%{transform:rotate(0) scale(1)} }
+.complete-box p { font-size: 1.1rem; color: #666; font-weight: 700; margin-bottom: 24px; }
+.complete-btns { display: flex; flex-direction: column; gap: 12px; }
+.primary-btn {
+  background: var(--purple); color: white; border: none; border-radius: 18px;
+  padding: 16px; font-family: 'Nunito', sans-serif; font-size: 1.1rem;
+  font-weight: 800; cursor: pointer; transition: transform 0.15s;
+  box-shadow: 0 5px 0 #7c3aed;
+}
+.primary-btn:hover { transform: translateY(-2px); }
+.secondary-btn {
+  background: #f5f5f5; color: #666; border: 3px solid #ddd; border-radius: 18px;
+  padding: 14px; font-family: 'Nunito', sans-serif; font-size: 1rem;
+  font-weight: 700; cursor: pointer;
+}
+
+/* ===== CONFETTI ===== */
+#confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+
+/* ===== ICON BTN ===== */
+.icon-btn {
+  background: rgba(255,255,255,0.25); border: none; border-radius: 12px;
+  padding: 8px 12px; font-size: 1.2rem; cursor: pointer; color: white;
+  font-weight: 700; transition: background 0.15s;
+}
+.icon-btn:hover { background: rgba(255,255,255,0.4); }
+
+/* Mode badge on study screen */
+.mode-tag {
+  background: rgba(255,255,255,0.25); color: white; border-radius: 20px;
+  padding: 4px 14px; font-size: 0.85rem; font-weight: 800;
+}
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<!-- HOME SCREEN -->
+<div id="home-screen" class="screen active">
+  <div class="home-header">
+    <h1>🌟 Mason's English Adventure!</h1>
+    <p>四年级上册英语词汇大挑战</p>
+  </div>
+  <div class="badges-row" id="badges-row"></div>
+  <div class="packs-grid" id="packs-grid"></div>
+</div>
+
+<!-- MODE SELECTOR -->
+<div id="mode-screen" class="screen">
+  <div class="mode-box">
+    <h2>Choose Your Mode!</h2>
+    <div class="pack-name" id="mode-pack-name"></div>
+    <button class="mode-btn easy" onclick="startStudy('A')">
+      <span class="mode-emoji">🃏</span>
+      <div class="mode-info"><strong>Flashcard — Easy</strong><span>Flip cards to learn words</span></div>
+    </button>
+    <button class="mode-btn medium" onclick="startStudy('B')">
+      <span class="mode-emoji">✏️</span>
+      <div class="mode-info"><strong>Spell Check — Medium</strong><span>Type the missing word</span></div>
+    </button>
+    <button class="mode-btn hard" onclick="startStudy('C')">
+      <span class="mode-emoji">🧠</span>
+      <div class="mode-info"><strong>Sentence Master — Hard</strong><span>Translate from Chinese</span></div>
+    </button>
+    <button class="back-btn" onclick="showHome()">← Back</button>
+  </div>
+</div>
+
+<!-- STUDY SCREEN -->
+<div id="study-screen" class="screen">
+  <div class="study-header">
+    <button class="icon-btn" onclick="showHome()">🏠</button>
+    <h2 id="study-title">Pack A</h2>
+    <span class="mode-tag" id="mode-tag">Easy</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-label" id="progress-label">Mastered: 0 / 0</div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <div class="card-scene" id="card-scene" onclick="handleCardClick()">
+    <div class="card-wrap" id="card-wrap">
+      <div class="card-face card-front" id="card-front"></div>
+      <div class="card-face card-back" id="card-back"></div>
+    </div>
+  </div>
+  <div class="answer-btns hidden" id="answer-btns">
+    <button class="ans-btn ans-know" onclick="markWord(true)">✅ I know it!</button>
+    <button class="ans-btn ans-learn" onclick="markWord(false)">❌ Still learning</button>
+  </div>
+  <div class="queue-info" id="queue-info"></div>
+</div>
+
+<!-- COMPLETE SCREEN -->
+<div id="complete-screen" class="screen">
+  <div class="complete-box">
+    <h2>🎉 Pack Complete!</h2>
+    <div class="complete-badge" id="complete-badge">⭐</div>
+    <p id="complete-msg">Amazing job, Mason!</p>
+    <div class="complete-btns">
+      <button class="primary-btn" onclick="startStudy(currentMode)">🔄 Play Again</button>
+      <button class="secondary-btn" onclick="showHome()">🏠 Choose Another Pack</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== VOCABULARY DATA =====
+const VOCAB = [
+  {word:"America",phonetic:"/əˈmerɪkə/",pos:"n.",chinese:"美国",ex_en:"I'm from America.",ex_zh:"我来自美国。"},
+  {word:"apple",phonetic:"/ˈæpl/",pos:"n.",chinese:"苹果",ex_en:"This is an apple.",ex_zh:"这是一个苹果。"},
+  {word:"banana",phonetic:"/bəˈnɑːnə/",pos:"n.",chinese:"香蕉",ex_en:"Do you like bananas?",ex_zh:"你喜欢香蕉吗？"},
+  {word:"big",phonetic:"/bɪg/",pos:"adj.",chinese:"大的",ex_en:"The elephant has big ears.",ex_zh:"大象有大耳朵。"},
+  {word:"blouse",phonetic:"/blaʊz/",pos:"n.",chinese:"女衬衫",ex_en:"I like this pink blouse.",ex_zh:"我喜欢这件粉色女衬衫。"},
+  {word:"boy",phonetic:"/bɔɪ/",pos:"n.",chinese:"男孩",ex_en:"Who is this boy?",ex_zh:"这个男孩是谁？"},
+  {word:"brother",phonetic:"/ˈbrʌðə/",pos:"n.",chinese:"兄弟",ex_en:"He is my brother.",ex_zh:"他是我的哥哥/弟弟。"},
+  {word:"Canada",phonetic:"/ˈkænədə/",pos:"n.",chinese:"加拿大",ex_en:"She is from Canada.",ex_zh:"她来自加拿大。"},
+  {word:"cap",phonetic:"/kæp/",pos:"n.",chinese:"（无边的）帽子",ex_en:"Put on your cap.",ex_zh:"戴上你的鸭舌帽。"},
+  {word:"carrot",phonetic:"/ˈkærət/",pos:"n.",chinese:"胡萝卜",ex_en:"It's a carrot.",ex_zh:"这是一根胡萝卜。"},
+  {word:"China",phonetic:"/ˈtʃaɪnə/",pos:"n.",chinese:"中国",ex_en:"I'm from China.",ex_zh:"我来自中国。"},
+  {word:"class",phonetic:"/klɑːs/",pos:"n.",chinese:"班级",ex_en:"Which class are you in?",ex_zh:"你在哪个班？"},
+  {word:"cloudy",phonetic:"/ˈklaʊdi/",pos:"adj.",chinese:"多云的",ex_en:"It's cloudy today.",ex_zh:"今天多云。"},
+  {word:"cold",phonetic:"/kəʊld/",pos:"adj.",chinese:"寒冷的",ex_en:"It's cold outside.",ex_zh:"外面很冷。"},
+  {word:"cool",phonetic:"/kuːl/",pos:"adj.",chinese:"凉爽的",ex_en:"It's cool today.",ex_zh:"今天很凉爽。"},
+  {word:"cucumber",phonetic:"/ˈkjuːkʌmbə/",pos:"n.",chinese:"黄瓜",ex_en:"Do you like cucumbers?",ex_zh:"你喜欢黄瓜吗？"},
+  {word:"doctor",phonetic:"/ˈdɒktə/",pos:"n.",chinese:"医生",ex_en:"My father is a doctor.",ex_zh:"我的爸爸是一名医生。"},
+  {word:"dress",phonetic:"/dres/",pos:"n.",chinese:"连衣裙",ex_en:"I have a new dress.",ex_zh:"我有一条新连衣裙。"},
+  {word:"driver",phonetic:"/ˈdraɪvə/",pos:"n.",chinese:"司机",ex_en:"Is your uncle a driver?",ex_zh:"你的叔叔是司机吗？"},
+  {word:"eggplant",phonetic:"/ˈegplɑːnt/",pos:"n.",chinese:"茄子",ex_en:"Do you like eggplants?",ex_zh:"你喜欢茄子吗？"},
+  {word:"eight",phonetic:"/eɪt/",pos:"num.",chinese:"八",ex_en:"I am eight.",ex_zh:"我八岁了。"},
+  {word:"eighteen",phonetic:"/ˌeɪˈtiːn/",pos:"num.",chinese:"十八",ex_en:"Six and twelve is eighteen.",ex_zh:"6加12等于18。"},
+  {word:"England",phonetic:"/ˈɪŋglənd/",pos:"n.",chinese:"英国",ex_en:"I'm from England.",ex_zh:"我来自英国。"},
+  {word:"farmer",phonetic:"/ˈfɑːmə/",pos:"n.",chinese:"农民",ex_en:"My grandpa is a farmer.",ex_zh:"我的爷爷是一位农民。"},
+  {word:"fat",phonetic:"/fæt/",pos:"adj.",chinese:"胖的",ex_en:"The panda is fat.",ex_zh:"这只熊猫胖胖的。"},
+  {word:"fifteen",phonetic:"/ˌfɪfˈtiːn/",pos:"num.",chinese:"十五",ex_en:"It's fifteen.",ex_zh:"结果是十五。"},
+  {word:"fine",phonetic:"/faɪn/",pos:"adj.",chinese:"晴朗的",ex_en:"It's fine today.",ex_zh:"今天天气很好。"},
+  {word:"five",phonetic:"/faɪv/",pos:"num.",chinese:"五",ex_en:"I have five books.",ex_zh:"我有五本书。"},
+  {word:"four",phonetic:"/fɔː/",pos:"num.",chinese:"四",ex_en:"I'm in Grade Four.",ex_zh:"我上四年级。"},
+  {word:"fourteen",phonetic:"/ˌfɔːˈtiːn/",pos:"num.",chinese:"十四",ex_en:"Seven and seven is fourteen.",ex_zh:"7加7等于14。"},
+  {word:"friend",phonetic:"/frend/",pos:"n.",chinese:"朋友",ex_en:"This is my new friend.",ex_zh:"这是我的新朋友。"},
+  {word:"girl",phonetic:"/gɜːl/",pos:"n.",chinese:"女孩",ex_en:"Who is that girl?",ex_zh:"那个女孩是谁？"},
+  {word:"good",phonetic:"/gʊd/",pos:"adj.",chinese:"好的",ex_en:"Good morning!",ex_zh:"早上好！"},
+  {word:"grade",phonetic:"/greɪd/",pos:"n.",chinese:"年级",ex_en:"I'm in Grade Four.",ex_zh:"我在四年级。"},
+  {word:"green pepper",phonetic:"/griːn ˈpepə/",pos:"n.",chinese:"青椒",ex_en:"I don't like green peppers.",ex_zh:"我不喜欢青椒。"},
+  {word:"happy",phonetic:"/ˈhæpi/",pos:"adj.",chinese:"快乐的",ex_en:"Happy New Year!",ex_zh:"新年快乐！"},
+  {word:"hat",phonetic:"/hæt/",pos:"n.",chinese:"（有边的）帽子",ex_en:"Show me that hat.",ex_zh:"给我看看那顶帽子。"},
+  {word:"hot",phonetic:"/hɒt/",pos:"adj.",chinese:"炎热的",ex_en:"It's hot today.",ex_zh:"今天很热。"},
+  {word:"jacket",phonetic:"/ˈdʒækɪt/",pos:"n.",chinese:"夹克衫",ex_en:"Put on your jacket.",ex_zh:"穿上你的夹克衫。"},
+  {word:"jeans",phonetic:"/dʒiːnz/",pos:"n.",chinese:"牛仔裤",ex_en:"Where are my jeans?",ex_zh:"我的牛仔裤在哪儿？"},
+  {word:"kiwi fruit",phonetic:"/ˈkiːwiː fruːt/",pos:"n.",chinese:"猕猴桃",ex_en:"Do you like kiwi fruit?",ex_zh:"你喜欢猕猴桃吗？"},
+  {word:"lemon",phonetic:"/ˈlemən/",pos:"n.",chinese:"柠檬",ex_en:"Is it a lemon?",ex_zh:"它是一个柠檬吗？"},
+  {word:"long",phonetic:"/lɒŋ/",pos:"adj.",chinese:"长的",ex_en:"It has a long nose.",ex_zh:"它有一个长鼻子。"},
+  {word:"new",phonetic:"/njuː/",pos:"adj.",chinese:"新的",ex_en:"I have a new book.",ex_zh:"我有一本新书。"},
+  {word:"nice",phonetic:"/naɪs/",pos:"adj.",chinese:"好的；令人愉快的",ex_en:"Nice to meet you.",ex_zh:"很高兴见到你。"},
+  {word:"nine",phonetic:"/naɪn/",pos:"num.",chinese:"九",ex_en:"It's nine o'clock.",ex_zh:"现在九点钟。"},
+  {word:"nineteen",phonetic:"/ˌnaɪnˈtiːn/",pos:"num.",chinese:"十九",ex_en:"It's nineteen.",ex_zh:"是十九。"},
+  {word:"nurse",phonetic:"/nɜːs/",pos:"n.",chinese:"护士",ex_en:"My mother is a nurse.",ex_zh:"我的妈妈是一名护士。"},
+  {word:"old",phonetic:"/əʊld/",pos:"adj.",chinese:"旧的；老的",ex_en:"My sweater is old.",ex_zh:"我的毛衣旧了。"},
+  {word:"one",phonetic:"/wʌn/",pos:"num.",chinese:"一",ex_en:"One and two is three.",ex_zh:"一加二等于三。"},
+  {word:"orange",phonetic:"/ˈɒrɪndʒ/",pos:"n.",chinese:"橙子",ex_en:"It's an orange.",ex_zh:"这是一个橙子。"},
+  {word:"pear",phonetic:"/peə/",pos:"n.",chinese:"梨",ex_en:"I like pears.",ex_zh:"我喜欢梨。"},
+  {word:"pineapple",phonetic:"/ˈpaɪnæpl/",pos:"n.",chinese:"菠萝",ex_en:"It's a pineapple.",ex_zh:"这是一个菠萝。"},
+  {word:"postman",phonetic:"/ˈpəʊstmən/",pos:"n.",chinese:"邮递员",ex_en:"Is he a postman?",ex_zh:"他是邮递员吗？"},
+  {word:"potato",phonetic:"/pəˈteɪtəʊ/",pos:"n.",chinese:"土豆",ex_en:"Do you like potatoes?",ex_zh:"你喜欢土豆吗？"},
+  {word:"raincoat",phonetic:"/ˈreɪnkəʊt/",pos:"n.",chinese:"雨衣",ex_en:"Put on your raincoat.",ex_zh:"穿上你的雨衣。"},
+  {word:"rainy",phonetic:"/ˈreɪni/",pos:"adj.",chinese:"下雨的",ex_en:"It's rainy today.",ex_zh:"今天下雨。"},
+  {word:"seven",phonetic:"/ˈsev(ə)n/",pos:"num.",chinese:"七",ex_en:"She is seven.",ex_zh:"她七岁了。"},
+  {word:"seventeen",phonetic:"/ˌsev(ə)nˈtiːn/",pos:"num.",chinese:"十七",ex_en:"I'm seventeen.",ex_zh:"我十七岁。"},
+  {word:"shirt",phonetic:"/ʃɜːt/",pos:"n.",chinese:"衬衫",ex_en:"This is my shirt.",ex_zh:"这是我的衬衫。"},
+  {word:"shoes",phonetic:"/ʃuːz/",pos:"n.",chinese:"鞋子",ex_en:"I like those shoes.",ex_zh:"我喜欢那双鞋。"},
+  {word:"short",phonetic:"/ʃɔːt/",pos:"adj.",chinese:"短的；矮的",ex_en:"You are short.",ex_zh:"你很矮。"},
+  {word:"shorts",phonetic:"/ʃɔːts/",pos:"n.",chinese:"短裤",ex_en:"Where are my shorts?",ex_zh:"我的短裤在哪儿？"},
+  {word:"Singapore",phonetic:"/ˌsɪŋəˈpɔː/",pos:"n.",chinese:"新加坡",ex_en:"I'm from Singapore.",ex_zh:"我来自新加坡。"},
+  {word:"sister",phonetic:"/ˈsɪstə/",pos:"n.",chinese:"姐妹",ex_en:"She is my sister.",ex_zh:"她是我的姐妹。"},
+  {word:"six",phonetic:"/sɪks/",pos:"num.",chinese:"六",ex_en:"It's six o'clock.",ex_zh:"现在六点钟。"},
+  {word:"sixteen",phonetic:"/ˌsɪkˈstiːn/",pos:"num.",chinese:"十六",ex_en:"It is sixteen.",ex_zh:"它是十六。"},
+  {word:"skirt",phonetic:"/skɜːt/",pos:"n.",chinese:"短裙",ex_en:"I like this skirt.",ex_zh:"我喜欢这条短裙。"},
+  {word:"small",phonetic:"/smɔːl/",pos:"adj.",chinese:"小的",ex_en:"It has small eyes.",ex_zh:"它有小眼睛。"},
+  {word:"snowy",phonetic:"/ˈsnəʊi/",pos:"adj.",chinese:"下雪的",ex_en:"It's snowy outside.",ex_zh:"外面下雪了。"},
+  {word:"socks",phonetic:"/sɒks/",pos:"n.",chinese:"短袜",ex_en:"Put on your socks.",ex_zh:"穿上你的袜子。"},
+  {word:"strong",phonetic:"/strɒŋ/",pos:"adj.",chinese:"强壮的",ex_en:"He is strong.",ex_zh:"他很强壮。"},
+  {word:"sunny",phonetic:"/ˈsʌni/",pos:"adj.",chinese:"晴朗的",ex_en:"It's sunny today.",ex_zh:"今天天气晴朗。"},
+  {word:"sweater",phonetic:"/ˈswetə/",pos:"n.",chinese:"毛衣",ex_en:"Look at my new sweater.",ex_zh:"看我的新毛衣。"},
+  {word:"tall",phonetic:"/tɔːl/",pos:"adj.",chinese:"高的",ex_en:"My father is tall.",ex_zh:"我的爸爸很高。"},
+  {word:"teacher",phonetic:"/ˈtiːtʃə/",pos:"n.",chinese:"教师",ex_en:"He is a teacher.",ex_zh:"他是一名老师。"},
+  {word:"ten",phonetic:"/ten/",pos:"num.",chinese:"十",ex_en:"I'm ten years old.",ex_zh:"我十岁了。"},
+  {word:"thin",phonetic:"/θɪn/",pos:"adj.",chinese:"瘦的",ex_en:"The monkey is thin.",ex_zh:"猴子很瘦。"},
+  {word:"thirteen",phonetic:"/ˌθɜːˈtiːn/",pos:"num.",chinese:"十三",ex_en:"It's thirteen.",ex_zh:"结果是十三。"},
+  {word:"three",phonetic:"/θriː/",pos:"num.",chinese:"三",ex_en:"Three apples.",ex_zh:"三个苹果。"},
+  {word:"tomato",phonetic:"/təˈmɑːtəʊ/",pos:"n.",chinese:"西红柿",ex_en:"It's a tomato.",ex_zh:"这是一个西红柿。"},
+  {word:"T-shirt",phonetic:"/ˈtiːʃɜːt/",pos:"n.",chinese:"T恤衫",ex_en:"Put on your T-shirt.",ex_zh:"穿上你的T恤衫。"},
+  {word:"twenty",phonetic:"/ˈtwenti/",pos:"num.",chinese:"二十",ex_en:"Seven and thirteen is twenty.",ex_zh:"7加13等于20。"},
+  {word:"two",phonetic:"/tuː/",pos:"num.",chinese:"二",ex_en:"I have two friends.",ex_zh:"我有两个朋友。"},
+  {word:"warm",phonetic:"/wɔːm/",pos:"adj.",chinese:"温暖的",ex_en:"It's warm inside.",ex_zh:"里面很暖和。"},
+  {word:"watermelon",phonetic:"/ˈwɔːtəˌmelən/",pos:"n.",chinese:"西瓜",ex_en:"Let us eat this big watermelon.",ex_zh:"让我们吃这个大西瓜。"},
+  {word:"windy",phonetic:"/ˈwɪndi/",pos:"adj.",chinese:"有风的",ex_en:"It's windy today.",ex_zh:"今天刮风。"},
+];
+
+// Group into packs by first letter
+const PACK_BADGES = {A:'🦁',B:'🐻',C:'🐱',D:'🐶',E:'🐘',F:'🦊',G:'🦒',H:'🐹',J:'🐰',K:'🦘',L:'🦁',N:'🦋',O:'🦉',P:'🐼',R:'🦊',S:'⭐',T:'🐯',W:'🐳'};
+const PACK_COLORS = ['#FF6B6B','#FF9F43','#FFD93D','#6BCB77','#4ECDC4','#4D96FF','#A855F7','#F72585','#3A86FF','#FB5607','#8338EC','#06D6A0','#EF476F','#FFD166','#118AB2','#073B4C','#E63946','#2EC4B6'];
+
+function buildPacks() {
+  const packs = {};
+  VOCAB.forEach(v => {
+    const letter = v.word[0].toUpperCase();
+    if (!packs[letter]) packs[letter] = [];
+    packs[letter].push(v);
+  });
+  return packs;
+}
+const PACKS = buildPacks();
+const PACK_KEYS = Object.keys(PACKS).sort();
+
+// ===== STATE =====
+let state = {};
+let currentPack = null;
+let currentMode = 'A';
+let queue = [];
+let queueIndex = 0;
+let isFlipped = false;
+let spellChecked = false;
+let audioCtx = null;
+
+function getAudioCtx() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return audioCtx;
+}
+
+function loadState() {
+  try { state = JSON.parse(localStorage.getItem('mason4a_state') || '{}'); } catch(e) { state = {}; }
+}
+function saveState() { localStorage.setItem('mason4a_state', JSON.stringify(state)); }
+
+function getWordState(word) {
+  if (!state[word]) state[word] = { score: 0, nextReview: 0 };
+  return state[word];
+}
+
+function isMastered(word) { return getWordState(word).score >= 3; }
+
+function getPackMastered(letter) {
+  return PACKS[letter].filter(v => isMastered(v.word)).length;
+}
+
+// ===== SOUND EFFECTS =====
+function playSound(type) {
+  try {
+    const ctx = getAudioCtx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    if (type === 'flip') {
+      osc.type = 'sine'; osc.frequency.setValueAtTime(440, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.15);
+      osc.start(); osc.stop(ctx.currentTime + 0.15);
+    } else if (type === 'correct') {
+      osc.type = 'triangle';
+      [523, 659, 784].forEach((f, i) => {
+        const o2 = ctx.createOscillator(); const g2 = ctx.createGain();
+        o2.connect(g2); g2.connect(ctx.destination);
+        o2.type = 'triangle'; o2.frequency.value = f;
+        g2.gain.setValueAtTime(0.2, ctx.currentTime + i*0.1);
+        g2.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i*0.1 + 0.2);
+        o2.start(ctx.currentTime + i*0.1); o2.stop(ctx.currentTime + i*0.1 + 0.2);
+      });
+      osc.start(); osc.stop(ctx.currentTime);
+    } else if (type === 'wrong') {
+      osc.type = 'sawtooth'; osc.frequency.value = 200;
+      gain.gain.setValueAtTime(0.1, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+      osc.start(); osc.stop(ctx.currentTime + 0.3);
+    } else if (type === 'complete') {
+      [523,659,784,1047].forEach((f,i) => {
+        const o2 = ctx.createOscillator(); const g2 = ctx.createGain();
+        o2.connect(g2); g2.connect(ctx.destination);
+        o2.type = 'triangle'; o2.frequency.value = f;
+        g2.gain.setValueAtTime(0.25, ctx.currentTime + i*0.12);
+        g2.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i*0.12 + 0.3);
+        o2.start(ctx.currentTime + i*0.12); o2.stop(ctx.currentTime + i*0.12 + 0.3);
+      });
+      osc.start(); osc.stop(ctx.currentTime);
+    }
+  } catch(e) {}
+}
+
+function speak(text) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+
+// ===== SCREENS =====
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function showHome() {
+  renderHome();
+  showScreen('home-screen');
+}
+
+function renderHome() {
+  const grid = document.getElementById('packs-grid');
+  const badgesRow = document.getElementById('badges-row');
+  grid.innerHTML = '';
+  badgesRow.innerHTML = '';
+
+  PACK_KEYS.forEach((letter, idx) => {
+    const words = PACKS[letter];
+    const mastered = getPackMastered(letter);
+    const total = words.length;
+    const pct = total > 0 ? mastered / total : 0;
+    const completed = mastered === total;
+    const color = PACK_COLORS[idx % PACK_COLORS.length];
+    const badge = PACK_BADGES[letter] || '🌟';
+
+    if (completed) {
+      const b = document.createElement('span');
+      b.className = 'badge-icon'; b.title = `Pack ${letter} mastered!`;
+      b.textContent = badge; badgesRow.appendChild(b);
+    }
+
+    const card = document.createElement('div');
+    card.className = 'pack-card' + (completed ? ' completed' : '');
+    card.onclick = () => selectPack(letter);
+
+    const r = 22, circ = 2 * Math.PI * r;
+    const dash = circ * pct;
+    card.innerHTML = `
+      ${completed ? `<div class="pack-badge">${badge}</div>` : ''}
+      <div class="pack-letter" style="color:${color}">${letter}</div>
+      <div class="pack-count">${total} words</div>
+      <svg class="ring pack-progress-ring" width="54" height="54" viewBox="0 0 54 54">
+        <circle class="ring-bg" cx="27" cy="27" r="${r}"/>
+        <circle class="ring-fill" cx="27" cy="27" r="${r}"
+          stroke="${color}"
+          stroke-dasharray="${circ}"
+          stroke-dashoffset="${circ - dash}"/>
+      </svg>
+      <div style="font-size:0.78rem;font-weight:700;color:#888;margin-top:2px">${mastered}/${total} mastered</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function selectPack(letter) {
+  currentPack = letter;
+  document.getElementById('mode-pack-name').textContent = `Pack ${letter} · ${PACKS[letter].length} words`;
+  showScreen('mode-screen');
+}
+
+// ===== STUDY SESSION =====
+function buildQueue(letter, mode) {
+  const words = PACKS[letter];
+  const now = Date.now();
+  // Words not yet mastered, sorted: overdue first, then by score
+  const due = words.filter(v => !isMastered(v.word));
+  const mastered = words.filter(v => isMastered(v.word));
+
+  // Weight: "still learning" (score=0) appear 3x, others 1x
+  let weighted = [];
+  due.forEach(v => {
+    const ws = getWordState(v.word);
+    const times = ws.score === 0 ? 3 : 1;
+    for (let i = 0; i < times; i++) weighted.push(v);
+  });
+  // Shuffle
+  for (let i = weighted.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [weighted[i], weighted[j]] = [weighted[j], weighted[i]];
+  }
+  // Add a few mastered words for review
+  const reviewMastered = mastered.slice(0, Math.min(2, mastered.length));
+  return [...weighted, ...reviewMastered];
+}
+
+function startStudy(mode) {
+  currentMode = mode;
+  queue = buildQueue(currentPack, mode);
+  if (queue.length === 0) {
+    // All mastered already
+    showComplete();
+    return;
+  }
+  queueIndex = 0;
+  const modeNames = {A:'🃏 Flashcard', B:'✏️ Spell Check', C:'🧠 Sentence Master'};
+  document.getElementById('study-title').textContent = `Pack ${currentPack}`;
+  document.getElementById('mode-tag').textContent = modeNames[mode];
+  showScreen('study-screen');
+  renderCard();
+}
+
+function renderCard() {
+  if (queueIndex >= queue.length) {
+    // Check if pack is complete
+    const allMastered = PACKS[currentPack].every(v => isMastered(v.word));
+    if (allMastered) { showComplete(); return; }
+    // Rebuild queue for remaining words
+    queue = buildQueue(currentPack, currentMode);
+    if (queue.length === 0) { showComplete(); return; }
+    queueIndex = 0;
+  }
+
+  const vocab = queue[queueIndex];
+  isFlipped = false;
+  spellChecked = false;
+
+  const wrap = document.getElementById('card-wrap');
+  wrap.classList.remove('flipped');
+
+  const front = document.getElementById('card-front');
+  const back = document.getElementById('card-back');
+  const answerBtns = document.getElementById('answer-btns');
+  answerBtns.classList.add('hidden');
+
+  // Update progress
+  updateProgress();
+
+  // Queue info
+  const remaining = PACKS[currentPack].filter(v => !isMastered(v.word)).length;
+  document.getElementById('queue-info').textContent = `${remaining} word${remaining!==1?'s':''} left to master`;
+
+  if (currentMode === 'A') {
+    front.innerHTML = `
+      <div class="card-word">${vocab.word}</div>
+      <div class="card-phonetic">${vocab.phonetic}</div>
+      <div class="card-pos">${vocab.pos}</div>
+      <div class="card-chinese">${vocab.chinese}</div>
+      <div class="tap-hint">👆 Tap to see example!</div>
+    `;
+    back.innerHTML = `
+      <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
+      <div class="card-example-zh">${vocab.ex_zh}</div>
+      <div style="margin-top:12px;font-size:2rem;cursor:pointer" onclick="speak('${vocab.word.replace(/'/g,"\\'")}')">🔊</div>
+    `;
+    document.getElementById('card-scene').style.cursor = 'pointer';
+
+  } else if (currentMode === 'B') {
+    const blanked = blankWord(vocab.ex_en, vocab.word);
+    front.innerHTML = `
+      <div class="card-example" style="font-size:1.1rem">${blanked}</div>
+      <div class="card-example-zh" style="margin-top:8px">${vocab.ex_zh}</div>
+      <div class="spell-input-wrap">
+        <input class="spell-input" id="spell-input" type="text" placeholder="Type the word..." autocomplete="off" autocorrect="off" spellcheck="false" onkeydown="if(event.key==='Enter')checkSpell()">
+        <button class="spell-submit" onclick="checkSpell()">✓</button>
+      </div>
+      <div class="spell-result" id="spell-result"></div>
+    `;
+    back.innerHTML = `
+      <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
+      <div class="card-example-zh">${vocab.ex_zh}</div>
+      <div style="margin-top:12px;font-size:2rem;cursor:pointer" onclick="speak('${vocab.word.replace(/'/g,"\\'")}')">🔊</div>
+    `;
+    document.getElementById('card-scene').style.cursor = 'default';
+    setTimeout(() => { const inp = document.getElementById('spell-input'); if(inp) inp.focus(); }, 100);
+
+  } else if (currentMode === 'C') {
+    front.innerHTML = `
+      <div style="font-size:0.9rem;color:#aaa;font-weight:700;margin-bottom:8px">🇨🇳 Chinese → English</div>
+      <div class="card-chinese" style="font-size:1.8rem">${vocab.ex_zh}</div>
+      <div class="tap-hint">👆 Say it, then tap to check!</div>
+    `;
+    back.innerHTML = `
+      <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
+      <div class="card-example-zh">${vocab.ex_zh}</div>
+      <div style="margin-top:12px;font-size:2rem;cursor:pointer" onclick="speak('${vocab.ex_en.replace(/'/g,"\\'")}')">🔊</div>
+    `;
+    document.getElementById('card-scene').style.cursor = 'pointer';
+  }
+}
+
+function highlightWord(sentence, word) {
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`(${escaped})`, 'gi');
+  return sentence.replace(re, '<span class="highlight">$1</span>');
+}
+
+function blankWord(sentence, word) {
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(escaped, 'gi');
+  const blanks = '_'.repeat(word.length);
+  return sentence.replace(re, `<span class="spell-blank">${blanks}</span>`);
+}
+
+function handleCardClick() {
+  if (currentMode === 'B') return; // handled by spell check
+  if (!isFlipped) {
+    flipCard();
+  }
+}
+
+function flipCard() {
+  isFlipped = true;
+  const wrap = document.getElementById('card-wrap');
+  wrap.classList.add('flipped');
+  playSound('flip');
+  const vocab = queue[queueIndex];
+  if (currentMode === 'A') speak(vocab.word);
+  else if (currentMode === 'C') speak(vocab.ex_en);
+  setTimeout(() => {
+    document.getElementById('answer-btns').classList.remove('hidden');
+  }, 300);
+}
+
+function checkSpell() {
+  if (spellChecked) return;
+  const input = document.getElementById('spell-input');
+  if (!input) return;
+  const vocab = queue[queueIndex];
+  const userVal = input.value.trim();
+  const correct = userVal.toLowerCase() === vocab.word.toLowerCase();
+  const resultEl = document.getElementById('spell-result');
+
+  if (correct) {
+    spellChecked = true;
+    resultEl.textContent = '🎉 Correct!';
+    resultEl.className = 'spell-result correct';
+    playSound('correct');
+    speak(vocab.word);
+    setTimeout(() => {
+      flipCard();
+    }, 600);
+  } else {
+    resultEl.textContent = `❌ Try again! Hint: ${vocab.word[0]}${'_'.repeat(vocab.word.length-1)}`;
+    resultEl.className = 'spell-result wrong';
+    playSound('wrong');
+    input.value = '';
+    input.focus();
+  }
+}
+
+function markWord(known) {
+  const vocab = queue[queueIndex];
+  const ws = getWordState(vocab.word);
+  const now = Date.now();
+
+  if (known) {
+    ws.score = Math.min(ws.score + 1, 6);
+    const days = Math.pow(2, ws.score - 1);
+    ws.nextReview = now + days * 24 * 60 * 60 * 1000;
+    playSound('correct');
+  } else {
+    ws.score = Math.max(0, ws.score - 1);
+    ws.nextReview = now + 5 * 60 * 1000;
+    playSound('wrong');
+  }
+  saveState();
+
+  // Check if all mastered
+  const allMastered = PACKS[currentPack].every(v => isMastered(v.word));
+  if (allMastered) {
+    setTimeout(() => showComplete(), 300);
+    return;
+  }
+
+  queueIndex++;
+  setTimeout(() => renderCard(), 200);
+}
+
+function updateProgress() {
+  const words = PACKS[currentPack];
+  const mastered = getPackMastered(currentPack);
+  const total = words.length;
+  const pct = total > 0 ? (mastered / total) * 100 : 0;
+  document.getElementById('progress-label').textContent = `⭐ Mastered: ${mastered} / ${total}`;
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+// ===== COMPLETE =====
+function showComplete() {
+  playSound('complete');
+  const badge = PACK_BADGES[currentPack] || '🌟';
+  document.getElementById('complete-badge').textContent = badge;
+  document.getElementById('complete-msg').textContent = `Amazing job, Mason! You mastered Pack ${currentPack}! 🎊`;
+  showScreen('complete-screen');
+  launchConfetti();
+  saveState();
+}
+
+// ===== CONFETTI =====
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const colors = ['#FFD93D','#FF6B6B','#4ECDC4','#A855F7','#6BCB77','#4D96FF','#FF9F43'];
+  const pieces = Array.from({length: 120}, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * -canvas.height,
+    w: 8 + Math.random() * 8,
+    h: 4 + Math.random() * 6,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    rot: Math.random() * Math.PI * 2,
+    vx: (Math.random() - 0.5) * 3,
+    vy: 2 + Math.random() * 4,
+    vr: (Math.random() - 0.5) * 0.15,
+  }));
+  let frame = 0;
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach(p => {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+      p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+    });
+    frame++;
+    if (frame < 180) requestAnimationFrame(draw);
+    else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  draw();
+}
+
+// ===== INIT =====
+loadState();
+showHome();
+</script>
+</body>
+</html>
