@@ -1,0 +1,258 @@
+[
+  {
+    "word": "chef",
+    "pos": "n.",
+    "ipa": "/ʃef/",
+    "chinese": "主厨，厨师",
+    "ex_en": "Harry doesn't want to be a star chef when he's 20.",
+    "ex_zh": "哈利不想等到20岁才成为一名明星厨师。"
+  },
+  {
+    "word": "programme",
+    "pos": "n.",
+    "ipa": "/ˈprəʊɡræm/",
+    "chinese": "（电视）节目",
+    "ex_en": "This is why he's on the TV programme Kitchen Kids.",
+    "ex_zh": "这就是为什么他参加了电视节目《厨房孩子》(Kitchen Kids)。"
+  },
+  {
+    "word": "kitchen",
+    "pos": "n.",
+    "ipa": "/ˈkɪtʃɪn/",
+    "chinese": "厨房",
+    "ex_en": "This is why he's on the TV programme Kitchen Kids.",
+    "ex_zh": "这就是为什么他参加了电视节目《厨房孩子》(Kitchen Kids)。"
+  },
+  {
+    "word": "yorker",
+    "pos": "n.",
+    "ipa": "/ˈjɔːkə/",
+    "chinese": "纽约人（New Yorker）",
+    "ex_en": "The ten-year-old New Yorker likes cooking.",
+    "ex_zh": "这个十岁的纽约男孩喜欢烹饪。"
+  },
+  {
+    "word": "cooking",
+    "pos": "n.",
+    "ipa": "/ˈkʊkɪŋ/",
+    "chinese": "烹饪，做饭",
+    "ex_en": "More and more young people are interested in cooking.",
+    "ex_zh": "越来越多的年轻人对烹饪感兴趣。"
+  },
+  {
+    "word": "fantastic",
+    "pos": "adj.",
+    "ipa": "/fænˈtæstɪk/",
+    "chinese": "极好的，了不起的",
+    "ex_en": "He can make fantastic soups and salads, excellent omelettes and the best cakes.",
+    "ex_zh": "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。"
+  },
+  {
+    "word": "soups",
+    "pos": "n.",
+    "ipa": "/suːps/",
+    "chinese": "汤",
+    "ex_en": "He can make fantastic soups and salads, excellent omelettes and the best cakes.",
+    "ex_zh": "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。"
+  },
+  {
+    "word": "salads",
+    "pos": "n.",
+    "ipa": "/ˈsælədz/",
+    "chinese": "沙拉",
+    "ex_en": "He can make fantastic soups and salads, excellent omelettes and the best cakes.",
+    "ex_zh": "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。"
+  },
+  {
+    "word": "excellent",
+    "pos": "adj.",
+    "ipa": "/ˈeksələnt/",
+    "chinese": "卓越的，杰出的",
+    "ex_en": "He can make fantastic soups and salads, excellent omelettes and the best cakes.",
+    "ex_zh": "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。"
+  },
+  {
+    "word": "omelettes",
+    "pos": "n.",
+    "ipa": "/ˈɒmləts/",
+    "chinese": "煎蛋卷",
+    "ex_en": "He can make fantastic soups and salads, excellent omelettes and the best cakes.",
+    "ex_zh": "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。"
+  },
+  {
+    "word": "cakes",
+    "pos": "n.",
+    "ipa": "/keɪks/",
+    "chinese": "蛋糕",
+    "ex_en": "He can make fantastic soups and salads, excellent omelettes and the best cakes.",
+    "ex_zh": "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。"
+  },
+  {
+    "word": "interested",
+    "pos": "adj.",
+    "ipa": "/ˈɪntrəstɪd/",
+    "chinese": "感兴趣的",
+    "ex_en": "More and more young people are interested in cooking.",
+    "ex_zh": "越来越多的年轻人对烹饪感兴趣。"
+  },
+  {
+    "word": "special",
+    "pos": "adj.",
+    "ipa": "/ˈspeʃl/",
+    "chinese": "特殊的，专门的",
+    "ex_en": "Others watch special cooking videos for children.",
+    "ex_zh": "其他人则观看专门为儿童制作的烹饪视频。"
+  },
+  {
+    "word": "videos",
+    "pos": "n.",
+    "ipa": "/ˈvɪdiəʊz/",
+    "chinese": "视频",
+    "ex_en": "Others watch special cooking videos for children.",
+    "ex_zh": "其他人则观看专门为儿童制作的烹饪视频。"
+  },
+  {
+    "word": "cities",
+    "pos": "n.",
+    "ipa": "/ˈsɪtiz/",
+    "chinese": "城市",
+    "ex_en": "In many cities, there are special cooking classes for young people.",
+    "ex_zh": "在许多城市，都有专门针对年轻人的烹饪培训班。"
+  },
+  {
+    "word": "classes",
+    "pos": "n.",
+    "ipa": "/ˈklɑːsɪz/",
+    "chinese": "班级/课",
+    "ex_en": "In many cities, there are special cooking classes for young people.",
+    "ex_zh": "在许多城市，都有专门针对年轻人的烹饪培训班。"
+  },
+  {
+    "word": "age",
+    "pos": "n.",
+    "ipa": "/eɪdʒ/",
+    "chinese": "年龄",
+    "ex_en": "Some of them are for children from the age of three!",
+    "ex_zh": "其中一些甚至针对三岁的儿童！"
+  },
+  {
+    "word": "become",
+    "pos": "v.",
+    "ipa": "/bɪˈkʌm/",
+    "chinese": "成为",
+    "ex_en": "But what must you do to become a star chef?",
+    "ex_zh": "但是要想成为一名明星厨师，你必须要怎么做呢？"
+  },
+  {
+    "word": "important",
+    "pos": "adj.",
+    "ipa": "/ɪmˈpɔːtnt/",
+    "chinese": "重要的",
+    "ex_en": "Of course, it's important that you like cooking and are really good at it.",
+    "ex_zh": "当然，喜欢烹饪并且真的很擅长烹饪也很重要。"
+  },
+  {
+    "word": "rules",
+    "pos": "n.",
+    "ipa": "/ruːl/",
+    "chinese": "规则",
+    "ex_en": "But there are some rules.",
+    "ex_zh": "但这也有一些规则。"
+  },
+  {
+    "word": "wash",
+    "pos": "v.",
+    "ipa": "/wɒʃ/",
+    "chinese": "洗，清洗",
+    "ex_en": "'We must wash our hands before we start cooking,' Harry says.",
+    "ex_zh": "“在开始做饭之前，我们必须洗手，”哈利说。"
+  },
+  {
+    "word": "mouths",
+    "pos": "n.",
+    "ipa": "/maʊθ/",
+    "chinese": "嘴巴",
+    "ex_en": "'And of course we mustn't put them in our mouths.",
+    "ex_zh": "“当然我们绝不能把手放进嘴里。"
+  },
+  {
+    "word": "careful",
+    "pos": "adj.",
+    "ipa": "/ˈkeəf(ə)l/",
+    "chinese": "小心的，仔细的",
+    "ex_en": "And we must be very careful with hot plates.'",
+    "ex_zh": "而且我们必须非常小心热盘子。”"
+  },
+  {
+    "word": "plates",
+    "pos": "n.",
+    "ipa": "/pleɪt/",
+    "chinese": "盘子",
+    "ex_en": "And we must be very careful with hot plates.'",
+    "ex_zh": "而且我们必须非常小心热盘子。”"
+  },
+  {
+    "word": "excited",
+    "pos": "adj.",
+    "ipa": "/ɪkˈsaɪtɪd/",
+    "chinese": "兴奋的",
+    "ex_en": "Harry is excited.",
+    "ex_zh": "哈利很兴奋。"
+  },
+  {
+    "word": "tomato",
+    "pos": "n.",
+    "ipa": "/təˈmɑːtəʊ/",
+    "chinese": "西红柿",
+    "ex_en": "This time he makes tomato soup, some salad, steak and carrot cake.",
+    "ex_zh": "这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。"
+  },
+  {
+    "word": "steak",
+    "pos": "n.",
+    "ipa": "/steɪk/",
+    "chinese": "牛排",
+    "ex_en": "This time he makes tomato soup, some salad, steak and carrot cake.",
+    "ex_zh": "这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。"
+  },
+  {
+    "word": "carrot",
+    "pos": "n.",
+    "ipa": "/ˈkærət/",
+    "chinese": "胡萝卜",
+    "ex_en": "This time he makes tomato soup, some salad, steak and carrot cake.",
+    "ex_zh": "这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。"
+  },
+  {
+    "word": "experts",
+    "pos": "n.",
+    "ipa": "/ˈekspɜːt/",
+    "chinese": "专家",
+    "ex_en": "The experts in the studio love Harry's food, and he stays on the show.",
+    "ex_zh": "演播室里的专家们很喜欢哈利的食物，他留在了节目中。"
+  },
+  {
+    "word": "studio",
+    "pos": "n.",
+    "ipa": "/ˈstjuːdiəʊ/",
+    "chinese": "工作室，演播室",
+    "ex_en": "The experts in the studio love Harry's food, and he stays on the show.",
+    "ex_zh": "演播室里的专家们很喜欢哈利的食物，他留在了节目中。"
+  },
+  {
+    "word": "tired",
+    "pos": "adj.",
+    "ipa": "/ˈtaɪəd/",
+    "chinese": "疲倦的，累的",
+    "ex_en": "Harry is happy, and a little tired.",
+    "ex_zh": "哈利很高兴，但也稍微有点累。"
+  },
+  {
+    "word": "homework",
+    "pos": "n.",
+    "ipa": "/ˈhəʊmwɜːk/",
+    "chinese": "家庭作业",
+    "ex_en": "It's time to do his homework.",
+    "ex_zh": "现在是该做家庭作业的时间了。"
+  }
+]
