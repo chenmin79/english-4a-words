@@ -1,0 +1,1809 @@
+{
+    "source_file":  "expression-100sentences.md",
+    "total":  100,
+    "items":  [
+                  {
+                      "id":  1,
+                      "expression_en":  "concentrate on / focus on",
+                      "translation_zh":  "集中注意力",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "concentrate",
+                                                  "phonetic":  "ˈkɒnsntreɪt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "集中"
+                                              },
+                                              {
+                                                  "word":  "focus",
+                                                  "phonetic":  "ˈfəʊkəs",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "聚焦；集中"
+                                              }
+                                          ],
+                      "example_en":  "Please **focus on** your study in class.",
+                      "example_zh":  "请在课堂上集中精力学习。",
+                      "raw_block":  "1. **concentrate on / focus on** 【集中注意力】\r\nconcentrate [ˈkɒnsntreɪt] v. 集中\r\nfocus [ˈfəʊkəs] v. 聚焦；集中\r\n**Ex:** Please **focus on** your study in class. ( 请在课堂上集中精力学习。 )"
+                  },
+                  {
+                      "id":  2,
+                      "expression_en":  "pay much attention to / attach great importance to",
+                      "translation_zh":  "高度重视",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "attention",
+                                                  "phonetic":  "əˈtenʃn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "注意"
+                                              },
+                                              {
+                                                  "word":  "attach",
+                                                  "phonetic":  "əˈtætʃ",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "赋予；系；贴"
+                                              },
+                                              {
+                                                  "word":  "importance",
+                                                  "phonetic":  "ɪmˈpɔːtns",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "重要性"
+                                              }
+                                          ],
+                      "example_en":  "Our school **attaches great importance to** safety.",
+                      "example_zh":  "我们学校高度重视安全。",
+                      "raw_block":  "2. **pay much attention to / attach great importance to** 【高度重视】\r\nattention [əˈtenʃn] n. 注意\r\nattach [əˈtætʃ] v. 赋予；系；贴\r\nimportance [ɪmˈpɔːtns] n. 重要性\r\n**Ex:** Our school **attaches great importance to** safety. ( 我们学校高度重视安全。 )"
+                  },
+                  {
+                      "id":  3,
+                      "expression_en":  "deliver a speech",
+                      "translation_zh":  "发表演讲",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "deliver",
+                                                  "phonetic":  "dɪˈlɪvə",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "发表；递送"
+                                              },
+                                              {
+                                                  "word":  "speech",
+                                                  "phonetic":  "spiːtʃ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "演讲"
+                                              }
+                                          ],
+                      "example_en":  "He will **deliver a speech** tomorrow.",
+                      "example_zh":  "他明天将发表一个演讲。",
+                      "raw_block":  "3. **deliver a speech** 【发表演讲】\r\ndeliver [dɪˈlɪvə] v. 发表；递送\r\nspeech [spiːtʃ] n. 演讲\r\n**Ex:** He will **deliver a speech** tomorrow. ( 他明天将发表一个演讲。 )"
+                  },
+                  {
+                      "id":  4,
+                      "expression_en":  "have a positive / negative / significant effect on",
+                      "translation_zh":  "对…有…影响",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "positive",
+                                                  "phonetic":  "ˈpɒzətɪv",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "积极的"
+                                              },
+                                              {
+                                                  "word":  "negative",
+                                                  "phonetic":  "ˈneɡətɪv",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "消极的"
+                                              },
+                                              {
+                                                  "word":  "significant",
+                                                  "phonetic":  "sɪɡˈnɪfɪkənt",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "重大的"
+                                              },
+                                              {
+                                                  "word":  "effect",
+                                                  "phonetic":  "ɪˈfekt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "影响"
+                                              }
+                                          ],
+                      "example_en":  "Reading **has a positive effect on** your mind.",
+                      "example_zh":  "阅读对你的思想有积极影响。",
+                      "raw_block":  "4. **have a positive / negative / significant effect on** 【对…有…影响】\r\npositive [ˈpɒzətɪv] adj. 积极的\r\nnegative [ˈneɡətɪv] adj. 消极的\r\nsignificant [sɪɡˈnɪfɪkənt] adj. 重大的\r\neffect [ɪˈfekt] n. 影响\r\n**Ex:** Reading **has a positive effect on** your mind. ( 阅读对你的思想有积极影响。 )"
+                  },
+                  {
+                      "id":  5,
+                      "expression_en":  "play a significant / leading / important role in",
+                      "translation_zh":  "在…起重要作用",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "leading",
+                                                  "phonetic":  "ˈliːdɪŋ",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "主导的；主要的"
+                                              },
+                                              {
+                                                  "word":  "role",
+                                                  "phonetic":  "rəʊl",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "角色；作用"
+                                              }
+                                          ],
+                      "example_en":  "Teachers **play an important role in** our growth.",
+                      "example_zh":  "老师在我们的成长中起重要作用。",
+                      "raw_block":  "5. **play a significant / leading / important role in** 【在…起重要作用】\r\nleading [ˈliːdɪŋ] adj. 主导的；主要的\r\nrole [rəʊl] n. 角色；作用\r\n**Ex:** Teachers **play an important role in** our growth. ( 老师在我们的成长中起重要作用。 )"
+                  },
+                  {
+                      "id":  6,
+                      "expression_en":  "make a difference",
+                      "translation_zh":  "产生影响；有意义",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "difference",
+                                                  "phonetic":  "ˈdɪfrəns",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "差别；影响"
+                                              }
+                                          ],
+                      "example_en":  "Small acts can **make a difference**.",
+                      "example_zh":  "小小的行动也能产生影响。",
+                      "raw_block":  "6. **make a difference** 【产生影响；有意义】\r\ndifference [ˈdɪfrəns] n. 差别；影响\r\n**Ex:** Small acts can **make a difference**. ( 小小的行动也能产生影响。 )"
+                  },
+                  {
+                      "id":  7,
+                      "expression_en":  "make great efforts to do",
+                      "translation_zh":  "尽最大努力做",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "effort",
+                                                  "phonetic":  "ˈefət",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "努力"
+                                              }
+                                          ],
+                      "example_en":  "I will **make great efforts to** learn English well.",
+                      "example_zh":  "我将尽最大努力学好英语。",
+                      "raw_block":  "7. **make great efforts to do** 【尽最大努力做】\r\neffort [ˈefət] n. 努力\r\n**Ex:** I will **make great efforts to** learn English well. ( 我将尽最大努力学好英语。 )"
+                  },
+                  {
+                      "id":  8,
+                      "expression_en":  "make full / good use of",
+                      "translation_zh":  "充分利用",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "You should **make full use of** your time.",
+                      "example_zh":  "你应该充分利用你的时间。",
+                      "raw_block":  "8. **make full / good use of** 【充分利用】\r\n**Ex:** You should **make full use of** your time. ( 你应该充分利用你的时间。 )"
+                  },
+                  {
+                      "id":  9,
+                      "expression_en":  "make preparations for",
+                      "translation_zh":  "为…做准备",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "preparation",
+                                                  "phonetic":  "ˌprepəˈreɪʃn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "准备"
+                                              }
+                                          ],
+                      "example_en":  "We are **making preparations for** the sports meeting.",
+                      "example_zh":  "我们正为运动会做准备。",
+                      "raw_block":  "9. **make preparations for** 【为…做准备】\r\npreparation [ˌprepəˈreɪʃn] n. 准备\r\n**Ex:** We are **making preparations for** the sports meeting. ( 我们正为运动会做准备。 )"
+                  },
+                  {
+                      "id":  10,
+                      "expression_en":  "make great progress",
+                      "translation_zh":  "取得巨大进步",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "progress",
+                                                  "phonetic":  "ˈprəʊɡres",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "进步"
+                                              }
+                                          ],
+                      "example_en":  "He **made great progress** this term.",
+                      "example_zh":  "这学期他取得了巨大进步。",
+                      "raw_block":  "10. **make great progress** 【取得巨大进步】\r\nprogress [ˈprəʊɡres] n. 进步\r\n**Ex:** He **made great progress** this term. ( 这学期他取得了巨大进步。 )"
+                  },
+                  {
+                      "id":  11,
+                      "expression_en":  "have a good command of",
+                      "translation_zh":  "精通；掌握",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "command",
+                                                  "phonetic":  "kəˈmɑːnd",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "掌握；控制"
+                                              }
+                                          ],
+                      "example_en":  "She **has a good command of** English grammar.",
+                      "example_zh":  "她精通英语语法。",
+                      "raw_block":  "11. **have a good command of** 【精通；掌握】\r\ncommand [kəˈmɑːnd] n. 掌握；控制\r\n**Ex:** She **has a good command of** English grammar. ( 她精通英语语法。 )"
+                  },
+                  {
+                      "id":  12,
+                      "expression_en":  "have a good ability of",
+                      "translation_zh":  "有好的…能力",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "ability",
+                                                  "phonetic":  "əˈbɪləti",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "能力"
+                                              }
+                                          ],
+                      "example_en":  "He **has a good ability of** learning.",
+                      "example_zh":  "他有很好的学习能力。",
+                      "raw_block":  "12. **have a good ability of** 【有好的…能力】\r\nability [əˈbɪləti] n. 能力\r\n**Ex:** He **has a good ability of** learning. ( 他有很好的学习能力。 )"
+                  },
+                  {
+                      "id":  13,
+                      "expression_en":  "be skilled in",
+                      "translation_zh":  "在…方面熟练",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "skilled",
+                                                  "phonetic":  "skɪld",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "熟练的"
+                                              }
+                                          ],
+                      "example_en":  "My mother **is skilled in** cooking.",
+                      "example_zh":  "我妈妈擅长烹饪。",
+                      "raw_block":  "13. **be skilled in** 【在…方面熟练】\r\nskilled [skɪld] adj. 熟练的\r\n**Ex:** My mother **is skilled in** cooking. ( 我妈妈擅长烹饪。 )"
+                  },
+                  {
+                      "id":  14,
+                      "expression_en":  "be an expert in",
+                      "translation_zh":  "在…上是专家",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "expert",
+                                                  "phonetic":  "ˈekspɜːt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "专家"
+                                              }
+                                          ],
+                      "example_en":  "He **is an expert in** computers.",
+                      "example_zh":  "他是电脑专家。",
+                      "raw_block":  "14. **be an expert in** 【在…上是专家】\r\nexpert [ˈekspɜːt] n. 专家\r\n**Ex:** He **is an expert in** computers. ( 他是电脑专家。 )"
+                  },
+                  {
+                      "id":  15,
+                      "expression_en":  "speak English fluently",
+                      "translation_zh":  "流利地说英语",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "fluently",
+                                                  "phonetic":  "ˈfluːəntli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "流利地"
+                                              }
+                                          ],
+                      "example_en":  "I want to **speak English fluently**.",
+                      "example_zh":  "我想流利地说英语。",
+                      "raw_block":  "15. **speak English fluently** 【流利地说英语】\r\nfluently [ˈfluːəntli] adv. 流利地\r\n**Ex:** I want to **speak English fluently**. ( 我想流利地说英语。 )"
+                  },
+                  {
+                      "id":  16,
+                      "expression_en":  "improve one\u0027s skill / ability",
+                      "translation_zh":  "提高某人的技能/能力",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "improve",
+                                                  "phonetic":  "ɪmˈpruːv",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "改善；提高"
+                                              },
+                                              {
+                                                  "word":  "skill",
+                                                  "phonetic":  "skɪl",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "技能"
+                                              }
+                                          ],
+                      "example_en":  "Practice can **improve your writing skill**.",
+                      "example_zh":  "练习能提高你的写作技巧。",
+                      "raw_block":  "16. **improve one\u0027s skill / ability** 【提高某人的技能/能力】\r\nimprove [ɪmˈpruːv] v. 改善；提高\r\nskill [skɪl] n. 技能\r\n**Ex:** Practice can **improve your writing skill**. ( 练习能提高你的写作技巧。 )"
+                  },
+                  {
+                      "id":  17,
+                      "expression_en":  "enrich one\u0027s experience",
+                      "translation_zh":  "丰富某人的经验",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "enrich",
+                                                  "phonetic":  "ɪnˈrɪtʃ",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "使丰富"
+                                              },
+                                              {
+                                                  "word":  "experience",
+                                                  "phonetic":  "ɪkˈspɪəriəns",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "经验；经历"
+                                              }
+                                          ],
+                      "example_en":  "Travel can **enrich your experience**.",
+                      "example_zh":  "旅行能丰富你的经历。",
+                      "raw_block":  "17. **enrich one\u0027s experience** 【丰富某人的经验】\r\nenrich [ɪnˈrɪtʃ] v. 使丰富\r\nexperience [ɪkˈspɪəriəns] n. 经验；经历\r\n**Ex:** Travel can **enrich your experience**. ( 旅行能丰富你的经历。 )"
+                  },
+                  {
+                      "id":  18,
+                      "expression_en":  "achieve / reach the goal",
+                      "translation_zh":  "达到目标",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "achieve",
+                                                  "phonetic":  "əˈtʃiːv",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "实现；获得"
+                                              },
+                                              {
+                                                  "word":  "goal",
+                                                  "phonetic":  "ɡəʊl",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "目标"
+                                              }
+                                          ],
+                      "example_en":  "Work hard to **achieve the goal**.",
+                      "example_zh":  "努力工作以实现目标。",
+                      "raw_block":  "18. **achieve / reach the goal** 【达到目标】\r\nachieve [əˈtʃiːv] v. 实现；获得\r\ngoal [ɡəʊl] n. 目标\r\n**Ex:** Work hard to **achieve the goal**. ( 努力工作以实现目标。 )"
+                  },
+                  {
+                      "id":  19,
+                      "expression_en":  "expand / enlarge one\u0027s knowledge",
+                      "translation_zh":  "扩大知识面",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "expand",
+                                                  "phonetic":  "ɪkˈspænd",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "扩大；展开"
+                                              },
+                                              {
+                                                  "word":  "enlarge",
+                                                  "phonetic":  "ɪnˈlɑːdʒ",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "扩大；放大"
+                                              },
+                                              {
+                                                  "word":  "knowledge",
+                                                  "phonetic":  "ˈnɒlɪdʒ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "知识"
+                                              }
+                                          ],
+                      "example_en":  "Reading books helps **expand your knowledge**.",
+                      "example_zh":  "读书有助于扩大知识面。",
+                      "raw_block":  "19. **expand / enlarge one\u0027s knowledge** 【扩大知识面】\r\nexpand [ɪkˈspænd] v. 扩大；展开\r\nenlarge [ɪnˈlɑːdʒ] v. 扩大；放大\r\nknowledge [ˈnɒlɪdʒ] n. 知识\r\n**Ex:** Reading books helps **expand your knowledge**. ( 读书有助于扩大知识面。 )"
+                  },
+                  {
+                      "id":  20,
+                      "expression_en":  "broaden / widen one\u0027s horizon",
+                      "translation_zh":  "开阔视野",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "broaden",
+                                                  "phonetic":  "ˈbrɔːdn",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "变宽；扩大"
+                                              },
+                                              {
+                                                  "word":  "horizon",
+                                                  "phonetic":  "həˈraɪzn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "地平线；视野"
+                                              }
+                                          ],
+                      "example_en":  "Going abroad can **broaden your horizon**.",
+                      "example_zh":  "出国能开阔你的视野。",
+                      "raw_block":  "20. **broaden / widen one\u0027s horizon** 【开阔视野】\r\nbroaden [ˈbrɔːdn] v. 变宽；扩大\r\nhorizon [həˈraɪzn] n. 地平线；视野\r\n**Ex:** Going abroad can **broaden your horizon**. ( 出国能开阔你的视野。 )"
+                  },
+                  {
+                      "id":  21,
+                      "expression_en":  "be capable of",
+                      "translation_zh":  "有…的能力",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "capable",
+                                                  "phonetic":  "ˈkeɪpəbl",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "有能力的"
+                                              }
+                                          ],
+                      "example_en":  "You **are capable of** solving this problem.",
+                      "example_zh":  "你有能力解决这个问题。",
+                      "raw_block":  "21. **be capable of** 【有…的能力】\r\ncapable [ˈkeɪpəbl] adj. 有能力的\r\n**Ex:** You **are capable of** solving this problem. ( 你有能力解决这个问题。 )"
+                  },
+                  {
+                      "id":  22,
+                      "expression_en":  "be responsible for",
+                      "translation_zh":  "对…负责",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "responsible",
+                                                  "phonetic":  "rɪˈspɒnsəbl",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "负责的"
+                                              }
+                                          ],
+                      "example_en":  "Who is **responsible for** this mistake?",
+                      "example_zh":  "谁对这个错误负责？",
+                      "raw_block":  "22. **be responsible for** 【对…负责】\r\nresponsible [rɪˈspɒnsəbl] adj. 负责的\r\n**Ex:** Who is **responsible for** this mistake? ( 谁对这个错误负责？ )"
+                  },
+                  {
+                      "id":  23,
+                      "expression_en":  "have a high sense of duty / responsibility",
+                      "translation_zh":  "有高度责任感",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "duty",
+                                                  "phonetic":  "ˈdjuːti",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "责任；义务"
+                                              },
+                                              {
+                                                  "word":  "responsibility",
+                                                  "phonetic":  "rɪˌspɒnsəˈbɪləti",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "责任"
+                                              }
+                                          ],
+                      "example_en":  "Teachers should **have a high sense of duty**.",
+                      "example_zh":  "老师应该有高度的责任感。",
+                      "raw_block":  "23. **have a high sense of duty / responsibility** 【有高度责任感】\r\nduty [ˈdjuːti] n. 责任；义务\r\nresponsibility [rɪˌspɒnsəˈbɪləti] n. 责任\r\n**Ex:** Teachers should **have a high sense of duty**. ( 老师应该有高度的责任感。 )"
+                  },
+                  {
+                      "id":  24,
+                      "expression_en":  "be qualified for",
+                      "translation_zh":  "胜任；有资格",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "qualified",
+                                                  "phonetic":  "ˈkwɒlɪfaɪd",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "有资格的；合格的"
+                                              }
+                                          ],
+                      "example_en":  "I think I **am qualified for** this job.",
+                      "example_zh":  "我认为我胜任这份工作。",
+                      "raw_block":  "24. **be qualified for** 【胜任；有资格】\r\nqualified [ˈkwɒlɪfaɪd] adj. 有资格的；合格的\r\n**Ex:** I think I **am qualified for** this job. ( 我认为我胜任这份工作。 )"
+                  },
+                  {
+                      "id":  25,
+                      "expression_en":  "be in charge of",
+                      "translation_zh":  "掌管，负责",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "charge",
+                                                  "phonetic":  "tʃɑːdʒ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "掌管；控告"
+                                              }
+                                          ],
+                      "example_en":  "She **is in charge of** the class meeting.",
+                      "example_zh":  "她负责班会。",
+                      "raw_block":  "25. **be in charge of** 【掌管，负责】\r\ncharge [tʃɑːdʒ] n. 掌管；控告\r\n**Ex:** She **is in charge of** the class meeting. ( 她负责班会。 )"
+                  },
+                  {
+                      "id":  26,
+                      "expression_en":  "cause / lead to / result in",
+                      "translation_zh":  "导致，引起",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "result",
+                                                  "phonetic":  "rɪˈzʌlt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "导致；产生"
+                                              }
+                                          ],
+                      "example_en":  "Carelessness may **lead to** failure.",
+                      "example_zh":  "粗心可能导致失败。",
+                      "raw_block":  "26. **cause / lead to / result in** 【导致，引起】\r\nresult [rɪˈzʌlt] v. 导致；产生\r\n**Ex:** Carelessness may **lead to** failure. ( 粗心可能导致失败。 )"
+                  },
+                  {
+                      "id":  27,
+                      "expression_en":  "dream of",
+                      "translation_zh":  "梦想",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "dream",
+                                                  "phonetic":  "driːm",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "梦想"
+                                              }
+                                          ],
+                      "example_en":  "He **dreams of** becoming a pilot.",
+                      "example_zh":  "他梦想成为一名飞行员。",
+                      "raw_block":  "27. **dream of** 【梦想】\r\ndream [driːm] v. 梦想\r\n**Ex:** He **dreams of** becoming a pilot. ( 他梦想成为一名飞行员。 )"
+                  },
+                  {
+                      "id":  28,
+                      "expression_en":  "be eager to",
+                      "translation_zh":  "渴望",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "eager",
+                                                  "phonetic":  "ˈiːɡə",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "热切的；渴望的"
+                                              }
+                                          ],
+                      "example_en":  "Students **are eager to** learn new things.",
+                      "example_zh":  "学生们渴望学习新事物。",
+                      "raw_block":  "28. **be eager to** 【渴望】\r\neager [ˈiːɡə] adj. 热切的；渴望的\r\n**Ex:** Students **are eager to** learn new things. ( 学生们渴望学习新事物。 )"
+                  },
+                  {
+                      "id":  29,
+                      "expression_en":  "be willing to",
+                      "translation_zh":  "愿意",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "willing",
+                                                  "phonetic":  "ˈwɪlɪŋ",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "乐意的"
+                                              }
+                                          ],
+                      "example_en":  "I **am willing to** help you.",
+                      "example_zh":  "我愿意帮助你。",
+                      "raw_block":  "29. **be willing to** 【愿意】\r\nwilling [ˈwɪlɪŋ] adj. 乐意的\r\n**Ex:** I **am willing to** help you. ( 我愿意帮助你。 )"
+                  },
+                  {
+                      "id":  30,
+                      "expression_en":  "be ready to",
+                      "translation_zh":  "乐于…；准备好…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "ready",
+                                                  "phonetic":  "ˈredi",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "准备好的"
+                                              }
+                                          ],
+                      "example_en":  "He **is ready to** help others.",
+                      "example_zh":  "他乐于助人。",
+                      "raw_block":  "30. **be ready to** 【乐于…；准备好…】\r\nready [ˈredi] adj. 准备好的\r\n**Ex:** He **is ready to** help others. ( 他乐于助人。 )"
+                  },
+                  {
+                      "id":  31,
+                      "expression_en":  "take effective measures to do",
+                      "translation_zh":  "采取有效措施做",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "effective",
+                                                  "phonetic":  "ɪˈfektɪv",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "有效的"
+                                              },
+                                              {
+                                                  "word":  "measure",
+                                                  "phonetic":  "ˈmeʒə",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "措施"
+                                              }
+                                          ],
+                      "example_en":  "We must **take effective measures to** stop pollution.",
+                      "example_zh":  "我们必须采取有效措施制止污染。",
+                      "raw_block":  "31. **take effective measures to do** 【采取有效措施做】\r\neffective [ɪˈfektɪv] adj. 有效的\r\nmeasure [ˈmeʒə] n. 措施\r\n**Ex:** We must **take effective measures to** stop pollution. ( 我们必须采取有效措施制止污染。 )"
+                  },
+                  {
+                      "id":  32,
+                      "expression_en":  "be aware of",
+                      "translation_zh":  "意识到",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "aware",
+                                                  "phonetic":  "əˈweə",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "意识到的"
+                                              }
+                                          ],
+                      "example_en":  "You should **be aware of** the danger.",
+                      "example_zh":  "你应该意识到危险。",
+                      "raw_block":  "32. **be aware of** 【意识到】\r\naware [əˈweə] adj. 意识到的\r\n**Ex:** You should **be aware of** the danger. ( 你应该意识到危险。 )"
+                  },
+                  {
+                      "id":  33,
+                      "expression_en":  "raise one\u0027s awareness of",
+                      "translation_zh":  "提高某人的…意识",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "awareness",
+                                                  "phonetic":  "əˈweənəs",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "意识"
+                                              }
+                                          ],
+                      "example_en":  "This activity **raised our awareness of** health.",
+                      "example_zh":  "这个活动提高了我们的健康意识。",
+                      "raw_block":  "33. **raise one\u0027s awareness of** 【提高某人的…意识】\r\nawareness [əˈweənəs] n. 意识\r\n**Ex:** This activity **raised our awareness of** health. ( 这个活动提高了我们的健康意识。 )"
+                  },
+                  {
+                      "id":  34,
+                      "expression_en":  "result from",
+                      "translation_zh":  "起因于",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "His illness **results from** bad food.",
+                      "example_zh":  "他的病起因于坏食物。",
+                      "raw_block":  "34. **result from** 【起因于】\r\n**Ex:** His illness **results from** bad food. ( 他的病起因于坏食物。 )"
+                  },
+                  {
+                      "id":  35,
+                      "expression_en":  "because of / owing to / due to / thanks to",
+                      "translation_zh":  "由于/多亏",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "owing",
+                                                  "phonetic":  "ˈəʊɪŋ",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "欠着的（owing to 由于）"
+                                              }
+                                          ],
+                      "example_en":  "**Thanks to** your help, I finished it.",
+                      "example_zh":  "多亏你的帮助，我完成了它。",
+                      "raw_block":  "35. **because of / owing to / due to / thanks to** 【由于/多亏】\r\nowing [ˈəʊɪŋ] adj. 欠着的（owing to 由于）\r\n**Ex:** **Thanks to** your help, I finished it. ( 多亏你的帮助，我完成了它。 )"
+                  },
+                  {
+                      "id":  36,
+                      "expression_en":  "aim to",
+                      "translation_zh":  "以…为目标",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "aim",
+                                                  "phonetic":  "eɪm",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "打算；瞄准"
+                                              }
+                                          ],
+                      "example_en":  "We **aim to** win the game.",
+                      "example_zh":  "我们的目标是赢得比赛。",
+                      "raw_block":  "36. **aim to** 【以…为目标】\r\naim [eɪm] v. 打算；瞄准\r\n**Ex:** We **aim to** win the game. ( 我们的目标是赢得比赛。 )"
+                  },
+                  {
+                      "id":  37,
+                      "expression_en":  "I am writing to apply for the job as a...",
+                      "translation_zh":  "我写信申请…的工作",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "apply",
+                                                  "phonetic":  "əˈplaɪ",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "申请"
+                                              },
+                                              {
+                                                  "word":  "volunteer",
+                                                  "phonetic":  "ˌvɒlənˈtɪə",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "志愿者"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to apply for the job as a** volunteer.",
+                      "example_zh":  "我写信申请志愿者的工作。",
+                      "raw_block":  "37. **I am writing to apply for the job as a...** 【我写信申请…的工作】\r\napply [əˈplaɪ] v. 申请\r\nvolunteer [ˌvɒlənˈtɪə] n. 志愿者\r\n**Ex:** **I am writing to apply for the job as a** volunteer. ( 我写信申请志愿者的工作。 )"
+                  },
+                  {
+                      "id":  38,
+                      "expression_en":  "I am writing to invite you to take part in...",
+                      "translation_zh":  "我写信邀请你参加…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "invite",
+                                                  "phonetic":  "ɪnˈvaɪt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "邀请"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to invite you to take part in** the party.",
+                      "example_zh":  "我写信邀请你参加聚会。",
+                      "raw_block":  "38. **I am writing to invite you to take part in...** 【我写信邀请你参加…】\r\ninvite [ɪnˈvaɪt] v. 邀请\r\n**Ex:** **I am writing to invite you to take part in** the party. ( 我写信邀请你参加聚会。 )"
+                  },
+                  {
+                      "id":  39,
+                      "expression_en":  "I am writing to invite you to be our judge.",
+                      "translation_zh":  "邀请你做我们的评委",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "judge",
+                                                  "phonetic":  "dʒʌdʒ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "评委；法官"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to invite you to be our judge.**",
+                      "example_zh":  "我写信邀请你做我们的评委。",
+                      "raw_block":  "39. **I am writing to invite you to be our judge.** 【邀请你做我们的评委】\r\njudge [dʒʌdʒ] n. 评委；法官\r\n**Ex:** **I am writing to invite you to be our judge.** ( 我写信邀请你做我们的评委。 )"
+                  },
+                  {
+                      "id":  40,
+                      "expression_en":  "I am writing to tell you something about...",
+                      "translation_zh":  "写信告诉你关于…",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**I am writing to tell you something about** my plan.",
+                      "example_zh":  "我写信告诉你关于我的计划。",
+                      "raw_block":  "40. **I am writing to tell you something about...** 【写信告诉你关于…】\r\n**Ex:** **I am writing to tell you something about** my plan. ( 我写信告诉你关于我的计划。 )"
+                  },
+                  {
+                      "id":  41,
+                      "expression_en":  "The purpose of the activity is to...",
+                      "translation_zh":  "活动的目的是…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "purpose",
+                                                  "phonetic":  "ˈpɜːpəs",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "目的"
+                                              }
+                                          ],
+                      "example_en":  "**The purpose of the activity is to** help others.",
+                      "example_zh":  "活动的目的是帮助他人。",
+                      "raw_block":  "41. **The purpose of the activity is to...** 【活动的目的是…】\r\npurpose [ˈpɜːpəs] n. 目的\r\n**Ex:** **The purpose of the activity is to** help others. ( 活动的目的是帮助他人。 )"
+                  },
+                  {
+                      "id":  42,
+                      "expression_en":  "The activity aims to...",
+                      "translation_zh":  "活动旨在…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "activity",
+                                                  "phonetic":  "ækˈtɪvəti",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "活动"
+                                              }
+                                          ],
+                      "example_en":  "**The activity aims to** improve our English.",
+                      "example_zh":  "活动旨在提高我们的英语。",
+                      "raw_block":  "42. **The activity aims to...** 【活动旨在…】\r\nactivity [ækˈtɪvəti] n. 活动\r\n**Ex:** **The activity aims to** improve our English. ( 活动旨在提高我们的英语。 )"
+                  },
+                  {
+                      "id":  43,
+                      "expression_en":  "I am writing to express my sincere thanks for...",
+                      "translation_zh":  "写信表达真诚感谢",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "express",
+                                                  "phonetic":  "ɪkˈspres",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "表达"
+                                              },
+                                              {
+                                                  "word":  "sincere",
+                                                  "phonetic":  "sɪnˈsɪə",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "真诚的"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to express my sincere thanks for** your help.",
+                      "example_zh":  "我写信对你的帮助表示真诚感谢。",
+                      "raw_block":  "43. **I am writing to express my sincere thanks for...** 【写信表达真诚感谢】\r\nexpress [ɪkˈspres] v. 表达\r\nsincere [sɪnˈsɪə] adj. 真诚的\r\n**Ex:** **I am writing to express my sincere thanks for** your help. ( 我写信对你的帮助表示真诚感谢。 )"
+                  },
+                  {
+                      "id":  44,
+                      "expression_en":  "I am writing to express my warm welcome to...",
+                      "translation_zh":  "写信表达热烈欢迎",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "welcome",
+                                                  "phonetic":  "ˈwelkəm",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "欢迎"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to express my warm welcome to** you.",
+                      "example_zh":  "我写信对你表示热烈欢迎。",
+                      "raw_block":  "44. **I am writing to express my warm welcome to...** 【写信表达热烈欢迎】\r\nwelcome [ˈwelkəm] n. 欢迎\r\n**Ex:** **I am writing to express my warm welcome to** you. ( 我写信对你表示热烈欢迎。 )"
+                  },
+                  {
+                      "id":  45,
+                      "expression_en":  "I am writing to express my warm congratulations to...",
+                      "translation_zh":  "写信表达热烈祝贺",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "congratulation",
+                                                  "phonetic":  "kənˌɡrætʃuˈleɪʃn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "祝贺"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to express my warm congratulations to** you.",
+                      "example_zh":  "我写信向你表示热烈祝贺。",
+                      "raw_block":  "45. **I am writing to express my warm congratulations to...** 【写信表达热烈祝贺】\r\ncongratulation [kənˌɡrætʃuˈleɪʃn] n. 祝贺\r\n**Ex:** **I am writing to express my warm congratulations to** you. ( 我写信向你表示热烈祝贺。 )"
+                  },
+                  {
+                      "id":  46,
+                      "expression_en":  "I am writing to express my sincere apology to...",
+                      "translation_zh":  "写信表达真诚道歉",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "apology",
+                                                  "phonetic":  "əˈpɒlədʒi",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "道歉"
+                                              }
+                                          ],
+                      "example_en":  "**I am writing to express my sincere apology to** you.",
+                      "example_zh":  "我写信向你表示真诚的道歉。",
+                      "raw_block":  "46. **I am writing to express my sincere apology to...** 【写信表达真诚道歉】\r\napology [əˈpɒlədʒi] n. 道歉\r\n**Ex:** **I am writing to express my sincere apology to** you. ( 我写信向你表示真诚的道歉。 )"
+                  },
+                  {
+                      "id":  47,
+                      "expression_en":  "It is our duty to protect environment.",
+                      "translation_zh":  "保护环境是我们的责任",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "duty",
+                                                  "phonetic":  "ˈdjuːti",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "责任"
+                                              },
+                                              {
+                                                  "word":  "environment",
+                                                  "phonetic":  "ɪnˈvaɪrənmənt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "环境"
+                                              }
+                                          ],
+                      "example_en":  "**It is our duty to protect environment** for the future.",
+                      "example_zh":  "为了未来保护环境是我们的责任。",
+                      "raw_block":  "47. **It is our duty to protect environment.** 【保护环境是我们的责任】\r\nduty [ˈdjuːti] n. 责任\r\nenvironment [ɪnˈvaɪrənmənt] n. 环境\r\n**Ex:** **It is our duty to protect environment** for the future. ( 为了未来保护环境是我们的责任。 )"
+                  },
+                  {
+                      "id":  48,
+                      "expression_en":  "It is important/necessary/urgent for sb to do...",
+                      "translation_zh":  "做某事是重要/必要/紧急的",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "necessary",
+                                                  "phonetic":  "ˈnesəsəri",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "必要的"
+                                              },
+                                              {
+                                                  "word":  "urgent",
+                                                  "phonetic":  "ˈɜːdʒənt",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "紧急的"
+                                              }
+                                          ],
+                      "example_en":  "**It is important for us to** keep healthy.",
+                      "example_zh":  "保持健康对我们很重要。",
+                      "raw_block":  "48. **It is important/necessary/urgent for sb to do...** 【做某事是重要/必要/紧急的】\r\nnecessary [ˈnesəsəri] adj. 必要的\r\nurgent [ˈɜːdʒənt] adj. 紧急的\r\n**Ex:** **It is important for us to** keep healthy. ( 保持健康对我们很重要。 )"
+                  },
+                  {
+                      "id":  49,
+                      "expression_en":  "There is no doubt that...",
+                      "translation_zh":  "毫无疑问…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "doubt",
+                                                  "phonetic":  "daʊt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "怀疑"
+                                              }
+                                          ],
+                      "example_en":  "**There is no doubt that** he is honest.",
+                      "example_zh":  "毫无疑问他是诚实的。",
+                      "raw_block":  "49. **There is no doubt that...** 【毫无疑问…】\r\ndoubt [daʊt] n. 怀疑\r\n**Ex:** **There is no doubt that** he is honest. ( 毫无疑问他是诚实的。 )"
+                  },
+                  {
+                      "id":  50,
+                      "expression_en":  "It is obvious / clear that...",
+                      "translation_zh":  "显而易见…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "obvious",
+                                                  "phonetic":  "ˈɒbviəs",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "明显的"
+                                              }
+                                          ],
+                      "example_en":  "**It is obvious that** practice helps.",
+                      "example_zh":  "显而易见，练习有帮助。",
+                      "raw_block":  "50. **It is obvious / clear that...** 【显而易见…】\r\nobvious [ˈɒbviəs] adj. 明显的\r\n**Ex:** **It is obvious that** practice helps. ( 显而易见，练习有帮助。 )"
+                  },
+                  {
+                      "id":  51,
+                      "expression_en":  "As a famous saying goes,",
+                      "translation_zh":  "如一句名言所说",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "famous",
+                                                  "phonetic":  "ˈfeɪməs",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "著名的"
+                                              },
+                                              {
+                                                  "word":  "saying",
+                                                  "phonetic":  "ˈseɪɪŋ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "谚语；格言"
+                                              }
+                                          ],
+                      "example_en":  "**As a famous saying goes,** time is money.",
+                      "example_zh":  "正如一句名言所说，时间就是金钱。",
+                      "raw_block":  "51. **As a famous saying goes,** 【如一句名言所说】\r\nfamous [ˈfeɪməs] adj. 著名的\r\nsaying [ˈseɪɪŋ] n. 谚语；格言\r\n**Ex:** **As a famous saying goes,** time is money. ( 正如一句名言所说，时间就是金钱。 )"
+                  },
+                  {
+                      "id":  52,
+                      "expression_en":  "I wonder if you are available.",
+                      "translation_zh":  "我想知道你是否有空",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "available",
+                                                  "phonetic":  "əˈveɪləbl",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "有空的；可获得的"
+                                              }
+                                          ],
+                      "example_en":  "**I wonder if you are available** this Sunday.",
+                      "example_zh":  "我想知道你这周日是否有空。",
+                      "raw_block":  "52. **I wonder if you are available.** 【我想知道你是否有空】\r\navailable [əˈveɪləbl] adj. 有空的；可获得的\r\n**Ex:** **I wonder if you are available** this Sunday. ( 我想知道你这周日是否有空。 )"
+                  },
+                  {
+                      "id":  53,
+                      "expression_en":  "I wonder if it is convenient for you.",
+                      "translation_zh":  "我想知道这对你是否方便",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "convenient",
+                                                  "phonetic":  "kənˈviːniənt",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "方便的"
+                                              }
+                                          ],
+                      "example_en":  "**I wonder if it is convenient for you** to meet.",
+                      "example_zh":  "我想知道你是否方便见面。",
+                      "raw_block":  "53. **I wonder if it is convenient for you.** 【我想知道这对你是否方便】\r\nconvenient [kənˈviːniənt] adj. 方便的\r\n**Ex:** **I wonder if it is convenient for you** to meet. ( 我想知道你是否方便见面。 )"
+                  },
+                  {
+                      "id":  54,
+                      "expression_en":  "Don\u0027t hesitate to let me know if...",
+                      "translation_zh":  "如果有…请尽管告诉我",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "hesitate",
+                                                  "phonetic":  "ˈhezɪteɪt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "犹豫"
+                                              }
+                                          ],
+                      "example_en":  "**Don\u0027t hesitate to let me know if** you have needs.",
+                      "example_zh":  "如果你有需要请尽管告诉我。",
+                      "raw_block":  "54. **Don\u0027t hesitate to let me know if...** 【如果有…请尽管告诉我】\r\nhesitate [ˈhezɪteɪt] v. 犹豫\r\n**Ex:** **Don\u0027t hesitate to let me know if** you have needs. ( 如果你有需要请尽管告诉我。 )"
+                  },
+                  {
+                      "id":  55,
+                      "expression_en":  "I would appreciate it if you could give me a chance.",
+                      "translation_zh":  "若给机会我将不胜感激",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "appreciate",
+                                                  "phonetic":  "əˈpriːʃieɪt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "感激；欣赏"
+                                              },
+                                              {
+                                                  "word":  "chance",
+                                                  "phonetic":  "tʃɑːns",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "机会"
+                                              }
+                                          ],
+                      "example_en":  "**I would appreciate it if you could give me a chance.**",
+                      "example_zh":  "若你能给我一个机会，我将不胜感激。",
+                      "raw_block":  "55. **I would appreciate it if you could give me a chance.** 【若给机会我将不胜感激】\r\nappreciate [əˈpriːʃieɪt] v. 感激；欣赏\r\nchance [tʃɑːns] n. 机会\r\n**Ex:** **I would appreciate it if you could give me a chance.** ( 若你能给我一个机会，我将不胜感激。 )"
+                  },
+                  {
+                      "id":  56,
+                      "expression_en":  "I would appreciate it if you could accept my invitation.",
+                      "translation_zh":  "若接受邀请将不胜感激",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "accept",
+                                                  "phonetic":  "əkˈsept",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "接受"
+                                              },
+                                              {
+                                                  "word":  "invitation",
+                                                  "phonetic":  "ˌɪnvɪˈteɪʃn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "邀请"
+                                              }
+                                          ],
+                      "example_en":  "**I would appreciate it if you could accept my invitation.**",
+                      "example_zh":  "若接受我的邀请，我将不胜感激。",
+                      "raw_block":  "56. **I would appreciate it if you could accept my invitation.** 【若接受邀请将不胜感激】\r\naccept [əkˈsept] v. 接受\r\ninvitation [ˌɪnvɪˈteɪʃn] n. 邀请\r\n**Ex:** **I would appreciate it if you could accept my invitation.** ( 若接受我的邀请，我将不胜感激。 )"
+                  },
+                  {
+                      "id":  57,
+                      "expression_en":  "I am looking forward to your reply.",
+                      "translation_zh":  "期待你的答复",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "forward",
+                                                  "phonetic":  "ˈfɔːwəd",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "向前"
+                                              },
+                                              {
+                                                  "word":  "reply",
+                                                  "phonetic":  "rɪˈplaɪ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "回复"
+                                              }
+                                          ],
+                      "example_en":  "**I am looking forward to your reply** soon.",
+                      "example_zh":  "期待很快收到你的答复。",
+                      "raw_block":  "57. **I am looking forward to your reply.** 【期待你的答复】\r\nforward [ˈfɔːwəd] adv. 向前\r\nreply [rɪˈplaɪ] n. 回复\r\n**Ex:** **I am looking forward to your reply** soon. ( 期待很快收到你的答复。 )"
+                  },
+                  {
+                      "id":  58,
+                      "expression_en":  "The reason why... is that...",
+                      "translation_zh":  "…的原因是…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "reason",
+                                                  "phonetic":  "ˈriːzn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "原因"
+                                              }
+                                          ],
+                      "example_en":  "**The reason why** I was late **is that** I was ill.",
+                      "example_zh":  "我迟到的原因是我病了。",
+                      "raw_block":  "58. **The reason why... is that...** 【…的原因是…】\r\nreason [ˈriːzn] n. 原因\r\n**Ex:** **The reason why** I was late **is that** I was ill. ( 我迟到的原因是我病了。 )"
+                  },
+                  {
+                      "id":  59,
+                      "expression_en":  "There is a famous saying that...",
+                      "translation_zh":  "有一句著名的谚语…",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**There is a famous saying that** failure is the mother of success.",
+                      "example_zh":  "俗话说失败是成功之母。",
+                      "raw_block":  "59. **There is a famous saying that...** 【有一句著名的谚语…】\r\n**Ex:** **There is a famous saying that** failure is the mother of success. ( 俗话说失败是成功之母。 )"
+                  },
+                  {
+                      "id":  60,
+                      "expression_en":  "With the rapid development of...",
+                      "translation_zh":  "随着…的快速发展",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "rapid",
+                                                  "phonetic":  "ˈræpɪd",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "快速的"
+                                              },
+                                              {
+                                                  "word":  "development",
+                                                  "phonetic":  "dɪˈveləpmənt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "发展"
+                                              }
+                                          ],
+                      "example_en":  "**With the rapid development of** society, life changes fast.",
+                      "example_zh":  "随着社会的快速发展，生活变化很快。",
+                      "raw_block":  "60. **With the rapid development of...** 【随着…的快速发展】\r\nrapid [ˈræpɪd] adj. 快速的\r\ndevelopment [dɪˈveləpmənt] n. 发展\r\n**Ex:** **With the rapid development of** society, life changes fast. ( 随着社会的快速发展，生活变化很快。 )"
+                  },
+                  {
+                      "id":  61,
+                      "expression_en":  "become increasingly popular / serious",
+                      "translation_zh":  "变得越来越受欢迎/严重",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "increasingly",
+                                                  "phonetic":  "ɪnˈkriːsɪŋli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "越来越多地"
+                                              },
+                                              {
+                                                  "word":  "popular",
+                                                  "phonetic":  "ˈpɒpjələ",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "受欢迎的"
+                                              },
+                                              {
+                                                  "word":  "serious",
+                                                  "phonetic":  "ˈsɪəriəs",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "严重的；严肃的"
+                                              }
+                                          ],
+                      "example_en":  "Cycling has **become increasingly popular**.",
+                      "example_zh":  "骑自行车变得越来越受欢迎。",
+                      "raw_block":  "61. **become increasingly popular / serious** 【变得越来越受欢迎/严重】\r\nincreasingly [ɪnˈkriːsɪŋli] adv. 越来越多地\r\npopular [ˈpɒpjələ] adj. 受欢迎的\r\nserious [ˈsɪəriəs] adj. 严重的；严肃的\r\n**Ex:** Cycling has **become increasingly popular**. ( 骑自行车变得越来越受欢迎。 )"
+                  },
+                  {
+                      "id":  62,
+                      "expression_en":  "At present / Nowadays / Recently",
+                      "translation_zh":  "目前/如今/最近",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "present",
+                                                  "phonetic":  "ˈpreznt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "现在"
+                                              },
+                                              {
+                                                  "word":  "nowadays",
+                                                  "phonetic":  "ˈnaʊədeɪz",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "现今"
+                                              },
+                                              {
+                                                  "word":  "recently",
+                                                  "phonetic":  "ˈriːsntli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "最近"
+                                              }
+                                          ],
+                      "example_en":  "**Nowadays**, many people use phones.",
+                      "example_zh":  "如今，许多人使用手机。",
+                      "raw_block":  "62. **At present / Nowadays / Recently** 【目前/如今/最近】\r\npresent [ˈpreznt] n. 现在\r\nnowadays [ˈnaʊədeɪz] adv. 现今\r\nrecently [ˈriːsntli] adv. 最近\r\n**Ex:** **Nowadays**, many people use phones. ( 如今，许多人使用手机。 )"
+                  },
+                  {
+                      "id":  63,
+                      "expression_en":  "to begin with / besides / furthermore",
+                      "translation_zh":  "首先 / 此外",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "besides",
+                                                  "phonetic":  "bɪˈsaɪdz",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "此外"
+                                              },
+                                              {
+                                                  "word":  "furthermore",
+                                                  "phonetic":  "ˌfɜːðəˈmɔː",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "而且"
+                                              }
+                                          ],
+                      "example_en":  "**To begin with**, listen to the teacher. **Besides**, take notes.",
+                      "example_zh":  "首先听老师讲，此外要记笔记。",
+                      "raw_block":  "63. **to begin with / besides / furthermore** 【首先 / 此外】\r\nbesides [bɪˈsaɪdz] adv. 此外\r\nfurthermore [ˌfɜːðəˈmɔː] adv. 而且\r\n**Ex:** **To begin with**, listen to the teacher. **Besides**, take notes. ( 首先听老师讲，此外要记笔记。 )"
+                  },
+                  {
+                      "id":  64,
+                      "expression_en":  "meanwhile / at the same time",
+                      "translation_zh":  "同时",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "meanwhile",
+                                                  "phonetic":  "ˈmiːnwaɪl",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "同时"
+                                              }
+                                          ],
+                      "example_en":  "He was reading; **meanwhile**, I was writing.",
+                      "example_zh":  "他在读书，同时我在写字。",
+                      "raw_block":  "64. **meanwhile / at the same time** 【同时】\r\nmeanwhile [ˈmiːnwaɪl] adv. 同时\r\n**Ex:** He was reading; **meanwhile**, I was writing. ( 他在读书，同时我在写字。 )"
+                  },
+                  {
+                      "id":  65,
+                      "expression_en":  "on one hand... on the other hand...",
+                      "translation_zh":  "一方面…另一方面…",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**On one hand** it is fast, **on the other hand** it is safe.",
+                      "example_zh":  "一方面它快，另一方面它安全。",
+                      "raw_block":  "65. **on one hand... on the other hand...** 【一方面…另一方面…】\r\n**Ex:** **On one hand** it is fast, **on the other hand** it is safe. ( 一方面它快，另一方面它安全。 )"
+                  },
+                  {
+                      "id":  66,
+                      "expression_en":  "on the contrary",
+                      "translation_zh":  "相反",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "contrary",
+                                                  "phonetic":  "ˈkɒntrəri",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "相反"
+                                              }
+                                          ],
+                      "example_en":  "It is not boring. **On the contrary**, it is fun.",
+                      "example_zh":  "它不无聊。相反，它很有趣。",
+                      "raw_block":  "66. **on the contrary** 【相反】\r\ncontrary [ˈkɒntrəri] n. 相反\r\n**Ex:** It is not boring. **On the contrary**, it is fun. ( 它不无聊。相反，它很有趣。 )"
+                  },
+                  {
+                      "id":  67,
+                      "expression_en":  "so / therefore",
+                      "translation_zh":  "因此",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "therefore",
+                                                  "phonetic":  "ˈðeəfɔː",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "因此"
+                                              }
+                                          ],
+                      "example_en":  "It rained, **therefore** we stayed home.",
+                      "example_zh":  "下雨了，因此我们待在家里。",
+                      "raw_block":  "67. **so / therefore** 【因此】\r\ntherefore [ˈðeəfɔː] adv. 因此\r\n**Ex:** It rained, **therefore** we stayed home. ( 下雨了，因此我们待在家里。 )"
+                  },
+                  {
+                      "id":  68,
+                      "expression_en":  "or / otherwise",
+                      "translation_zh":  "否则",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "otherwise",
+                                                  "phonetic":  "ˈʌðəwaɪz",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "否则"
+                                              }
+                                          ],
+                      "example_en":  "Hurry up, **otherwise** you will be late.",
+                      "example_zh":  "快点，否则你会迟到。",
+                      "raw_block":  "68. **or / otherwise** 【否则】\r\notherwise [ˈʌðəwaɪz] adv. 否则\r\n**Ex:** Hurry up, **otherwise** you will be late. ( 快点，否则你会迟到。 )"
+                  },
+                  {
+                      "id":  69,
+                      "expression_en":  "Only in this way, can we...",
+                      "translation_zh":  "只有这样我们才能…",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**Only in this way, can we** solve the problem.",
+                      "example_zh":  "只有这样我们才能解决这个问题。",
+                      "raw_block":  "69. **Only in this way, can we...** 【只有这样我们才能…】\r\n**Ex:** **Only in this way, can we** solve the problem. ( 只有这样我们才能解决这个问题。 )"
+                  },
+                  {
+                      "id":  70,
+                      "expression_en":  "benefit a lot from",
+                      "translation_zh":  "从…获益匪浅",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "benefit",
+                                                  "phonetic":  "ˈbenɪfɪt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "受益"
+                                              }
+                                          ],
+                      "example_en":  "I **benefit a lot from** reading.",
+                      "example_zh":  "我从阅读中获益匪浅。",
+                      "raw_block":  "70. **benefit a lot from** 【从…获益匪浅】\r\nbenefit [ˈbenɪfɪt] v. 受益\r\n**Ex:** I **benefit a lot from** reading. ( 我从阅读中获益匪浅。 )"
+                  },
+                  {
+                      "id":  71,
+                      "expression_en":  "It is (high) time that...",
+                      "translation_zh":  "该是做…的时候了",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**It is high time that** we took action.",
+                      "example_zh":  "是我们采取行动的时候了。",
+                      "raw_block":  "71. **It is (high) time that...** 【该是做…的时候了】\r\n**Ex:** **It is high time that** we took action. ( 是我们采取行动的时候了。 )"
+                  },
+                  {
+                      "id":  72,
+                      "expression_en":  "set an example for",
+                      "translation_zh":  "为…树立榜样",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "example",
+                                                  "phonetic":  "ɪɡˈzɑːmpl",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "榜样；例子"
+                                              }
+                                          ],
+                      "example_en":  "Parents should **set an example for** kids.",
+                      "example_zh":  "父母应该为孩子树立榜样。",
+                      "raw_block":  "72. **set an example for** 【为…树立榜样】\r\nexample [ɪɡˈzɑːmpl] n. 榜样；例子\r\n**Ex:** Parents should **set an example for** kids. ( 父母应该为孩子树立榜样。 )"
+                  },
+                  {
+                      "id":  73,
+                      "expression_en":  "set a goal of",
+                      "translation_zh":  "设定…的目标",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "goal",
+                                                  "phonetic":  "ɡəʊl",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "目标"
+                                              }
+                                          ],
+                      "example_en":  "I **set a goal of** learning 10 words a day.",
+                      "example_zh":  "我设定了每天学10个单词的目标。",
+                      "raw_block":  "73. **set a goal of** 【设定…的目标】\r\ngoal [ɡəʊl] n. 目标\r\n**Ex:** I **set a goal of** learning 10 words a day. ( 我设定了每天学10个单词的目标。 )"
+                  },
+                  {
+                      "id":  74,
+                      "expression_en":  "with the help of",
+                      "translation_zh":  "在…的帮助下",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**With the help of** the teacher, I passed.",
+                      "example_zh":  "在老师帮助下，我及格了。",
+                      "raw_block":  "74. **with the help of** 【在…的帮助下】\r\n**Ex:** **With the help of** the teacher, I passed. ( 在老师帮助下，我及格了。 )"
+                  },
+                  {
+                      "id":  75,
+                      "expression_en":  "No pains, no gains.",
+                      "translation_zh":  "不劳无获",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "pain",
+                                                  "phonetic":  "peɪn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "痛苦；劳苦"
+                                              },
+                                              {
+                                                  "word":  "gain",
+                                                  "phonetic":  "ɡeɪn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "收获"
+                                              }
+                                          ],
+                      "example_en":  "Remember: **No pains, no gains.**",
+                      "example_zh":  "记住：不劳无获。",
+                      "raw_block":  "75. **No pains, no gains.** 【不劳无获】\r\npain [peɪn] n. 痛苦；劳苦\r\ngain [ɡeɪn] n. 收获\r\n**Ex:** Remember: **No pains, no gains.** ( 记住：不劳无获。 )"
+                  },
+                  {
+                      "id":  76,
+                      "expression_en":  "Where there is a will, there is a way.",
+                      "translation_zh":  "有志者事竟成",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "Believe yourself. **Where there is a will, there is a way.**",
+                      "example_zh":  "相信自己。有志者事竟成。",
+                      "raw_block":  "76. **Where there is a will, there is a way.** 【有志者事竟成】\r\n**Ex:** Believe yourself. **Where there is a will, there is a way.** ( 相信自己。有志者事竟成。 )"
+                  },
+                  {
+                      "id":  77,
+                      "expression_en":  "A friend in need is a friend indeed.",
+                      "translation_zh":  "患难见真情",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "indeed",
+                                                  "phonetic":  "ɪnˈdiːd",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "确实；真正地"
+                                              }
+                                          ],
+                      "example_en":  "He helped me greatly. **A friend in need is a friend indeed.**",
+                      "example_zh":  "他帮了我大忙。患难见真情。",
+                      "raw_block":  "77. **A friend in need is a friend indeed.** 【患难见真情】\r\nindeed [ɪnˈdiːd] adv. 确实；真正地\r\n**Ex:** He helped me greatly. **A friend in need is a friend indeed.** ( 他帮了我大忙。患难见真情。 )"
+                  },
+                  {
+                      "id":  78,
+                      "expression_en":  "Every coin has two sides.",
+                      "translation_zh":  "事物都有两面性",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "coin",
+                                                  "phonetic":  "kɔɪn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "硬币"
+                                              }
+                                          ],
+                      "example_en":  "**Every coin has two sides**, so does the internet.",
+                      "example_zh":  "凡事都有两面性，网络也是。",
+                      "raw_block":  "78. **Every coin has two sides.** 【事物都有两面性】\r\ncoin [kɔɪn] n. 硬币\r\n**Ex:** **Every coin has two sides**, so does the internet. ( 凡事都有两面性，网络也是。 )"
+                  },
+                  {
+                      "id":  79,
+                      "expression_en":  "in conclusion / in summary / in a nutshell",
+                      "translation_zh":  "总之",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "conclusion",
+                                                  "phonetic":  "kənˈkluːʒn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "结论"
+                                              },
+                                              {
+                                                  "word":  "summary",
+                                                  "phonetic":  "ˈsʌməri",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "总结"
+                                              },
+                                              {
+                                                  "word":  "nutshell",
+                                                  "phonetic":  "ˈnʌtʃel",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "坚果壳（in a nutshell 简言之）"
+                                              }
+                                          ],
+                      "example_en":  "**In a nutshell**, we had a good time.",
+                      "example_zh":  "总之，我们玩得很开心。",
+                      "raw_block":  "79. **in conclusion / in summary / in a nutshell** 【总之】\r\nconclusion [kənˈkluːʒn] n. 结论\r\nsummary [ˈsʌməri] n. 总结\r\nnutshell [ˈnʌtʃel] n. 坚果壳（in a nutshell 简言之）\r\n**Ex:** **In a nutshell**, we had a good time. ( 总之，我们玩得很开心。 )"
+                  },
+                  {
+                      "id":  80,
+                      "expression_en":  "in my opinion / as far as I am concerned",
+                      "translation_zh":  "在我看来",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "opinion",
+                                                  "phonetic":  "əˈpɪnjən",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "意见"
+                                              },
+                                              {
+                                                  "word":  "concerned",
+                                                  "phonetic":  "kənˈsɜːnd",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "关心的；有关的"
+                                              }
+                                          ],
+                      "example_en":  "**In my opinion**, health is important.",
+                      "example_zh":  "在我看来，健康很重要。",
+                      "raw_block":  "80. **in my opinion / as far as I am concerned** 【在我看来】\r\nopinion [əˈpɪnjən] n. 意见\r\nconcerned [kənˈsɜːnd] adj. 关心的；有关的\r\n**Ex:** **In my opinion**, health is important. ( 在我看来，健康很重要。 )"
+                  },
+                  {
+                      "id":  81,
+                      "expression_en":  "in other words",
+                      "translation_zh":  "换句话说",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "He is mute. **In other words**, he can\u0027t speak.",
+                      "example_zh":  "他是哑巴。换句话说，他不会说话。",
+                      "raw_block":  "81. **in other words** 【换句话说】\r\n**Ex:** He is mute. **In other words**, he can\u0027t speak. ( 他是哑巴。换句话说，他不会说话。 )"
+                  },
+                  {
+                      "id":  82,
+                      "expression_en":  "generally speaking / frankly speaking",
+                      "translation_zh":  "一般来说/坦率地说",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "generally",
+                                                  "phonetic":  "ˈdʒenrəli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "通常"
+                                              },
+                                              {
+                                                  "word":  "frankly",
+                                                  "phonetic":  "ˈfræŋkli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "坦率地"
+                                              }
+                                          ],
+                      "example_en":  "**Generally speaking**, boys like sports.",
+                      "example_zh":  "一般来说，男孩喜欢运动。",
+                      "raw_block":  "82. **generally speaking / frankly speaking** 【一般来说/坦率地说】\r\ngenerally [ˈdʒenrəli] adv. 通常\r\nfrankly [ˈfræŋkli] adv. 坦率地\r\n**Ex:** **Generally speaking**, boys like sports. ( 一般来说，男孩喜欢运动。 )"
+                  },
+                  {
+                      "id":  83,
+                      "expression_en":  "I firmly believe that...",
+                      "translation_zh":  "我坚信…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "firmly",
+                                                  "phonetic":  "ˈfɜːmli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "坚定地"
+                                              },
+                                              {
+                                                  "word":  "convinced",
+                                                  "phonetic":  "kənˈvɪnst",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "确信的"
+                                              }
+                                          ],
+                      "example_en":  "**I firmly believe that** we will win.",
+                      "example_zh":  "我坚信我们会赢。",
+                      "raw_block":  "83. **I firmly believe that...** 【我坚信…】\r\nfirmly [ˈfɜːmli] adv. 坚定地\r\nconvinced [kənˈvɪnst] adj. 确信的\r\n**Ex:** **I firmly believe that** we will win. ( 我坚信我们会赢。 )"
+                  },
+                  {
+                      "id":  84,
+                      "expression_en":  "I sincerely hope that...",
+                      "translation_zh":  "我真诚希望…",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "sincerely",
+                                                  "phonetic":  "sɪnˈsɪəli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "真诚地"
+                                              }
+                                          ],
+                      "example_en":  "**I sincerely hope that** you can come.",
+                      "example_zh":  "我真诚希望你能来。",
+                      "raw_block":  "84. **I sincerely hope that...** 【我真诚希望…】\r\nsincerely [sɪnˈsɪəli] adv. 真诚地\r\n**Ex:** **I sincerely hope that** you can come. ( 我真诚希望你能来。 )"
+                  },
+                  {
+                      "id":  85,
+                      "expression_en":  "It is said that / It is a fact that",
+                      "translation_zh":  "据说/事实是",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "fact",
+                                                  "phonetic":  "fækt",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "事实"
+                                              }
+                                          ],
+                      "example_en":  "**It is said that** he is rich.",
+                      "example_zh":  "据说他很富有。",
+                      "raw_block":  "85. **It is said that / It is a fact that** 【据说/事实是】\r\nfact [fækt] n. 事实\r\n**Ex:** **It is said that** he is rich. ( 据说他很富有。 )"
+                  },
+                  {
+                      "id":  86,
+                      "expression_en":  "It is generally believed that...",
+                      "translation_zh":  "人们普遍认为",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "believe",
+                                                  "phonetic":  "bɪˈliːv",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "相信；认为"
+                                              }
+                                          ],
+                      "example_en":  "**It is generally believed that** tea is healthy.",
+                      "example_zh":  "人们普遍认为茶是健康的。",
+                      "raw_block":  "86. **It is generally believed that...** 【人们普遍认为】\r\nbelieve [bɪˈliːv] v. 相信；认为\r\n**Ex:** **It is generally believed that** tea is healthy. ( 人们普遍认为茶是健康的。 )"
+                  },
+                  {
+                      "id":  87,
+                      "expression_en":  "It is widely accepted that...",
+                      "translation_zh":  "人们广泛接受",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "widely",
+                                                  "phonetic":  "ˈwaɪdli",
+                                                  "part_of_speech":  "adv.",
+                                                  "meaning_zh":  "广泛地"
+                                              },
+                                              {
+                                                  "word":  "accept",
+                                                  "phonetic":  "əkˈsept",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "接受"
+                                              }
+                                          ],
+                      "example_en":  "**It is widely accepted that** smoking is bad.",
+                      "example_zh":  "人们广泛接受吸烟有害。",
+                      "raw_block":  "87. **It is widely accepted that...** 【人们广泛接受】\r\nwidely [ˈwaɪdli] adv. 广泛地\r\naccept [əkˈsept] v. 接受\r\n**Ex:** **It is widely accepted that** smoking is bad. ( 人们广泛接受吸烟有害。 )"
+                  },
+                  {
+                      "id":  88,
+                      "expression_en":  "It is reported that...",
+                      "translation_zh":  "据报道",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "report",
+                                                  "phonetic":  "rɪˈpɔːt",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "报道"
+                                              }
+                                          ],
+                      "example_en":  "**It is reported that** the fire is out.",
+                      "example_zh":  "据报道火已经灭了。",
+                      "raw_block":  "88. **It is reported that...** 【据报道】\r\nreport [rɪˈpɔːt] v. 报道\r\n**Ex:** **It is reported that** the fire is out. ( 据报道火已经灭了。 )"
+                  },
+                  {
+                      "id":  89,
+                      "expression_en":  "It is well-known that / As is known to us all",
+                      "translation_zh":  "众所周知",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "known",
+                                                  "phonetic":  "nəʊn",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "知名的；已知的"
+                                              }
+                                          ],
+                      "example_en":  "**As is known to us all**, the earth is round.",
+                      "example_zh":  "众所周知，地球是圆的。",
+                      "raw_block":  "89. **It is well-known that / As is known to us all** 【众所周知】\r\nknown [nəʊn] adj. 知名的；已知的\r\n**Ex:** **As is known to us all**, the earth is round. ( 众所周知，地球是圆的。 )"
+                  },
+                  {
+                      "id":  90,
+                      "expression_en":  "Not only... but also...",
+                      "translation_zh":  "不仅…而且…",
+                      "difficult_words":  [
+
+                                          ],
+                      "example_en":  "**Not only can we** sing, **but also we can** dance.",
+                      "example_zh":  "我们不仅会唱歌，而且会跳舞。",
+                      "raw_block":  "90. **Not only... but also...** 【不仅…而且…】\r\n**Ex:** **Not only can we** sing, **but also we can** dance. ( 我们不仅会唱歌，而且会跳舞。 )"
+                  },
+                  {
+                      "id":  91,
+                      "expression_en":  "Practice makes perfect.",
+                      "translation_zh":  "熟能生巧",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "practice",
+                                                  "phonetic":  "ˈpræktɪs",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "练习"
+                                              },
+                                              {
+                                                  "word":  "perfect",
+                                                  "phonetic":  "ˈpɜːfɪkt",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "完美的"
+                                              }
+                                          ],
+                      "example_en":  "Write more. **Practice makes perfect.**",
+                      "example_zh":  "多写。熟能生巧。",
+                      "raw_block":  "91. **Practice makes perfect.** 【熟能生巧】\r\npractice [ˈpræktɪs] n. 练习\r\nperfect [ˈpɜːfɪkt] adj. 完美的\r\n**Ex:** Write more. **Practice makes perfect.** ( 多写。熟能生巧。 )"
+                  },
+                  {
+                      "id":  92,
+                      "expression_en":  "It goes without saying that...",
+                      "translation_zh":  "不用说/毫无疑问",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "saying",
+                                                  "phonetic":  "ˈseɪɪŋ",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "话；谚语"
+                                              },
+                                              {
+                                                  "word":  "needless",
+                                                  "phonetic":  "ˈniːdləs",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "不需要的"
+                                              }
+                                          ],
+                      "example_en":  "**It goes without saying that** water is life.",
+                      "example_zh":  "不用说，水就是生命。",
+                      "raw_block":  "92. **It goes without saying that...** 【不用说/毫无疑问】\r\nsaying [ˈseɪɪŋ] n. 话；谚语\r\nneedless [ˈniːdləs] adj. 不需要的\r\n**Ex:** **It goes without saying that** water is life. ( 不用说，水就是生命。 )"
+                  },
+                  {
+                      "id":  93,
+                      "expression_en":  "daily communication",
+                      "translation_zh":  "日常交流",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "daily",
+                                                  "phonetic":  "ˈdeɪli",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "日常的"
+                                              },
+                                              {
+                                                  "word":  "communication",
+                                                  "phonetic":  "kəˌmjuːnɪˈkeɪʃn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "交流"
+                                              }
+                                          ],
+                      "example_en":  "English is useful for **daily communication**.",
+                      "example_zh":  "英语对日常交流很有用。",
+                      "raw_block":  "93. **daily communication** 【日常交流】\r\ndaily [ˈdeɪli] adj. 日常的\r\ncommunication [kəˌmjuːnɪˈkeɪʃn] n. 交流\r\n**Ex:** English is useful for **daily communication**. ( 英语对日常交流很有用。 )"
+                  },
+                  {
+                      "id":  94,
+                      "expression_en":  "a serious problem",
+                      "translation_zh":  "严重的问题",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "serious",
+                                                  "phonetic":  "ˈsɪəriəs",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "严重的"
+                                              },
+                                              {
+                                                  "word":  "problem",
+                                                  "phonetic":  "ˈprɒbləm",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "问题"
+                                              }
+                                          ],
+                      "example_en":  "Pollution is **a serious problem**.",
+                      "example_zh":  "污染是一个严重的问题。",
+                      "raw_block":  "94. **a serious problem** 【严重的问题】\r\nserious [ˈsɪəriəs] adj. 严重的\r\nproblem [ˈprɒbləm] n. 问题\r\n**Ex:** Pollution is **a serious problem**. ( 污染是一个严重的问题。 )"
+                  },
+                  {
+                      "id":  95,
+                      "expression_en":  "be eager to do",
+                      "translation_zh":  "渴望做",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "eager",
+                                                  "phonetic":  "ˈiːɡə",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "渴望的"
+                                              }
+                                          ],
+                      "example_en":  "She **is eager to** see you.",
+                      "example_zh":  "她渴望见到你。",
+                      "raw_block":  "95. **be eager to do** 【渴望做】\r\neager [ˈiːɡə] adj. 渴望的\r\n**Ex:** She **is eager to** see you. ( 她渴望见到你。 )"
+                  },
+                  {
+                      "id":  96,
+                      "expression_en":  "cause public concern",
+                      "translation_zh":  "引起公众关注",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "concern",
+                                                  "phonetic":  "kənˈsɜːn",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "关注；担忧"
+                                              }
+                                          ],
+                      "example_en":  "The news **caused public concern**.",
+                      "example_zh":  "这条新闻引起了公众关注。",
+                      "raw_block":  "96. **cause public concern** 【引起公众关注】\r\nconcern [kənˈsɜːn] n. 关注；担忧\r\n**Ex:** The news **caused public concern**. ( 这条新闻引起了公众关注。 )"
+                  },
+                  {
+                      "id":  97,
+                      "expression_en":  "overcome the difficulty",
+                      "translation_zh":  "克服困难",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "overcome",
+                                                  "phonetic":  "ˌəʊvəˈkʌm",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "克服"
+                                              },
+                                              {
+                                                  "word":  "difficulty",
+                                                  "phonetic":  "ˈdɪfɪkəlti",
+                                                  "part_of_speech":  "n.",
+                                                  "meaning_zh":  "困难"
+                                              }
+                                          ],
+                      "example_en":  "We worked together to **overcome the difficulty**.",
+                      "example_zh":  "我们齐心协力克服困难。",
+                      "raw_block":  "97. **overcome the difficulty** 【克服困难】\r\novercome [ˌəʊvəˈkʌm] v. 克服\r\ndifficulty [ˈdɪfɪkəlti] n. 困难\r\n**Ex:** We worked together to **overcome the difficulty**. ( 我们齐心协力克服困难。 )"
+                  },
+                  {
+                      "id":  98,
+                      "expression_en":  "be likely to do",
+                      "translation_zh":  "可能做",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "likely",
+                                                  "phonetic":  "ˈlaɪkli",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "可能的"
+                                              }
+                                          ],
+                      "example_en":  "It **is likely to** rain today.",
+                      "example_zh":  "今天可能会下雨。",
+                      "raw_block":  "98. **be likely to do** 【可能做】\r\nlikely [ˈlaɪkli] adj. 可能的\r\n**Ex:** It **is likely to** rain today. ( 今天可能会下雨。 )"
+                  },
+                  {
+                      "id":  99,
+                      "expression_en":  "be unlikely to do",
+                      "translation_zh":  "不可能做",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "unlikely",
+                                                  "phonetic":  "ʌnˈlaɪkli",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "不可能的"
+                                              }
+                                          ],
+                      "example_en":  "He **is unlikely to** give up.",
+                      "example_zh":  "他不可能放弃。",
+                      "raw_block":  "99. **be unlikely to do** 【不可能做】\r\nunlikely [ʌnˈlaɪkli] adj. 不可能的\r\n**Ex:** He **is unlikely to** give up. ( 他不可能放弃。 )"
+                  },
+                  {
+                      "id":  100,
+                      "expression_en":  "It is generally considered (un)wise to do",
+                      "translation_zh":  "普遍认为做…是(不)明智的",
+                      "difficult_words":  [
+                                              {
+                                                  "word":  "consider",
+                                                  "phonetic":  "kənˈsɪdə",
+                                                  "part_of_speech":  "v.",
+                                                  "meaning_zh":  "认为；考虑"
+                                              },
+                                              {
+                                                  "word":  "unwise",
+                                                  "phonetic":  "ˌʌnˈwaɪz",
+                                                  "part_of_speech":  "adj.",
+                                                  "meaning_zh":  "不明智的"
+                                              }
+                                          ],
+                      "example_en":  "**It is generally considered unwise to** waste food.",
+                      "example_zh":  "普遍认为浪费食物是不明智的。",
+                      "raw_block":  "100. **It is generally considered (un)wise to do** 【普遍认为做…是(不)明智的】\r\nconsider [kənˈsɪdə] v. 认为；考虑\r\nunwise [ˌʌnˈwaɪz] adj. 不明智的\r\n**Ex:** **It is generally considered unwise to** waste food. ( 普遍认为浪费食物是不明智的。 )"
+                  }
+              ]
+}
