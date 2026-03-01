@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1120,7 +1120,7 @@
       <div class="card-word">${vocab.word}</div>
       <div class="card-phonetic">${vocab.phonetic}</div>
       <div class="card-pos">${vocab.pos}</div>
-      <div class="audio-btn" style="margin-top: 12px; min-width: 60px; padding: 6px 16px;" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊</div>
+      <div class="audio-btn" style="margin-top: 12px; min-width: 60px; padding: 6px 16px;" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊</div>
       <div class="tap-hint">👆 Tap to flip</div>
     `;
                 back.innerHTML = `
@@ -1128,8 +1128,8 @@
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="card-example-zh">${vocab.ex_zh}</div>
       <div class="audio-row">
-        <div class="audio-btn" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊 Word</div>
-        <div class="audio-btn primary" onclick="event.stopPropagation(); speak('${vocab.ex_en.replace(/'/g, "\\'")}')">�️ Sentence</div>
+        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.ex_en)}')"">�️ Sentence</div>
       </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'pointer';
@@ -1150,8 +1150,8 @@
       <div class="card-word" style="font-size:2.2rem">${vocab.word}</div>
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="audio-row">
-        <div class="audio-btn" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊 Word</div>
-        <div class="audio-btn primary" onclick="event.stopPropagation(); speak('${vocab.ex_en.replace(/'/g, "\\'")}')">�️ Sentence</div>
+        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.ex_en)}')"">�️ Sentence</div>
       </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'default';
@@ -1168,8 +1168,8 @@
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="card-word" style="font-size:1.5rem;margin-top:10px;color:var(--purple)">${vocab.word}</div>
       <div class="audio-row">
-        <div class="audio-btn" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊 Word</div>
-        <div class="audio-btn primary" onclick="event.stopPropagation(); speak('${vocab.ex_en.replace(/'/g, "\\'")}')">�️ Sentence</div>
+        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.ex_en)}')"">�️ Sentence</div>
       </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'pointer';
@@ -1296,6 +1296,10 @@
             } catch (e) { }
         }
 
+        
+        function playEncodedAudio(encoded) {
+            speak(decodeURIComponent(encoded));
+        }
         function speak(text) {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
