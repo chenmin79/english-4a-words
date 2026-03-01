@@ -1,1103 +1,246 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English Expression Flashcards</title>
-  <style>
-    :root {
-      --bg1: #fff7df;
-      --bg2: #d8efff;
-      --ink: #1f2937;
-      --muted: #64748b;
-      --card: #ffffff;
-      --line: #e2e8f0;
-      --accent: #ef4444;
-      --accent2: #0ea5e9;
-      --ok: #16a34a;
-      --warn: #f59e0b;
-      --bad: #dc2626;
-      --shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: radial-gradient(circle at 10% 10%, #ffeec8 0, transparent 40%),
-                  radial-gradient(circle at 90% 20%, #c7e9ff 0, transparent 35%),
-                  linear-gradient(140deg, var(--bg1), var(--bg2));
-      min-height: 100vh;
-    }
-
-    .screen { display: none; padding: 20px; min-height: 100vh; }
-    .screen.active { display: block; }
-    .wrap { max-width: 980px; margin: 0 auto; }
-
-    .title { margin: 0; font-size: 2rem; letter-spacing: 0.5px; }
-    .subtitle { color: var(--muted); margin-top: 6px; }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      border: 0;
-      border-radius: 12px;
-      padding: 10px 14px;
-      font-weight: 700;
-      cursor: pointer;
-      background: #111827;
-      color: #fff;
-    }
-
-    .btn.secondary { background: #334155; }
-    .btn.good { background: var(--ok); }
-    .btn.warn { background: var(--warn); color: #111827; }
-    .btn.bad { background: var(--bad); }
-    .btn.speak { background: #0f766e; }
-    .btn.compact-toggle {
-      background: #475569;
-      font-size: .9rem;
-      padding: 8px 10px;
-    }
-
-    .pill {
-      display: inline-block;
-      font-size: 0.85rem;
-      padding: 4px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      background: #fff;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .pack {
-      background: var(--card);
-      border: 2px solid var(--line);
-      border-radius: 16px;
-      padding: 14px;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-      transition: transform .12s ease;
-    }
-
-    .pack:hover { transform: translateY(-2px); }
-    .pack h3 { margin: 0 0 8px 0; font-size: 1.1rem; }
-    .meta { color: var(--muted); font-size: .9rem; }
-
-    .bar {
-      height: 8px;
-      border-radius: 999px;
-      background: #e5e7eb;
-      overflow: hidden;
-      margin-top: 8px;
-    }
-
-    .bar > span {
-      display: block;
-      height: 100%;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      width: 0%;
-    }
-
-    .error {
-      border: 1px solid #fecaca;
-      background: #fef2f2;
-      color: #991b1b;
-      padding: 12px;
-      border-radius: 12px;
-      margin-top: 14px;
-      display: none;
-    }
-
-    .mode-box {
-      background: #fff;
-      border: 2px solid var(--line);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-      max-width: 520px;
-      margin: 16px auto;
-    }
-
-    .mode-list { display: grid; gap: 10px; margin-top: 14px; }
-
-    .mode-btn {
-      border: 2px solid;
-      border-radius: 14px;
-      padding: 12px;
-      text-align: left;
-      cursor: pointer;
-      background: #fff;
-      font-weight: 700;
-    }
-
-    .mode-btn.easy { border-color: #16a34a; background: #ecfdf3; }
-    .mode-btn.medium { border-color: #f59e0b; background: #fffbeb; }
-    .mode-btn.hard { border-color: #dc2626; background: #fef2f2; }
-
-    .study-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
-    }
-
-    .card-wrap { perspective: 1200px; margin-top: 12px; }
-
-    .card {
-      width: 100%;
-      min-height: 430px;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform .35s ease;
-    }
-
-    .card.flipped { transform: rotateY(180deg); }
-
-    .face {
-      position: absolute;
-      inset: 0;
-      backface-visibility: hidden;
-      background: var(--card);
-      border: 2px solid var(--line);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 12px;
-      overflow: auto;
-    }
-
-    .back { transform: rotateY(180deg); }
-
-    .expr {
-      font-size: clamp(1.35rem, 3vw, 2rem);
-      font-weight: 800;
-      line-height: 1.35;
-      text-align: center;
-      word-break: break-word;
-    }
-
-    .variant-list {
-      display: grid;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .variant-row {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: #f8fafc;
-      padding: 8px 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    .variant-text {
-      word-break: break-word;
-    }
-
-    .hint { text-align: center; color: var(--muted); }
-    .zh { font-size: 1.12rem; color: #0f766e; font-weight: 700; text-align: center; }
-    .progress { color: var(--muted); }
-
-    .section { margin-top: 4px; }
-    .section h4 { margin: 0 0 8px 0; font-size: 1rem; }
-
-    .dw-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 6px;
-      max-height: 170px;
-      overflow: auto;
-    }
-
-    .dw {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 8px;
-      font-size: .9rem;
-      background: #f8fafc;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .ex {
-      border: 1px dashed #cbd5e1;
-      border-radius: 10px;
-      padding: 10px;
-      background: #fffbeb;
-      font-size: .95rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .tiny-btn {
-      border: 1px solid #0f766e;
-      color: #0f766e;
-      background: #ecfeff;
-      border-radius: 8px;
-      padding: 4px 8px;
-      font-size: .8rem;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .mini-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-    }
-
-    .mini-chip {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: .85rem;
-      background: #f8fafc;
-    }
-
-    .qa-box {
-      border: 2px dashed #cbd5e1;
-      border-radius: 16px;
-      padding: 12px;
-      background: #f8fafc;
-    }
-
-    .answer {
-      width: 100%;
-      border: 2px solid #cbd5e1;
-      border-radius: 10px;
-      padding: 10px;
-      font-size: 1rem;
-      margin-top: 8px;
-    }
-
-    .answer-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
-    .feedback { margin-top: 8px; font-weight: 700; }
-
-    .actions {
-      margin-top: 12px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(120px, 1fr));
-      gap: 10px;
-    }
-
-    @media (max-width: 700px) {
-      .screen { padding: 10px; }
-
-      #study.active .wrap {
-        height: calc(100vh - 20px);
-        height: calc(100dvh - 20px);
-        display: grid;
-        grid-template-rows: auto auto 1fr auto;
-        gap: 8px;
-      }
-
-      .study-header {
-        margin-bottom: 0;
-        gap: 6px;
-      }
-
-      .pill {
-        font-size: .8rem;
-        padding: 3px 8px;
-      }
-
-      .progress {
-        font-size: 1rem;
-        line-height: 1.3;
-      }
-
-      .card-wrap {
-        margin-top: 0;
-        min-height: 0;
-      }
-
-      .card {
-        min-height: 0;
-        height: 100%;
-      }
-
-      .face {
-        padding: 10px;
-        gap: 8px;
-        border-radius: 16px;
-      }
-
-      .variant-row {
-        padding: 6px 8px;
-        font-size: .92rem;
-      }
-
-      .mini-list {
-        gap: 6px;
-      }
-
-      .mini-chip {
-        padding: 3px 8px;
-        font-size: .8rem;
-      }
-
-      .tiny-btn {
-        padding: 3px 6px;
-        font-size: .75rem;
-      }
-
-      .actions {
-        margin-top: 0;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-      }
-
-      .actions .btn {
-        padding: 10px 6px;
-        font-size: .95rem;
-        border-radius: 10px;
-      }
-
-      .ex, .dw { align-items: flex-start; }
-    }
-
-    @media (max-width: 700px) {
-      body.super-compact #study.active .wrap {
-        gap: 4px;
-      }
-
-      body.super-compact .study-header {
-        gap: 4px;
-      }
-
-      body.super-compact .pill {
-        font-size: .74rem;
-        padding: 2px 7px;
-      }
-
-      body.super-compact .progress {
-        font-size: .9rem;
-        line-height: 1.25;
-      }
-
-      body.super-compact .card-wrap {
-        margin-top: 0;
-      }
-
-      body.super-compact .face {
-        padding: 8px;
-        gap: 6px;
-      }
-
-      body.super-compact .variant-list {
-        gap: 6px;
-      }
-
-      body.super-compact .variant-row {
-        padding: 5px 7px;
-        font-size: .86rem;
-        gap: 6px;
-      }
-
-      body.super-compact .mini-list {
-        gap: 4px;
-        max-height: 56px;
-        overflow: auto;
-      }
-
-      body.super-compact .mini-chip {
-        padding: 2px 6px;
-        font-size: .75rem;
-      }
-
-      body.super-compact .hint {
-        font-size: .86rem;
-      }
-
-      body.super-compact .dw,
-      body.super-compact .ex {
-        padding: 6px;
-        font-size: .84rem;
-      }
-
-      body.super-compact .tiny-btn {
-        padding: 2px 6px;
-        font-size: .72rem;
-      }
-
-      body.super-compact .actions .btn {
-        padding: 8px 4px;
-        font-size: .9rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Vocabulary Lobby</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f0fdf4;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            background-image: radial-gradient(#22c55e 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: -12px -12px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #15803d;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .lobby-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 24px;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 3px solid transparent;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        /* Staggered animation delays */
+        .lobby-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .lobby-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .lobby-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .lobby-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-icon {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .lobby-card:hover .card-icon {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        /* Specific card styles */
+        .card-4b {
+            border-bottom-color: #3b82f6;
+        }
+
+        .card-4b:hover {
+            border-color: #3b82f6;
+        }
+
+        .card-4b .card-title {
+            color: #2563eb;
+        }
+
+        .card-kitchen {
+            border-bottom-color: #f59e0b;
+        }
+
+        .card-kitchen:hover {
+            border-color: #f59e0b;
+        }
+
+        .card-kitchen .card-title {
+            color: #d97706;
+        }
+
+        .card-expr {
+            border-bottom-color: #8b5cf6;
+        }
+
+        .card-expr:hover {
+            border-color: #8b5cf6;
+        }
+
+        .card-expr .card-title {
+            color: #7c3aed;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            font-weight: 700;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .lobby-card {
+                padding: 24px 20px;
+            }
+
+            .card-icon {
+                font-size: 3.5rem;
+            }
+
+            .card-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <section id="home" class="screen active">
-    <div class="wrap">
-      <div class="topbar">
-        <div>
-          <h1 class="title">English Expression Flashcards</h1>
-          <div class="subtitle">纯客户端版 · 支持 easy / medium / hard</div>
-        </div>
-        <div><span class="pill" id="globalStat">加载中...</span></div>
-      </div>
 
-      <div class="error" id="loadError"></div>
-      <input id="fileInput" type="file" accept="application/json" style="display:none" />
-      <div class="grid" id="packs"></div>
+    <div class="header">
+        <h1>🌟 Word Explorer Lobby 🌟</h1>
+        <p>Choose your vocabulary learning adventure today!</p>
     </div>
-  </section>
 
-  <section id="mode" class="screen">
-    <div class="wrap">
-      <div class="study-header">
-        <button class="btn secondary" id="modeBackBtn">返回分组</button>
-        <span class="pill" id="modePackName"></span>
-      </div>
+    <div class="cards-grid">
+        <!-- 4B Textbooks -->
+        <a href="vocab_sets/4b/index.html" class="lobby-card card-4b">
+            <div class="card-icon">🎒</div>
+            <h2 class="card-title">四年级课文单词</h2>
+            <p class="card-desc">原版 4B 课文同步词汇，强化基础读写与记忆。</p>
+        </a>
 
-      <div class="mode-box">
-        <h2 style="margin:0">选择学习模式</h2>
-        <div class="subtitle">Easy 看卡翻面；Medium 根据中文写英文；Hard 只给中文与词义，完整默写表达</div>
-        <div class="mode-list">
-          <button class="mode-btn easy" data-mode="easy">Easy: 闪卡 + 朗读</button>
-          <button class="mode-btn medium" data-mode="medium">Medium: 中译英输入</button>
-          <button class="mode-btn hard" data-mode="hard">Hard: 无提示默写</button>
-        </div>
-      </div>
+        <!-- Kitchen Kids -->
+        <a href="vocab_sets/kitchen_kids/index.html" class="lobby-card card-kitchen">
+            <div class="card-icon">👨‍🍳</div>
+            <h2 class="card-title">Kitchen Kids 拓展</h2>
+            <p class="card-desc">课外英语阅读拓展，专攻高频与核心进阶生词。</p>
+        </a>
+
+        <!-- Expressions 100 -->
+        <a href="vocab_sets/expressions/index.html" class="lobby-card card-expr">
+            <div class="card-icon">💬</div>
+            <h2 class="card-title">100 Sentences</h2>
+            <p class="card-desc">地道英文表达 100 句，中英互译默写实战演练。</p>
+        </a>
     </div>
-  </section>
 
-  <section id="study" class="screen">
-    <div class="wrap">
-      <div class="study-header">
-        <button class="btn secondary" id="backBtn">返回模式</button>
-        <button class="btn compact-toggle" id="compactToggleBtn">超紧凑：关</button>
-        <span class="pill" id="packName"></span>
-        <span class="pill" id="modeTag"></span>
-        <span class="pill" id="cardCount"></span>
-      </div>
-
-      <div class="progress" id="studyProgress"></div>
-
-      <div class="card-wrap">
-        <div class="card" id="card">
-          <div class="face front" id="front"></div>
-          <div class="face back" id="back"></div>
-        </div>
-      </div>
-
-      <div class="actions" id="actions">
-        <button class="btn bad" id="btnBad">不熟（-1）</button>
-        <button class="btn warn" id="btnMid">一般（0）</button>
-        <button class="btn good" id="btnGood">掌握（+1）</button>
-      </div>
+    <div class="footer">
+        Have fun learning! ✨
     </div>
-  </section>
 
-  <script>
-    const DATA_FILE = 'expression-100sentences.json';
-    const STATE_KEY = 'expression100_flash_state_v2';
-
-    const dom = {
-      home: document.getElementById('home'),
-      mode: document.getElementById('mode'),
-      study: document.getElementById('study'),
-      packs: document.getElementById('packs'),
-      globalStat: document.getElementById('globalStat'),
-      loadError: document.getElementById('loadError'),
-      fileInput: document.getElementById('fileInput'),
-
-      modeBackBtn: document.getElementById('modeBackBtn'),
-      modePackName: document.getElementById('modePackName'),
-
-      backBtn: document.getElementById('backBtn'),
-      compactToggleBtn: document.getElementById('compactToggleBtn'),
-      packName: document.getElementById('packName'),
-      modeTag: document.getElementById('modeTag'),
-      cardCount: document.getElementById('cardCount'),
-      studyProgress: document.getElementById('studyProgress'),
-      card: document.getElementById('card'),
-      front: document.getElementById('front'),
-      back: document.getElementById('back'),
-      actions: document.getElementById('actions'),
-      btnBad: document.getElementById('btnBad'),
-      btnMid: document.getElementById('btnMid'),
-      btnGood: document.getElementById('btnGood'),
-    };
-
-    let expressions = [];
-    let packs = {};
-    let state = loadState();
-
-    let currentPackKey = null;
-    let currentMode = 'easy';
-    let queue = [];
-    let queueIndex = 0;
-    let flipped = false;
-    let superCompact = false;
-
-    function updateCompactToggleUI() {
-      document.body.classList.toggle('super-compact', superCompact);
-      if (dom.compactToggleBtn) {
-        dom.compactToggleBtn.textContent = superCompact ? '超紧凑：开' : '超紧凑：关';
-        dom.compactToggleBtn.setAttribute('aria-pressed', superCompact ? 'true' : 'false');
-      }
-    }
-
-    function loadState() {
-      try {
-        return JSON.parse(localStorage.getItem(STATE_KEY) || '{}');
-      } catch (_) {
-        return {};
-      }
-    }
-
-    function saveState() {
-      localStorage.setItem(STATE_KEY, JSON.stringify(state));
-    }
-
-    function getExpState(id) {
-      const key = String(id);
-      if (!state[key]) {
-        state[key] = { score: 0, correct: 0, wrong: 0, last: 0 };
-      }
-      return state[key];
-    }
-
-    function scoreLabel(score) {
-      if (score >= 3) return '已掌握';
-      if (score >= 1) return '学习中';
-      return '未掌握';
-    }
-
-    function splitPacks(items) {
-      const result = { all: items.slice() };
-      for (let i = 0; i < 10; i++) {
-        const start = i * 10 + 1;
-        const end = i * 10 + 10;
-        const key = `${start}-${end}`;
-        result[key] = items.filter((x) => x.id >= start && x.id <= end);
-      }
-      return result;
-    }
-
-    function masteredCount(list) {
-      return list.filter((x) => getExpState(x.id).score >= 3).length;
-    }
-
-    function renderHome() {
-      const allMastered = masteredCount(expressions);
-      dom.globalStat.textContent = `总进度：${allMastered} / ${expressions.length} 已掌握`;
-
-      const order = ['all', ...Object.keys(packs).filter((k) => k !== 'all')];
-      dom.packs.innerHTML = order.map((key) => {
-        const list = packs[key] || [];
-        const m = masteredCount(list);
-        const pct = list.length ? Math.round((m / list.length) * 100) : 0;
-        const title = key === 'all' ? '全部 100 条' : `分组 ${key}`;
-        return `
-          <article class="pack" data-pack="${key}">
-            <h3>${title}</h3>
-            <div class="meta">${m} / ${list.length} 已掌握 · ${pct}%</div>
-            <div class="bar"><span style="width:${pct}%"></span></div>
-          </article>
-        `;
-      }).join('');
-
-      document.querySelectorAll('.pack').forEach((el) => {
-        el.addEventListener('click', () => choosePack(el.dataset.pack));
-      });
-    }
-
-    function showScreen(name) {
-      dom.home.classList.toggle('active', name === 'home');
-      dom.mode.classList.toggle('active', name === 'mode');
-      dom.study.classList.toggle('active', name === 'study');
-    }
-
-    function choosePack(packKey) {
-      currentPackKey = packKey;
-      const title = packKey === 'all' ? '全部 100 条' : `分组 ${packKey}`;
-      dom.modePackName.textContent = title;
-      showScreen('mode');
-    }
-
-    function buildQueue(packKey, mode) {
-      const list = (packs[packKey] || []).slice();
-      const learning = [];
-      const mastered = [];
-
-      for (const item of list) {
-        const s = getExpState(item.id);
-        if (s.score >= 3) mastered.push(item);
-        else {
-          const weightBase = mode === 'hard' ? 4 : mode === 'medium' ? 3 : 2;
-          const weight = s.score === 0 ? weightBase : (s.score === 1 ? weightBase - 1 : 1);
-          for (let i = 0; i < Math.max(1, weight); i++) learning.push(item);
-        }
-      }
-
-      for (let i = learning.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [learning[i], learning[j]] = [learning[j], learning[i]];
-      }
-
-      const reviewCount = mode === 'hard' ? 2 : 4;
-      const review = mastered.sort(() => 0.5 - Math.random()).slice(0, Math.min(reviewCount, mastered.length));
-      return [...learning, ...review];
-    }
-
-    function startMode(mode) {
-      currentMode = mode;
-      queue = buildQueue(currentPackKey, mode);
-      queueIndex = 0;
-
-      const modeName = mode === 'easy' ? 'Easy' : mode === 'medium' ? 'Medium' : 'Hard';
-      dom.packName.textContent = currentPackKey === 'all' ? '全部 100 条' : `分组 ${currentPackKey}`;
-      dom.modeTag.textContent = modeName;
-
-      if (!queue.length) {
-        dom.studyProgress.textContent = '该分组已全部掌握，可返回选择其他分组复习。';
-        dom.cardCount.textContent = '0 / 0';
-        dom.front.innerHTML = '<div class="expr">当前分组没有待学习卡片</div>';
-        dom.back.innerHTML = '<div class="hint">点击返回模式</div>';
-        dom.actions.style.display = 'none';
-      } else {
-        dom.actions.style.display = 'grid';
-        renderCard();
-      }
-
-      showScreen('study');
-    }
-
-    function normalizeText(str) {
-      return String(str || '')
-        .toLowerCase()
-        .replace(/\*\*/g, '')
-        .replace(/[\u2018\u2019]/g, "'")
-        .replace(/[\u201c\u201d]/g, '"')
-        .replace(/[.,!?;:()[\]{}]/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
-    }
-
-    function canonicalizeForCompare(str) {
-      return normalizeText(str)
-        .replace(/\bsb\.\b/g, 'somebody')
-        .replace(/\bsb\b/g, 'somebody')
-        .replace(/\bsth\.\b/g, 'something')
-        .replace(/\bsth\b/g, 'something')
-        .replace(/\b(ones|one's)\b/g, 'someone')
-        .replace(/\b(a|an|the)\b/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
-    }
-
-    function getExpressionVariants(item) {
-      const list = Array.isArray(item.expression_variants) ? item.expression_variants : [];
-      const cleaned = list
-        .map((x) => String(x || '').trim())
-        .filter(Boolean);
-      if (cleaned.length) return cleaned;
-      return [String(item.expression_en || '').trim()].filter(Boolean);
-    }
-
-    function renderExpressionVariantsHtml(item, showSpeakButtons) {
-      const variants = getExpressionVariants(item);
-      return variants.map((v, idx) => `
-        <div class="variant-row">
-          <span class="variant-text">${idx + 1}. ${formatDisplayText(v)}</span>
-          ${showSpeakButtons ? `<button class="tiny-btn" data-speak="${encodeURIComponent(v)}" data-lang="en-US">朗读</button>` : ''}
-        </div>
-      `).join('');
-    }
-
-    function isAnswerCorrect(userInput, item) {
-      const user = canonicalizeForCompare(userInput);
-      const variants = getExpressionVariants(item).map(canonicalizeForCompare);
-      if (!user) return { ok: false, expected: variants[0] || '', user, variants };
-      const ok = variants.includes(user);
-      return { ok, expected: variants[0] || '', user, variants };
-    }
-
-    function escapeHtml(str) {
-      return String(str)
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;');
-    }
-
-    function formatDisplayText(str) {
-      const safe = escapeHtml(str || '');
-      // Convert markdown-style emphasis from source JSON
-      return safe.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    }
-
-    function speakText(text, lang) {
-      const clean = String(text || '')
-        .replace(/\*\*/g, '')
-        .replace(/`/g, '')
-        .replace(/[_#~]/g, ' ')
-        .replace(/\[(.*?)\]\((.*?)\)/g, '$1')
-        .replace(/\s+/g, ' ')
-        .trim();
-      if (!clean) return;
-      if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(clean);
-      u.lang = lang;
-      u.rate = lang.startsWith('zh') ? 1.0 : 0.9;
-      window.speechSynthesis.speak(u);
-    }
-
-    function safeWords(words) {
-      return Array.isArray(words) ? words : [];
-    }
-
-    function renderEasyFront(item) {
-      const wordChips = safeWords(item.difficult_words).map((w) => {
-        const word = String(w.word || '').trim();
-        const phonetic = String(w.phonetic || '').trim();
-        if (!word && !phonetic) return '';
-        const wordHtml = word ? `<strong>${escapeHtml(word)}</strong>` : '';
-        const phHtml = phonetic ? ` [${escapeHtml(phonetic)}]` : '';
-        return `<span class="mini-chip">${wordHtml}${phHtml}</span>`;
-      }).join('');
-
-      return `
-        <div class="pill">#${item.id}</div>
-        <div class="variant-list">${renderExpressionVariantsHtml(item, true)}</div>
-        <div class="mini-list">${wordChips || '<span class="mini-chip">无疑难词</span>'}</div>
-        <div style="text-align:center"><button class="btn speak" data-speak="${encodeURIComponent(getExpressionVariants(item).join(' ; '))}" data-lang="en-US">顺序朗读全部说法</button></div>
-        <div class="hint">点击卡片查看反面</div>
-      `;
-    }
-
-    function renderEasyBack(item) {
-      const dwHtml = safeWords(item.difficult_words).map((w) => {
-        const word = String(w.word || '').trim();
-        const phonetic = String(w.phonetic || '').trim();
-        const pos = String(w.part_of_speech || '').trim();
-        const meaning = String(w.meaning_zh || '').trim();
-        const parts = [
-          word ? `<strong>${escapeHtml(word)}</strong>` : '',
-          phonetic ? `[${escapeHtml(phonetic)}]` : '',
-          formatDisplayText(pos || ''),
-          formatDisplayText(meaning || ''),
-        ].filter(Boolean).join(' ');
-        return `
-          <div class="dw">
-            <span>${parts || '无'}</span>
-            ${w.word ? `<button class="tiny-btn" data-speak="${encodeURIComponent(w.word)}" data-lang="en-US">读单词</button>` : ''}
-          </div>
-        `;
-      }).join('');
-
-      return `
-        <div class="pill">#${item.id}</div>
-        <div class="zh">${formatDisplayText(item.translation_zh || '')}</div>
-        <section class="section">
-          <h4>疑难词</h4>
-          <div class="dw-list">${dwHtml || '<div class="dw"><span>无</span></div>'}</div>
-        </section>
-        <section class="section">
-          <h4>例句</h4>
-          <div class="ex">
-            <span><strong>EN:</strong> ${formatDisplayText(item.example_en || '无')}</span>
-            ${item.example_en ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_en)}" data-lang="en-US">读英文</button>` : ''}
-          </div>
-          <div class="ex">
-            <span><strong>ZH:</strong> ${formatDisplayText(item.example_zh || '无')}</span>
-            ${item.example_zh ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_zh)}" data-lang="zh-CN">读中文</button>` : ''}
-          </div>
-        </section>
-      `;
-    }
-
-    function renderMediumFront(item) {
-      return `
-        <div class="pill">#${item.id}</div>
-        <div class="qa-box">
-          <div><strong>中文：</strong>${formatDisplayText(item.translation_zh || '')}</div>
-          <div class="hint" style="margin-top:8px">请写出对应英文表达（若有多种说法，写任意一种）</div>
-          <input class="answer" id="answerInput" placeholder="输入 expression_en" autocomplete="off" />
-          <div class="answer-row">
-            <button class="btn" id="checkBtn">检查答案</button>
-            <button class="btn secondary" id="showBtn">显示答案</button>
-            <button class="btn speak" data-speak="${encodeURIComponent(item.translation_zh || '')}" data-lang="zh-CN">读中文提示</button>
-          </div>
-          <div class="feedback" id="feedback"></div>
-        </div>
-      `;
-    }
-
-    function renderMediumBack(item) {
-      const words = safeWords(item.difficult_words).map((w) => w.word).filter(Boolean).join(' / ');
-      return `
-        <div class="pill">#${item.id}</div>
-        <div class="variant-list">${renderExpressionVariantsHtml(item, true)}</div>
-        <div class="hint">关键词：${formatDisplayText(words || '无')}</div>
-        <div class="ex"><span><strong>EN:</strong> ${formatDisplayText(item.example_en || '无')}</span>${item.example_en ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_en)}" data-lang="en-US">读英文</button>` : ''}</div>
-      `;
-    }
-
-    function renderHardFront(item) {
-      const hintWords = safeWords(item.difficult_words)
-        .map((w) => {
-          const word = String(w.word || '').trim();
-          const meaning = String(w.meaning_zh || '').trim();
-          const wordHtml = word ? `<strong>${escapeHtml(word)}</strong>` : '';
-          const meaningHtml = meaning ? ` (${formatDisplayText(meaning)})` : '';
-          return `${wordHtml}${meaningHtml}`.trim();
-        })
-        .filter(Boolean)
-        .join('；');
-
-      return `
-        <div class="pill">#${item.id}</div>
-        <div class="qa-box">
-          <div><strong>中文释义：</strong>${formatDisplayText(item.translation_zh || '')}</div>
-          <div style="margin-top:8px"><strong>词义线索：</strong>${formatDisplayText(hintWords || '无')}</div>
-          <div class="hint" style="margin-top:8px">不展示英文，请完整默写表达（多种说法任写一种）</div>
-          <input class="answer" id="answerInput" placeholder="完整输入表达" autocomplete="off" />
-          <div class="answer-row">
-            <button class="btn" id="checkBtn">检查答案</button>
-            <button class="btn secondary" id="showBtn">显示答案</button>
-            <button class="btn speak" data-speak="${encodeURIComponent(item.translation_zh || '')}" data-lang="zh-CN">读中文释义</button>
-          </div>
-          <div class="feedback" id="feedback"></div>
-        </div>
-      `;
-    }
-
-    function renderHardBack(item) {
-      return `
-        <div class="pill">#${item.id}</div>
-        <div class="variant-list">${renderExpressionVariantsHtml(item, true)}</div>
-        <div class="ex"><span><strong>ZH:</strong> ${formatDisplayText(item.example_zh || '无')}</span>${item.example_zh ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_zh)}" data-lang="zh-CN">读中文</button>` : ''}</div>
-      `;
-    }
-
-    function renderCard() {
-      const item = queue[queueIndex];
-      if (!item) return;
-
-      const s = getExpState(item.id);
-      const total = queue.length;
-      const remain = Math.max(0, total - queueIndex);
-      dom.cardCount.textContent = `${queueIndex + 1} / ${total}`;
-      dom.studyProgress.textContent = `当前状态：${scoreLabel(s.score)}（score=${s.score}） · 本轮剩余 ${remain} 张`;
-
-      if (currentMode === 'easy') {
-        dom.front.innerHTML = renderEasyFront(item);
-        dom.back.innerHTML = renderEasyBack(item);
-        dom.card.classList.remove('flipped');
-      } else if (currentMode === 'medium') {
-        dom.front.innerHTML = renderMediumFront(item);
-        dom.back.innerHTML = renderMediumBack(item);
-        dom.card.classList.add('flipped');
-      } else {
-        dom.front.innerHTML = renderHardFront(item);
-        dom.back.innerHTML = renderHardBack(item);
-        dom.card.classList.add('flipped');
-      }
-
-      flipped = false;
-      if (currentMode === 'easy') {
-        dom.card.classList.remove('flipped');
-      }
-
-      wireQaButtons(item);
-    }
-
-    function wireQaButtons(item) {
-      const input = document.getElementById('answerInput');
-      const checkBtn = document.getElementById('checkBtn');
-      const showBtn = document.getElementById('showBtn');
-      const feedback = document.getElementById('feedback');
-      if (!input || !checkBtn || !showBtn || !feedback) return;
-
-      const acceptedRaw = getExpressionVariants(item);
-      const acceptedNorm = acceptedRaw.map(canonicalizeForCompare);
-      checkBtn.onclick = () => {
-        const result = isAnswerCorrect(input.value, item);
-        const ok = result.ok;
-        feedback.textContent = ok
-          ? '正确，可点击下方“掌握(+1)”进入下一题。'
-          : `不完全正确，请再试一次或显示答案。（你的标准化输入：${result.user || '空'}；可接受：${acceptedNorm.join(' | ')}）`;
-        feedback.style.color = ok ? '#166534' : '#991b1b';
-      };
-
-      showBtn.onclick = () => {
-        input.value = acceptedRaw[0] || item.expression_en;
-        feedback.textContent = `已显示答案。可接受写法：${acceptedRaw.join(' | ')}`;
-        feedback.style.color = '#1d4ed8';
-      };
-
-      input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          checkBtn.click();
-        }
-      });
-    }
-
-    function applyDelta(delta) {
-      const item = queue[queueIndex];
-      if (!item) return;
-      const s = getExpState(item.id);
-      s.score = Math.max(0, Math.min(6, s.score + delta));
-      if (delta > 0) s.correct += 1;
-      if (delta < 0) s.wrong += 1;
-      s.last = Date.now();
-      saveState();
-
-      queueIndex += 1;
-      if (queueIndex >= queue.length) {
-        queue = buildQueue(currentPackKey, currentMode);
-        queueIndex = 0;
-        if (!queue.length) {
-          renderHome();
-          showScreen('home');
-          return;
-        }
-      }
-      renderCard();
-    }
-
-    function bindEvents() {
-      dom.modeBackBtn.addEventListener('click', () => showScreen('home'));
-
-      document.querySelectorAll('.mode-btn').forEach((btn) => {
-        btn.addEventListener('click', () => startMode(btn.dataset.mode));
-      });
-
-      dom.backBtn.addEventListener('click', () => {
-        if (currentPackKey) {
-          const title = currentPackKey === 'all' ? '全部 100 条' : `分组 ${currentPackKey}`;
-          dom.modePackName.textContent = title;
-          showScreen('mode');
-        } else {
-          showScreen('home');
-        }
-      });
-
-      if (dom.compactToggleBtn) {
-        dom.compactToggleBtn.addEventListener('click', () => {
-          superCompact = !superCompact;
-          updateCompactToggleUI();
-        });
-      }
-
-      dom.card.addEventListener('click', (e) => {
-        const t = e.target;
-        if (t.closest('[data-speak]') || t.id === 'checkBtn' || t.id === 'showBtn' || t.id === 'answerInput') {
-          return;
-        }
-        if (currentMode !== 'easy') return;
-        flipped = !flipped;
-        dom.card.classList.toggle('flipped', flipped);
-      });
-
-      document.body.addEventListener('click', (e) => {
-        const target = e.target.closest('[data-speak]');
-        if (!target) return;
-        e.preventDefault();
-        const text = decodeURIComponent(target.getAttribute('data-speak') || '');
-        const lang = target.getAttribute('data-lang') || 'en-US';
-        speakText(text, lang);
-      });
-
-      dom.btnBad.addEventListener('click', () => applyDelta(-1));
-      dom.btnMid.addEventListener('click', () => applyDelta(0));
-      dom.btnGood.addEventListener('click', () => applyDelta(1));
-
-      dom.fileInput.addEventListener('change', async (e) => {
-        const file = e.target.files && e.target.files[0];
-        if (!file) return;
-        try {
-          const txt = await file.text();
-          const payload = JSON.parse(txt);
-          hydrate(payload);
-        } catch (_) {
-          showError('手动加载 JSON 失败，请确认文件是 UTF-8 编码且结构正确。');
-        }
-      });
-    }
-
-    function showError(msg) {
-      dom.loadError.style.display = 'block';
-      dom.loadError.innerHTML = `${escapeHtml(msg)}<br/><br/>你可以点击这里手动选择 JSON 文件：<button class="btn" id="manualBtn">选择文件</button>`;
-      const btn = document.getElementById('manualBtn');
-      if (btn) btn.onclick = () => dom.fileInput.click();
-    }
-
-    function hydrate(payload) {
-      const items = Array.isArray(payload) ? payload : payload.items;
-      if (!Array.isArray(items) || items.length === 0) {
-        throw new Error('invalid data');
-      }
-      expressions = items
-        .map((x) => ({
-          id: Number(x.id),
-          expression_en: x.expression_en || x.expression || '',
-          expression_variants: Array.isArray(x.expression_variants) ? x.expression_variants : [],
-          translation_zh: x.translation_zh || '',
-          difficult_words: Array.isArray(x.difficult_words) ? x.difficult_words : [],
-          example_en: x.example_en || '',
-          example_zh: x.example_zh || x.example_cn || '',
-        }))
-        .filter((x) => Number.isFinite(x.id) && x.expression_en)
-        .sort((a, b) => a.id - b.id);
-
-      packs = splitPacks(expressions);
-      renderHome();
-      showScreen('home');
-      dom.loadError.style.display = 'none';
-    }
-
-    async function init() {
-      bindEvents();
-      updateCompactToggleUI();
-      try {
-        const res = await fetch(DATA_FILE, { cache: 'no-store' });
-        if (!res.ok) throw new Error('fetch failed');
-        const payload = await res.json();
-        hydrate(payload);
-      } catch (_) {
-        showError('自动读取 expression-100sentences.json 失败。若直接双击打开 HTML，请改为本地服务器访问，或手动加载 JSON。');
-      }
-    }
-
-    init();
-  </script>
 </body>
+
 </html>
