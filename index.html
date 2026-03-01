@@ -192,6 +192,29 @@
       word-break: break-word;
     }
 
+    .variant-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .variant-row {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f8fafc;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .variant-text {
+      word-break: break-word;
+    }
+
     .hint { text-align: center; color: var(--muted); }
     .zh { font-size: 1.12rem; color: #0f766e; font-weight: 700; text-align: center; }
     .progress { color: var(--muted); }
@@ -541,19 +564,31 @@
         .trim();
     }
 
-    function expressionVariants(expr) {
-      const raw = normalizeText(expr).replace(/\s*\/\s*/g, '/');
-      const parts = raw.split('/').map((x) => x.trim()).filter(Boolean);
-      if (parts.length <= 1) return [raw];
-      return [raw, ...parts];
+    function getExpressionVariants(item) {
+      const list = Array.isArray(item.expression_variants) ? item.expression_variants : [];
+      const cleaned = list
+        .map((x) => String(x || '').trim())
+        .filter(Boolean);
+      if (cleaned.length) return cleaned;
+      return [String(item.expression_en || '').trim()].filter(Boolean);
     }
 
-    function isAnswerCorrect(userInput, targetExpr) {
+    function renderExpressionVariantsHtml(item, showSpeakButtons) {
+      const variants = getExpressionVariants(item);
+      return variants.map((v, idx) => `
+        <div class="variant-row">
+          <span class="variant-text">${idx + 1}. ${formatDisplayText(v)}</span>
+          ${showSpeakButtons ? `<button class="tiny-btn" data-speak="${encodeURIComponent(v)}" data-lang="en-US">朗读</button>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function isAnswerCorrect(userInput, item) {
       const user = canonicalizeForCompare(userInput);
-      if (!user) return { ok: false, expected: canonicalizeForCompare(targetExpr), user };
-      const variants = expressionVariants(targetExpr).map(canonicalizeForCompare);
+      const variants = getExpressionVariants(item).map(canonicalizeForCompare);
+      if (!user) return { ok: false, expected: variants[0] || '', user, variants };
       const ok = variants.includes(user);
-      return { ok, expected: variants[0] || canonicalizeForCompare(targetExpr), user };
+      return { ok, expected: variants[0] || '', user, variants };
     }
 
     function escapeHtml(str) {
@@ -561,6 +596,12 @@
         .replaceAll('&', '&amp;')
         .replaceAll('<', '&lt;')
         .replaceAll('>', '&gt;');
+    }
+
+    function formatDisplayText(str) {
+      const safe = escapeHtml(str || '');
+      // Convert markdown-style emphasis from source JSON
+      return safe.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     }
 
     function speakText(text, lang) {
@@ -587,9 +628,9 @@
 
       return `
         <div class="pill">#${item.id}</div>
-        <div class="expr">${escapeHtml(item.expression_en)}</div>
+        <div class="variant-list">${renderExpressionVariantsHtml(item, true)}</div>
         <div class="mini-list">${wordChips || '<span class="mini-chip">无疑难词</span>'}</div>
-        <div style="text-align:center"><button class="btn speak" data-speak="${encodeURIComponent(item.expression_en)}" data-lang="en-US">朗读表达</button></div>
+        <div style="text-align:center"><button class="btn speak" data-speak="${encodeURIComponent(getExpressionVariants(item).join(' ; '))}" data-lang="en-US">顺序朗读全部说法</button></div>
         <div class="hint">点击卡片查看反面</div>
       `;
     }
@@ -601,7 +642,7 @@
           .join(' ');
         return `
           <div class="dw">
-            <span>${escapeHtml(parts || '无')}</span>
+            <span>${formatDisplayText(parts || '无')}</span>
             ${w.word ? `<button class="tiny-btn" data-speak="${encodeURIComponent(w.word)}" data-lang="en-US">读单词</button>` : ''}
           </div>
         `;
@@ -609,7 +650,7 @@
 
       return `
         <div class="pill">#${item.id}</div>
-        <div class="zh">${escapeHtml(item.translation_zh || '')}</div>
+        <div class="zh">${formatDisplayText(item.translation_zh || '')}</div>
         <section class="section">
           <h4>疑难词</h4>
           <div class="dw-list">${dwHtml || '<div class="dw"><span>无</span></div>'}</div>
@@ -617,11 +658,11 @@
         <section class="section">
           <h4>例句</h4>
           <div class="ex">
-            <span><strong>EN:</strong> ${escapeHtml(item.example_en || '无')}</span>
+            <span><strong>EN:</strong> ${formatDisplayText(item.example_en || '无')}</span>
             ${item.example_en ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_en)}" data-lang="en-US">读英文</button>` : ''}
           </div>
           <div class="ex">
-            <span><strong>ZH:</strong> ${escapeHtml(item.example_zh || '无')}</span>
+            <span><strong>ZH:</strong> ${formatDisplayText(item.example_zh || '无')}</span>
             ${item.example_zh ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_zh)}" data-lang="zh-CN">读中文</button>` : ''}
           </div>
         </section>
@@ -632,8 +673,8 @@
       return `
         <div class="pill">#${item.id}</div>
         <div class="qa-box">
-          <div><strong>中文：</strong>${escapeHtml(item.translation_zh || '')}</div>
-          <div class="hint" style="margin-top:8px">请写出对应英文表达（忽略大小写）</div>
+          <div><strong>中文：</strong>${formatDisplayText(item.translation_zh || '')}</div>
+          <div class="hint" style="margin-top:8px">请写出对应英文表达（若有多种说法，写任意一种）</div>
           <input class="answer" id="answerInput" placeholder="输入 expression_en" autocomplete="off" />
           <div class="answer-row">
             <button class="btn" id="checkBtn">检查答案</button>
@@ -649,9 +690,9 @@
       const words = safeWords(item.difficult_words).map((w) => w.word).filter(Boolean).join(' / ');
       return `
         <div class="pill">#${item.id}</div>
-        <div class="expr">${escapeHtml(item.expression_en)}</div>
-        <div class="hint">关键词：${escapeHtml(words || '无')}</div>
-        <div class="ex"><span><strong>EN:</strong> ${escapeHtml(item.example_en || '无')}</span>${item.example_en ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_en)}" data-lang="en-US">读英文</button>` : ''}</div>
+        <div class="variant-list">${renderExpressionVariantsHtml(item, true)}</div>
+        <div class="hint">关键词：${formatDisplayText(words || '无')}</div>
+        <div class="ex"><span><strong>EN:</strong> ${formatDisplayText(item.example_en || '无')}</span>${item.example_en ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_en)}" data-lang="en-US">读英文</button>` : ''}</div>
       `;
     }
 
@@ -664,9 +705,9 @@
       return `
         <div class="pill">#${item.id}</div>
         <div class="qa-box">
-          <div><strong>中文释义：</strong>${escapeHtml(item.translation_zh || '')}</div>
-          <div style="margin-top:8px"><strong>词义线索：</strong>${escapeHtml(hintWords || '无')}</div>
-          <div class="hint" style="margin-top:8px">不展示英文，请完整默写表达</div>
+          <div><strong>中文释义：</strong>${formatDisplayText(item.translation_zh || '')}</div>
+          <div style="margin-top:8px"><strong>词义线索：</strong>${formatDisplayText(hintWords || '无')}</div>
+          <div class="hint" style="margin-top:8px">不展示英文，请完整默写表达（多种说法任写一种）</div>
           <input class="answer" id="answerInput" placeholder="完整输入表达" autocomplete="off" />
           <div class="answer-row">
             <button class="btn" id="checkBtn">检查答案</button>
@@ -681,8 +722,8 @@
     function renderHardBack(item) {
       return `
         <div class="pill">#${item.id}</div>
-        <div class="expr">${escapeHtml(item.expression_en)}</div>
-        <div class="ex"><span><strong>ZH:</strong> ${escapeHtml(item.example_zh || '无')}</span>${item.example_zh ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_zh)}" data-lang="zh-CN">读中文</button>` : ''}</div>
+        <div class="variant-list">${renderExpressionVariantsHtml(item, true)}</div>
+        <div class="ex"><span><strong>ZH:</strong> ${formatDisplayText(item.example_zh || '无')}</span>${item.example_zh ? `<button class="tiny-btn" data-speak="${encodeURIComponent(item.example_zh)}" data-lang="zh-CN">读中文</button>` : ''}</div>
       `;
     }
 
@@ -725,19 +766,20 @@
       const feedback = document.getElementById('feedback');
       if (!input || !checkBtn || !showBtn || !feedback) return;
 
-      const answerNorm = canonicalizeForCompare(item.expression_en);
+      const acceptedRaw = getExpressionVariants(item);
+      const acceptedNorm = acceptedRaw.map(canonicalizeForCompare);
       checkBtn.onclick = () => {
-        const result = isAnswerCorrect(input.value, item.expression_en);
+        const result = isAnswerCorrect(input.value, item);
         const ok = result.ok;
         feedback.textContent = ok
           ? '正确，可点击下方“掌握(+1)”进入下一题。'
-          : `不完全正确，请再试一次或显示答案。（标准化：${result.user || '空'} != ${answerNorm}）`;
+          : `不完全正确，请再试一次或显示答案。（你的标准化输入：${result.user || '空'}；可接受：${acceptedNorm.join(' | ')}）`;
         feedback.style.color = ok ? '#166534' : '#991b1b';
       };
 
       showBtn.onclick = () => {
-        input.value = item.expression_en;
-        feedback.textContent = '已显示标准答案。';
+        input.value = acceptedRaw[0] || item.expression_en;
+        feedback.textContent = `已显示答案。可接受写法：${acceptedRaw.join(' | ')}`;
         feedback.style.color = '#1d4ed8';
       };
 
@@ -841,6 +883,7 @@
         .map((x) => ({
           id: Number(x.id),
           expression_en: x.expression_en || x.expression || '',
+          expression_variants: Array.isArray(x.expression_variants) ? x.expression_variants : [],
           translation_zh: x.translation_zh || '',
           difficult_words: Array.isArray(x.difficult_words) ? x.difficult_words : [],
           example_en: x.example_en || '',
