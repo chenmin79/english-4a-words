@@ -63,6 +63,11 @@
     .btn.warn { background: var(--warn); color: #111827; }
     .btn.bad { background: var(--bad); }
     .btn.speak { background: #0f766e; }
+    .btn.compact-toggle {
+      background: #475569;
+      font-size: .9rem;
+      padding: 8px 10px;
+    }
 
     .pill {
       display: inline-block;
@@ -178,8 +183,9 @@
       padding: 18px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 12px;
+      overflow: auto;
     }
 
     .back { transform: rotateY(180deg); }
@@ -307,9 +313,149 @@
     }
 
     @media (max-width: 700px) {
-      .card { min-height: 560px; }
-      .actions { grid-template-columns: 1fr; }
+      .screen { padding: 10px; }
+
+      #study.active .wrap {
+        height: calc(100vh - 20px);
+        height: calc(100dvh - 20px);
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 8px;
+      }
+
+      .study-header {
+        margin-bottom: 0;
+        gap: 6px;
+      }
+
+      .pill {
+        font-size: .8rem;
+        padding: 3px 8px;
+      }
+
+      .progress {
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .card-wrap {
+        margin-top: 0;
+        min-height: 0;
+      }
+
+      .card {
+        min-height: 0;
+        height: 100%;
+      }
+
+      .face {
+        padding: 10px;
+        gap: 8px;
+        border-radius: 16px;
+      }
+
+      .variant-row {
+        padding: 6px 8px;
+        font-size: .92rem;
+      }
+
+      .mini-list {
+        gap: 6px;
+      }
+
+      .mini-chip {
+        padding: 3px 8px;
+        font-size: .8rem;
+      }
+
+      .tiny-btn {
+        padding: 3px 6px;
+        font-size: .75rem;
+      }
+
+      .actions {
+        margin-top: 0;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .actions .btn {
+        padding: 10px 6px;
+        font-size: .95rem;
+        border-radius: 10px;
+      }
+
       .ex, .dw { align-items: flex-start; }
+    }
+
+    @media (max-width: 700px) {
+      body.super-compact #study.active .wrap {
+        gap: 4px;
+      }
+
+      body.super-compact .study-header {
+        gap: 4px;
+      }
+
+      body.super-compact .pill {
+        font-size: .74rem;
+        padding: 2px 7px;
+      }
+
+      body.super-compact .progress {
+        font-size: .9rem;
+        line-height: 1.25;
+      }
+
+      body.super-compact .card-wrap {
+        margin-top: 0;
+      }
+
+      body.super-compact .face {
+        padding: 8px;
+        gap: 6px;
+      }
+
+      body.super-compact .variant-list {
+        gap: 6px;
+      }
+
+      body.super-compact .variant-row {
+        padding: 5px 7px;
+        font-size: .86rem;
+        gap: 6px;
+      }
+
+      body.super-compact .mini-list {
+        gap: 4px;
+        max-height: 56px;
+        overflow: auto;
+      }
+
+      body.super-compact .mini-chip {
+        padding: 2px 6px;
+        font-size: .75rem;
+      }
+
+      body.super-compact .hint {
+        font-size: .86rem;
+      }
+
+      body.super-compact .dw,
+      body.super-compact .ex {
+        padding: 6px;
+        font-size: .84rem;
+      }
+
+      body.super-compact .tiny-btn {
+        padding: 2px 6px;
+        font-size: .72rem;
+      }
+
+      body.super-compact .actions .btn {
+        padding: 8px 4px;
+        font-size: .9rem;
+      }
     }
   </style>
 </head>
@@ -353,6 +499,7 @@
     <div class="wrap">
       <div class="study-header">
         <button class="btn secondary" id="backBtn">返回模式</button>
+        <button class="btn compact-toggle" id="compactToggleBtn">超紧凑：关</button>
         <span class="pill" id="packName"></span>
         <span class="pill" id="modeTag"></span>
         <span class="pill" id="cardCount"></span>
@@ -392,6 +539,7 @@
       modePackName: document.getElementById('modePackName'),
 
       backBtn: document.getElementById('backBtn'),
+      compactToggleBtn: document.getElementById('compactToggleBtn'),
       packName: document.getElementById('packName'),
       modeTag: document.getElementById('modeTag'),
       cardCount: document.getElementById('cardCount'),
@@ -414,6 +562,15 @@
     let queue = [];
     let queueIndex = 0;
     let flipped = false;
+    let superCompact = false;
+
+    function updateCompactToggleUI() {
+      document.body.classList.toggle('super-compact', superCompact);
+      if (dom.compactToggleBtn) {
+        dom.compactToggleBtn.textContent = superCompact ? '超紧凑：开' : '超紧凑：关';
+        dom.compactToggleBtn.setAttribute('aria-pressed', superCompact ? 'true' : 'false');
+      }
+    }
 
     function loadState() {
       try {
@@ -621,9 +778,12 @@
 
     function renderEasyFront(item) {
       const wordChips = safeWords(item.difficult_words).map((w) => {
-        const txt = `${w.word || ''} ${w.phonetic ? '[' + w.phonetic + ']' : ''}`.trim();
-        if (!txt) return '';
-        return `<span class="mini-chip">${escapeHtml(txt)}</span>`;
+        const word = String(w.word || '').trim();
+        const phonetic = String(w.phonetic || '').trim();
+        if (!word && !phonetic) return '';
+        const wordHtml = word ? `<strong>${escapeHtml(word)}</strong>` : '';
+        const phHtml = phonetic ? ` [${escapeHtml(phonetic)}]` : '';
+        return `<span class="mini-chip">${wordHtml}${phHtml}</span>`;
       }).join('');
 
       return `
@@ -637,12 +797,19 @@
 
     function renderEasyBack(item) {
       const dwHtml = safeWords(item.difficult_words).map((w) => {
-        const parts = [w.word, w.phonetic ? `[${w.phonetic}]` : '', w.part_of_speech || '', w.meaning_zh || '']
-          .filter(Boolean)
-          .join(' ');
+        const word = String(w.word || '').trim();
+        const phonetic = String(w.phonetic || '').trim();
+        const pos = String(w.part_of_speech || '').trim();
+        const meaning = String(w.meaning_zh || '').trim();
+        const parts = [
+          word ? `<strong>${escapeHtml(word)}</strong>` : '',
+          phonetic ? `[${escapeHtml(phonetic)}]` : '',
+          formatDisplayText(pos || ''),
+          formatDisplayText(meaning || ''),
+        ].filter(Boolean).join(' ');
         return `
           <div class="dw">
-            <span>${formatDisplayText(parts || '无')}</span>
+            <span>${parts || '无'}</span>
             ${w.word ? `<button class="tiny-btn" data-speak="${encodeURIComponent(w.word)}" data-lang="en-US">读单词</button>` : ''}
           </div>
         `;
@@ -698,7 +865,13 @@
 
     function renderHardFront(item) {
       const hintWords = safeWords(item.difficult_words)
-        .map((w) => `${w.word || ''}${w.meaning_zh ? ' (' + w.meaning_zh + ')' : ''}`.trim())
+        .map((w) => {
+          const word = String(w.word || '').trim();
+          const meaning = String(w.meaning_zh || '').trim();
+          const wordHtml = word ? `<strong>${escapeHtml(word)}</strong>` : '';
+          const meaningHtml = meaning ? ` (${formatDisplayText(meaning)})` : '';
+          return `${wordHtml}${meaningHtml}`.trim();
+        })
         .filter(Boolean)
         .join('；');
 
@@ -831,6 +1004,13 @@
         }
       });
 
+      if (dom.compactToggleBtn) {
+        dom.compactToggleBtn.addEventListener('click', () => {
+          superCompact = !superCompact;
+          updateCompactToggleUI();
+        });
+      }
+
       dom.card.addEventListener('click', (e) => {
         const t = e.target;
         if (t.closest('[data-speak]') || t.id === 'checkBtn' || t.id === 'showBtn' || t.id === 'answerInput') {
@@ -900,6 +1080,7 @@
 
     async function init() {
       bindEvents();
+      updateCompactToggleUI();
       try {
         const res = await fetch(DATA_FILE, { cache: 'no-store' });
         if (!res.ok) throw new Error('fetch failed');
