@@ -1120,6 +1120,7 @@
       <div class="card-word">${vocab.word}</div>
       <div class="card-phonetic">${vocab.phonetic}</div>
       <div class="card-pos">${vocab.pos}</div>
+      <div class="audio-btn" style="margin-top: 12px; min-width: 60px; padding: 6px 16px;" onclick="event.stopPropagation(); speak('${vocab.word.replace(/'/g, "\\'")}')">🔊</div>
       <div class="tap-hint">👆 Tap to flip</div>
     `;
                 back.innerHTML = `
