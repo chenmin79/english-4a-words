@@ -1,10 +1,12 @@
-# Kitchen Kids Lesson Content and Vocabulary
+# Kitchen Kids - Mason 学习版（UTF-8）
 
-## 1. Lesson Text (Transcribed)
+## 1. 课文原文（按图片整理）
 
-**Harry doesn't want to be a star chef when he's 20. He wants to be one now. This is why he's on the TV programme *Kitchen Kids*.**
+Harry doesn't want to be a star chef when he's 20. He wants to be one now. This is why he's on the TV programme *Kitchen Kids*.
 
-The ten-year-old New Yorker likes cooking. He can make fantastic soups and salads, excellent omelettes and the best cakes. But there are many other children on the show, too. And they are all very good. More and more young people are interested in cooking. Many of them learn it from their parents. Others watch special cooking videos for children. In many cities, there are special cooking classes for young people. Some of them are for children from the age of three!
+The ten-year-old New Yorker likes cooking. He can make fantastic soups and salads, excellent omelettes and the best cakes. But there are many other children on the show, too. And they are all very good.
+
+More and more young people are interested in cooking. Many of them learn it from their parents. Others watch special cooking videos for children. In many cities, there are special cooking classes for young people. Some of them are for children from the age of three!
 
 But what must you do to become a star chef? Of course, it's important that you like cooking and are really good at it. But there are some rules. You must be nine years old or more to be on *Kitchen Kids*.
 
@@ -16,89 +18,99 @@ It's 5 pm. The show is over. Harry is happy, and a little tired. He goes home. I
 
 ---
 
-## 2. Difficult Vocabulary (Frequency Rank > 300)
+## 2. 生词表（定义：不在最常用前 300 词内）
 
-| 英文原文   | 词性 | 音标         | 中文翻译             |
-| :--------- | :--- | :----------- | :------------------- |
-| chef       | n.   | /ʃef/        | 主厨，厨师           |
-| programme  | n.   | /ˈprəʊɡræm/  | （电视）节目         |
-| kitchen    | n.   | /ˈkɪtʃɪn/    | 厨房                 |
-| yorker     | n.   | /ˈjɔːkə/     | 纽约人（New Yorker） |
-| cooking    | n.   | /ˈkʊkɪŋ/     | 烹饪，做饭           |
-| fantastic  | adj. | /fænˈtæstɪk/ | 极好的，了不起的     |
-| soups      | n.   | /suːps/      | 汤                   |
-| salads     | n.   | /ˈsælədz/    | 沙拉                 |
-| excellent  | adj. | /ˈeksələnt/  | 卓越的，杰出的       |
-| omelettes  | n.   | /ˈɒmləts/    | 煎蛋卷               |
-| cakes      | n.   | /keɪks/      | 蛋糕                 |
-| interested | adj. | /ˈɪntrəstɪd/ | 感兴趣的             |
-| special    | adj. | /ˈspeʃl/     | 特殊的，专门的       |
-| videos     | n.   | /ˈvɪdiəʊz/   | 视频                 |
-| cities     | n.   | /ˈsɪtiz/     | 城市                 |
-| classes    | n.   | /ˈklɑːsɪz/   | 班级/课              |
-| age        | n.   | /eɪdʒ/       | 年龄                 |
-| become     | v.   | /bɪˈkʌm/     | 成为                 |
-| important  | adj. | /ɪmˈpɔːtnt/  | 重要的               |
-| rules      | n.   | /ruːl/       | 规则                 |
-| wash       | v.   | /wɒʃ/        | 洗，清洗             |
-| mouths     | n.   | /maʊθ/       | 嘴巴                 |
-| careful    | adj. | /ˈkeəf(ə)l/  | 小心的，仔细的       |
-| plates     | n.   | /pleɪt/      | 盘子                 |
-| excited    | adj. | /ɪkˈsaɪtɪd/  | 兴奋的               |
-| tomato     | n.   | /təˈmɑːtəʊ/  | 西红柿               |
-| steak      | n.   | /steɪk/      | 牛排                 |
-| carrot     | n.   | /ˈkærət/     | 胡萝卜               |
-| experts    | n.   | /ˈekspɜːt/   | 专家                 |
-| studio     | n.   | /ˈstjuːdiəʊ/ | 工作室，演播室       |
-| tired      | adj. | /ˈtaɪəd/     | 疲倦的，累的         |
-| homework   | n.   | /ˈhəʊmwɜːk/  | 家庭作业             |
+说明：按“前 300 高频词以外”筛选；单词先列，固定搭配/词组紧随其后；名词统一用原形（不再用复数词头）。
 
-
-## 3. 课文参考翻译 (Chinese Translation)
-
-哈利不想等到20岁才成为一名明星厨师。他现在就想成为其中的一员。这就是为什么他参加了电视节目《厨房孩子》(Kitchen Kids)。
-
-这个十岁的纽约男孩喜欢烹饪。他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。但是在这个节目里还有许多其他的孩子，他们也都非常出色。越来越多的年轻人对烹饪感兴趣。他们中的很多人是从父母那里学来的。其他人则观看专门为儿童制作的烹饪视频。在许多城市，都有专门针对年轻人的烹饪培训班。其中一些甚至针对三岁的儿童！
-
-但是要想成为一名明星厨师，你必须要怎么做呢？当然，喜欢烹饪并且真的很擅长烹饪很重要。但这也是有规则的。要想参加《厨房孩子》，你必须要满九岁或九岁以上。
-
-“在开始做饭之前，我们必须洗手，”哈利说。“当然我们绝不能把手放进嘴里。厨师是不会那样做的！而且我们必须非常小心热盘子。”
-
-节目开始了。哈利很兴奋。他知道自己是个极好的厨师。这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。演播室里的专家们很喜欢哈利的食物，他留在了节目中。
-
-现在是下午五点。节目结束了。哈利很高兴，但也稍微有点累。他回家了。现在是该做家庭作业的时间了。
+| 词汇 | 词性 | 音标（Gimson） | 中文释义 | 例句 | 课文中的搭配/片段 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| chef | n. | /ʃef/ | 厨师 | A chef doesn't do that! | a star chef |
+| star chef | n. phr. | /ˌstɑː ˈʃef/ | 明星厨师 | Harry doesn't want to be a star chef when he's 20. | a star chef |
+| programme | n. | /ˈprəʊɡræm/ | （电视）节目（英式拼写） | This is why he's on the TV programme *Kitchen Kids*. | TV programme |
+| TV programme | n. phr. | /ˌtiːˈviː ˈprəʊɡræm/ | 电视节目 | This is why he's on the TV programme *Kitchen Kids*. | TV programme *Kitchen Kids* |
+| New Yorker | n. | /ˌnjuː ˈjɔːkə/ | 纽约人 | The ten-year-old New Yorker likes cooking. | ten-year-old New Yorker |
+| cook | n. | /kʊk/ | 厨师 | He knows he's an excellent cook. | excellent cook |
+| cooking | n. | /ˈkʊkɪŋ/ | 烹饪 | More and more young people are interested in cooking. | likes cooking |
+| fantastic | adj. | /fænˈtæstɪk/ | 极好的 | He can make fantastic soups and salads... | fantastic soups |
+| soup | n. | /suːp/ | 汤 | This time he makes tomato soup... | tomato soup |
+| tomato soup | n. phr. | /təˈmɑːtəʊ suːp/ | 番茄汤 | This time he makes tomato soup... | tomato soup |
+| salad | n. | /ˈsæləd/ | 沙拉 | This time he makes tomato soup, some salad... | some salad |
+| excellent | adj. | /ˈeksələnt/ | 极好的；优秀的 | He can make ... excellent omelettes... | excellent omelettes |
+| omelette | n. | /ˈɒmlət/ | 煎蛋卷 | He can make ... excellent omelettes... | excellent omelettes |
+| cake | n. | /keɪk/ | 蛋糕 | He can make ... the best cakes. | carrot cake |
+| carrot cake | n. phr. | /ˈkærət keɪk/ | 胡萝卜蛋糕 | This time he makes ... carrot cake. | carrot cake |
+| interested | adj. | /ˈɪntrəstɪd/ | 感兴趣的 | More and more young people are interested in cooking. | interested in cooking |
+| be interested in | phr. | /biː ˈɪntrəstɪd ɪn/ | 对……感兴趣 | More and more young people are interested in cooking. | interested in cooking |
+| special | adj. | /ˈspeʃl/ | 特别的；专门的 | Others watch special cooking videos for children. | special cooking videos |
+| video | n. | /ˈvɪdiəʊ/ | 视频 | Others watch special cooking videos for children. | cooking videos |
+| city | n. | /ˈsɪti/ | 城市 | In many cities, there are special cooking classes... | in many cities |
+| class | n. | /klɑːs/ | 课程；班 | ...there are special cooking classes for young people. | cooking classes |
+| age | n. | /eɪdʒ/ | 年龄 | Some of them are for children from the age of three! | from the age of three |
+| from the age of ... | phr. | /frəm ði ˈeɪdʒ əv/ | 从……岁起 | Some of them are for children from the age of three! | from the age of three |
+| become | v. | /bɪˈkʌm/ | 成为 | But what must you do to become a star chef? | become a star chef |
+| important | adj. | /ɪmˈpɔːtənt/ | 重要的 | Of course, it's important that you like cooking... | it's important that... |
+| rule | n. | /ruːl/ | 规则 | But there are some rules. | there are some rules |
+| wash | v. | /wɒʃ/ | 洗；清洗 | We must wash our hands before we start cooking. | wash our hands |
+| mouth | n. | /maʊθ/ | 嘴 | ...we mustn't put them in our mouths. | in our mouths |
+| careful | adj. | /ˈkeəfl/ | 小心的 | We must be very careful with hot plates. | very careful |
+| be careful with | phr. | /biː ˈkeəfl wɪð/ | 小心对待…… | We must be very careful with hot plates. | careful with hot plates |
+| plate | n. | /pleɪt/ | 盘子 | We must be very careful with hot plates. | hot plates |
+| excited | adj. | /ɪkˈsaɪtɪd/ | 兴奋的 | Harry is excited. | Harry is excited |
+| tomato | n. | /təˈmɑːtəʊ/ | 番茄；西红柿 | This time he makes tomato soup... | tomato soup |
+| steak | n. | /steɪk/ | 牛排 | This time he makes ... steak and carrot cake. | steak and carrot cake |
+| carrot | n. | /ˈkærət/ | 胡萝卜 | This time he makes ... carrot cake. | carrot cake |
+| expert | n. | /ˈekspɜːt/ | 专家 | The experts in the studio love Harry's food... | experts in the studio |
+| studio | n. | /ˈstjuːdiəʊ/ | 演播室；录音室 | The experts in the studio love Harry's food... | in the studio |
+| tired | adj. | /ˈtaɪəd/ | 疲倦的 | Harry is happy, and a little tired. | a little tired |
+| homework | n. | /ˈhəʊmwɜːk/ | 家庭作业 | It's time to do his homework. | do his homework |
+| do homework | phr. | /duː ˈhəʊmwɜːk/ | 做作业 | It's time to do his homework. | do his homework |
 
 ---
 
-## 4. 课文详细讲解 (Detailed Explanations)
+## 3. 参考译文（中文）
 
-### 【核心语法与句型】
+哈利不想等到 20 岁才当明星厨师。他现在就想成为其中一员。这就是他参加电视节目《Kitchen Kids》的原因。
 
-1. **want to be...** (想要成为……)
-   - *"Harry doesn't want to be a star chef"*
-   - **解析**：want to do sth. 表示“想要做某事”。此处 be 动词意为“成为”。
+这个 10 岁的纽约男孩喜欢做饭。他会做非常棒的汤和沙拉、非常好的煎蛋卷，还有最好吃的蛋糕。不过，节目里还有很多其他孩子，而且他们都很厉害。
 
-2. **This is why...** (这就是为什么……)
-   - *"This is why he's on the TV programme Kitchen Kids."*
-   - **解析**：why 引导的是表语从句，用来解释前文提到的事情的原因。
+越来越多的年轻人对烹饪感兴趣。他们中的很多人是跟父母学的。还有一些人会看专门给孩子做的烹饪视频。在很多城市里，都有面向年轻人的烹饪课程。有些课程甚至是给三岁孩子开的！
 
-3. **be interested in...** (对……感兴趣)
-   - *"More and more young people are interested in cooking."*
-   - **解析**：这是一个非常重要且常用的词组，介词 in 后面需要接名词、代词或动名词 (doing)，所以此处用了 cooking。另外，"More and more" 表示“越来越……”。
+但是，要成为明星厨师需要做什么呢？当然，你得喜欢做饭，而且确实做得好，这很重要。不过也有一些规则。你必须年满 9 岁才能参加《Kitchen Kids》。
 
-4. **It is important that...** (……很重要)
-   - *"Of course, it's important that you like cooking and are really good at it."*
-   - **解析**：It 在句中作形式主语，真正的主语是 that 引导的从句 "you like cooking..."。这种句型常用于将长句子后置以保持句子平衡。同时，"be good at" 意为“擅长（做）某事”。
+“开始做饭前，我们必须洗手。”哈利说。“当然，我们绝不能把手放进嘴里。厨师不会那样做！而且我们必须非常小心热盘子。”
 
-5. **must / mustn't** (必须 / 绝不能)
-   - *"'We must wash our hands... we mustn't put them in our mouths."*
-   - **解析**：must 是情态动词，表示强烈的义务或“必须”；否定形式 mustn't 表示“禁止、绝不能”。情态动词后直接跟动词原形。
+节目开始了。哈利很兴奋。他知道自己是个很棒的厨师。这一次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。演播室里的专家很喜欢哈利做的食物，所以他留在了节目里。
 
-### 【易错/重点词汇精析】
-- **programme** (`/ˈprəʊɡræm/`): 节目。这是英式英语的拼写，美式英语通常拼写为 **program**。
-- **omelettes** (`/ˈɒmləts/`): 煎蛋卷。这是一个外来词（源自法语），在拼写和发音上容易出错。
-- **expert** (`/ˈekspɜːt/`): 专家。名词，指在某一领域有专长的人。文中的 *"The experts in the studio love Harry's food"* 表示各位评委/专家对他的厨艺十分认可。
-- **stay on** (`/steɪ/`): 留任，坚持（做某事）。文中的 *"he stays on the show"* 指他成功晋级，继续留在这个电视节目中。
+现在是下午 5 点。节目结束了。哈利很开心，也有点累。他回家了。该做家庭作业了。
 
-### 【在线核对说明】
-*注：经过全网公开资料的检索对比，这段文本并没有对应某篇著名的新闻报道或公开发表的文献，通常这类文章是专为英语学习（ESL/EFL）教材或阅读理解题目定制编写的文章，因此文字误差较小。上文的英文课文为其最标准、完整的版本。*
+---
+
+## 4. Mason 可复用标准流程（后续每篇课文都按这个来）
+
+1. 准备输入  
+把课文图片放到 `input/` 目录，文件名用日期+主题（例如：`2026-03-08_kitchen-kids.jpg`）。
+
+2. 抓取课文原文  
+先人工校对 OCR（重点检查大小写、标点、专有名词，如 `New Yorker`、`Kitchen Kids`）。
+
+3. 生成生词候选  
+把课文分词并转小写；去掉停用词；再和“最常用 300 词”名单对比，筛出候选词。
+
+4. 人工复核词表  
+合并词形（如 `experts -> expert`）；保留学习价值高的短语（如 `star chef`）；删除明显专名噪声。
+
+5. 输出标准文件  
+固定输出 4 个区块：`原文`、`生词表`、`中文译文`、`流程记录`。文件编码统一 UTF-8。
+
+6. 命名规范  
+建议用：`vocab_sets/<主题>/<主题>_vocab_<版本>.md`，例如：`kitchen_kids_vocab_mason_utf8.md`。
+
+---
+
+## 5. 给 Mason 的执行清单（简化版）
+
+1. 放图片到 `input/`。  
+2. 把英文原文抄到新 md。  
+3. 按“前 300 高频词以外”圈出生词。  
+4. 填中文意思和课文短语。  
+5. 最后检查：有没有错别字、有没有专有名词写错。

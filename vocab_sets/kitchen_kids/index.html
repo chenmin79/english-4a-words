@@ -875,40 +875,28 @@
 
     <script>
         // PLACEHOLDER FOR VOCAB
-        const VOCAB = [
-            { unit: 1, word: "chef", phonetic: "/ʃef/", pos: "n.", chinese: "主厨，厨师", ex_en: "Harry doesn\'t want to be a star chef when he\'s 20.", ex_zh: "哈利不想等到20岁才成为一名明星厨师。", star: false },
-            { unit: 1, word: "programme", phonetic: "/ˈprəʊɡræm/", pos: "n.", chinese: "（电视）节目", ex_en: "This is why he\'s on the TV programme Kitchen Kids.", ex_zh: "这就是为什么他参加了电视节目《厨房孩子》(Kitchen Kids)。", star: false },
-            { unit: 1, word: "kitchen", phonetic: "/ˈkɪtʃɪn/", pos: "n.", chinese: "厨房", ex_en: "This is why he\'s on the TV programme Kitchen Kids.", ex_zh: "这就是为什么他参加了电视节目《厨房孩子》(Kitchen Kids)。", star: false },
-            { unit: 1, word: "yorker", phonetic: "/ˈjɔːkə/", pos: "n.", chinese: "纽约人（New Yorker）", ex_en: "The ten-year-old New Yorker likes cooking.", ex_zh: "这个十岁的纽约男孩喜欢烹饪。", star: false },
-            { unit: 1, word: "cooking", phonetic: "/ˈkʊkɪŋ/", pos: "n.", chinese: "烹饪，做饭", ex_en: "More and more young people are interested in cooking.", ex_zh: "越来越多的年轻人对烹饪感兴趣。", star: false },
-            { unit: 1, word: "fantastic", phonetic: "/fænˈtæstɪk/", pos: "adj.", chinese: "极好的，了不起的", ex_en: "He can make fantastic soups and salads, excellent omelettes and the best cakes.", ex_zh: "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。", star: false },
-            { unit: 1, word: "soups", phonetic: "/suːps/", pos: "n.", chinese: "汤", ex_en: "He can make fantastic soups and salads, excellent omelettes and the best cakes.", ex_zh: "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。", star: false },
-            { unit: 1, word: "salads", phonetic: "/ˈsælədz/", pos: "n.", chinese: "沙拉", ex_en: "He can make fantastic soups and salads, excellent omelettes and the best cakes.", ex_zh: "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。", star: false },
-            { unit: 1, word: "excellent", phonetic: "/ˈeksələnt/", pos: "adj.", chinese: "卓越的，杰出的", ex_en: "He can make fantastic soups and salads, excellent omelettes and the best cakes.", ex_zh: "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。", star: false },
-            { unit: 1, word: "omelettes", phonetic: "/ˈɒmləts/", pos: "n.", chinese: "煎蛋卷", ex_en: "He can make fantastic soups and salads, excellent omelettes and the best cakes.", ex_zh: "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。", star: false },
-            { unit: 2, word: "cakes", phonetic: "/keɪks/", pos: "n.", chinese: "蛋糕", ex_en: "He can make fantastic soups and salads, excellent omelettes and the best cakes.", ex_zh: "他能做出很棒的汤和沙拉、极好的煎蛋卷以及最棒的蛋糕。", star: false },
-            { unit: 2, word: "interested", phonetic: "/ˈɪntrəstɪd/", pos: "adj.", chinese: "感兴趣的", ex_en: "More and more young people are interested in cooking.", ex_zh: "越来越多的年轻人对烹饪感兴趣。", star: false },
-            { unit: 2, word: "special", phonetic: "/ˈspeʃl/", pos: "adj.", chinese: "特殊的，专门的", ex_en: "Others watch special cooking videos for children.", ex_zh: "其他人则观看专门为儿童制作的烹饪视频。", star: false },
-            { unit: 2, word: "videos", phonetic: "/ˈvɪdiəʊz/", pos: "n.", chinese: "视频", ex_en: "Others watch special cooking videos for children.", ex_zh: "其他人则观看专门为儿童制作的烹饪视频。", star: false },
-            { unit: 2, word: "cities", phonetic: "/ˈsɪtiz/", pos: "n.", chinese: "城市", ex_en: "In many cities, there are special cooking classes for young people.", ex_zh: "在许多城市，都有专门针对年轻人的烹饪培训班。", star: false },
-            { unit: 2, word: "classes", phonetic: "/ˈklɑːsɪz/", pos: "n.", chinese: "班级/课", ex_en: "In many cities, there are special cooking classes for young people.", ex_zh: "在许多城市，都有专门针对年轻人的烹饪培训班。", star: false },
-            { unit: 2, word: "age", phonetic: "/eɪdʒ/", pos: "n.", chinese: "年龄", ex_en: "Some of them are for children from the age of three!", ex_zh: "其中一些甚至针对三岁的儿童！", star: false },
-            { unit: 2, word: "become", phonetic: "/bɪˈkʌm/", pos: "v.", chinese: "成为", ex_en: "But what must you do to become a star chef?", ex_zh: "但是要想成为一名明星厨师，你必须要怎么做呢？", star: false },
-            { unit: 2, word: "important", phonetic: "/ɪmˈpɔːtnt/", pos: "adj.", chinese: "重要的", ex_en: "Of course, it\'s important that you like cooking and are really good at it.", ex_zh: "当然，喜欢烹饪并且真的很擅长烹饪也很重要。", star: false },
-            { unit: 2, word: "rules", phonetic: "/ruːl/", pos: "n.", chinese: "规则", ex_en: "But there are some rules.", ex_zh: "但这也有一些规则。", star: false },
-            { unit: 3, word: "wash", phonetic: "/wɒʃ/", pos: "v.", chinese: "洗，清洗", ex_en: "\'We must wash our hands before we start cooking,\' Harry says.", ex_zh: "“在开始做饭之前，我们必须洗手，”哈利说。", star: false },
-            { unit: 3, word: "mouths", phonetic: "/maʊθ/", pos: "n.", chinese: "嘴巴", ex_en: "\'And of course we mustn\'t put them in our mouths.", ex_zh: "“当然我们绝不能把手放进嘴里。", star: false },
-            { unit: 3, word: "careful", phonetic: "/ˈkeəf(ə)l/", pos: "adj.", chinese: "小心的，仔细的", ex_en: "And we must be very careful with hot plates.\'", ex_zh: "而且我们必须非常小心热盘子。”", star: false },
-            { unit: 3, word: "plates", phonetic: "/pleɪt/", pos: "n.", chinese: "盘子", ex_en: "And we must be very careful with hot plates.\'", ex_zh: "而且我们必须非常小心热盘子。”", star: false },
-            { unit: 3, word: "excited", phonetic: "/ɪkˈsaɪtɪd/", pos: "adj.", chinese: "兴奋的", ex_en: "Harry is excited.", ex_zh: "哈利很兴奋。", star: false },
-            { unit: 3, word: "tomato", phonetic: "/təˈmɑːtəʊ/", pos: "n.", chinese: "西红柿", ex_en: "This time he makes tomato soup, some salad, steak and carrot cake.", ex_zh: "这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。", star: false },
-            { unit: 3, word: "steak", phonetic: "/steɪk/", pos: "n.", chinese: "牛排", ex_en: "This time he makes tomato soup, some salad, steak and carrot cake.", ex_zh: "这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。", star: false },
-            { unit: 3, word: "carrot", phonetic: "/ˈkærət/", pos: "n.", chinese: "胡萝卜", ex_en: "This time he makes tomato soup, some salad, steak and carrot cake.", ex_zh: "这次他做了番茄汤、一些沙拉、牛排和胡萝卜蛋糕。", star: false },
-            { unit: 3, word: "experts", phonetic: "/ˈekspɜːt/", pos: "n.", chinese: "专家", ex_en: "The experts in the studio love Harry\'s food, and he stays on the show.", ex_zh: "演播室里的专家们很喜欢哈利的食物，他留在了节目中。", star: false },
-            { unit: 3, word: "studio", phonetic: "/ˈstjuːdiəʊ/", pos: "n.", chinese: "工作室，演播室", ex_en: "The experts in the studio love Harry\'s food, and he stays on the show.", ex_zh: "演播室里的专家们很喜欢哈利的食物，他留在了节目中。", star: false },
-            { unit: 4, word: "tired", phonetic: "/ˈtaɪəd/", pos: "adj.", chinese: "疲倦的，累的", ex_en: "Harry is happy, and a little tired.", ex_zh: "哈利很高兴，但也稍微有点累。", star: false },
-            { unit: 4, word: "homework", phonetic: "/ˈhəʊmwɜːk/", pos: "n.", chinese: "家庭作业", ex_en: "It\'s time to do his homework.", ex_zh: "现在是该做家庭作业的时间了。", star: false },
-        ];
+        let VOCAB = [];
+
+        async function loadVocabData() {
+            const jsonUrl = './kitchen_kids_vocab.json';
+            const resp = await fetch(jsonUrl, { cache: 'no-store' });
+            if (!resp.ok) throw new Error(`Failed to load ${jsonUrl}: ${resp.status}`);
+            const data = await resp.json();
+            const words = Array.isArray(data) ? data : (data.words || []);
+            VOCAB = words.map((w, idx) => ({
+                unit: w.unit ?? (Math.floor(idx / 10) + 1),
+                pack_letter: w.pack_letter || (w.word ? String(w.word).charAt(0).toUpperCase() : ''),
+                word: w.word || '',
+                phonetic: w.phonetic || w.ipa || '',
+                pos: w.pos || '',
+                chinese: w.chinese || '',
+                ex_en: sanitizeText(w.ex_en || ''),
+                ex_en_tts: sanitizeText(w.ex_en_tts || w.ex_en || ''),
+                ex_zh: w.ex_zh || '',
+                star: !!w.star,
+                sort_order: w.sort_order ?? (idx + 1)
+            }));
+        }
         // PACK CONFIG
         const PACK_COLORS = ['#fd79a8', '#0984e3', '#00b894', '#fdcb6e', '#e17055', '#6c5ce7', '#d63031', '#00cec9', '#fab1a0', '#74b9ff'];
         const PACK_BADGES = {
@@ -1120,7 +1108,7 @@
       <div class="card-word">${vocab.word}</div>
       <div class="card-phonetic">${vocab.phonetic}</div>
       <div class="card-pos">${vocab.pos}</div>
-      <div class="audio-btn" style="margin-top: 12px; min-width: 60px; padding: 6px 16px;" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊</div>
+      <div class="audio-btn" style="margin-top: 12px; min-width: 60px; padding: 6px 16px;" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.word)}')">🔊</div>
       <div class="tap-hint">👆 Tap to flip</div>
     `;
                 back.innerHTML = `
@@ -1128,8 +1116,8 @@
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="card-example-zh">${vocab.ex_zh}</div>
       <div class="audio-row">
-        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊 Word</div>
-        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.ex_en)}')"">�️ Sentence</div>
+        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.word)}')">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.ex_en_tts || vocab.ex_en)}')">🔊 Sentence</div>
       </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'pointer';
@@ -1150,8 +1138,8 @@
       <div class="card-word" style="font-size:2.2rem">${vocab.word}</div>
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="audio-row">
-        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊 Word</div>
-        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.ex_en)}')"">�️ Sentence</div>
+        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.word)}')">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.ex_en_tts || vocab.ex_en)}')">🔊 Sentence</div>
       </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'default';
@@ -1168,8 +1156,8 @@
       <div class="card-example">${highlightWord(vocab.ex_en, vocab.word)}</div>
       <div class="card-word" style="font-size:1.5rem;margin-top:10px;color:var(--purple)">${vocab.word}</div>
       <div class="audio-row">
-        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.word)}')"">🔊 Word</div>
-        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeURIComponent(vocab.ex_en)}')"">�️ Sentence</div>
+        <div class="audio-btn" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.word)}')">🔊 Word</div>
+        <div class="audio-btn primary" onclick="event.stopPropagation(); playEncodedAudio('${encodeForOnclick(vocab.ex_en_tts || vocab.ex_en)}')">🔊 Sentence</div>
       </div>
     `;
                 document.getElementById('card-scene').style.cursor = 'pointer';
@@ -1187,7 +1175,7 @@
             playSound('flip');
             const vocab = queue[queueIndex];
             if (currentMode === 'A') speak(vocab.word);
-            else if (currentMode === 'C') speak(vocab.ex_en);
+            else if (currentMode === 'C') speak(vocab.ex_en_tts || vocab.ex_en);
             setTimeout(() => document.getElementById('answer-btns').classList.remove('hidden'), 300);
         }
 
@@ -1300,6 +1288,10 @@
         function playEncodedAudio(encoded) {
             speak(decodeURIComponent(encoded));
         }
+        function encodeForOnclick(text) {
+            // encodeURIComponent does not escape apostrophe, which breaks single-quoted onclick args.
+            return encodeURIComponent(String(text ?? '')).replace(/'/g, '%27');
+        }
         function speak(text) {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
@@ -1335,22 +1327,40 @@
             draw();
         }
 
+        function sanitizeText(text) {
+            // Remove markdown emphasis markers that may leak from source data.
+            return String(text || '').replace(/\*/g, '');
+        }
+
+        function escapeRegExp(s) {
+            return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
         function highlightWord(sentence, word) {
-            const parts = word.split(' ');
-            const esc = parts[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            // Simplified highlighting
-            return sentence.replace(new RegExp(esc, 'gi'), '<span class="highlight">$&</span>');
+            const cleanSentence = sanitizeText(sentence);
+            const cleanWord = String(word || '').trim();
+            if (!cleanWord) return cleanSentence;
+            const esc = escapeRegExp(cleanWord);
+            return cleanSentence.replace(new RegExp(esc, 'gi'), '<span class="highlight">$&</span>');
         }
 
         function blankWord(sentence, word) {
-            const parts = word.split(' ');
-            const esc = parts[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            return sentence.replace(new RegExp(esc, 'gi'), `<span class="spell-blank">${'_'.repeat(word.length)}</span>`);
+            const cleanSentence = sanitizeText(sentence);
+            const cleanWord = String(word || '').trim();
+            if (!cleanWord) return cleanSentence;
+            const esc = escapeRegExp(cleanWord);
+            const blank = cleanWord.replace(/[A-Za-z]/g, '_');
+            return cleanSentence.replace(new RegExp(esc, 'gi'), `<span class="spell-blank">${blank}</span>`);
         }
 
         // INIT
         loadState();
-        showHome();
+        loadVocabData()
+            .then(() => showHome())
+            .catch((err) => {
+                console.error(err);
+                alert('Failed to load vocabulary JSON. Please check kitchen_kids_vocab.json.');
+            });
     </script>
 </body>
 
